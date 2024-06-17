@@ -1,0 +1,37 @@
+Resume
+Mohammad Jawad Barati
+Fullstack Developer, Language lerner and Anime fan
+Website: https://kasir-barati.github.io
+Twitter: @kasir_barati
+
+Intro: Hey guys, this is me Mohammad Jawad Barati, I've learned the importance of not imitating but rather understanding. Although I can also see why imitation is something that we do. It is because when we are a child we need to pick up on a lot of skills and imitation can make it a bit lighter for us. But when it comes to becoming an original thinker and a creative developer it is better to understand and then build stuff that can be labeled as our own creation.
+
+Services:
+Building web apps
+And if I get the chance literally anything that you can throw at me :)
+
+Skills:
+HTML/CSS
+NodeJS
+NestJS
+ReactJS, NextJS
+Programming language: JavaScript, Typescript, Python
+Containerization: Docker
+IaC: Terraform, Ansible
+
+Experiences:
+RYTLE
+ClimatePartner
+Spad
+Salamsakhteman
+Rahayaft
+ArianaCloud
+
+Portfolio:
+you-say
+
+Recommendations:
+Kathi
+
+Mailing Address:
+Schokoladenstraße 13, 12134, Berlin
