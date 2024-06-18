@@ -1,0 +1,99 @@
+<!-- Outline:
+  Body is a section.
+  Sections create the outline of our HTML document.
+  Some tools will create an outline for us from our HTML documents.
+-->
+<!-- Sectioning root: A node in the tree that represents the root of a new section in document -->
+<!-- Container: An element with nested elements inside it, e.g. body element or html element itself -->
+<!-- Elements represent things; that is, they have intrinsic meaning, also known as semantics. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Sectioning</title>
+  </head>
+  <body>
+    <header>
+      <h1>Resume</h1>
+      <!-- Headings and rank:
+        They define the header of a section, you can markup and specify sections with this element in 2 ways: 
+        1. Implicit: Like what we are doing here with Resume.
+        2. Explicit: Like how we are marking up the services or skills section's header
+      -->
+      <!-- They are Flow content, Heading content, and Palpable content. -->
+      <!-- They're content model is Phrasing content. -->
+    </header>
+    <!-- This element contains the sections heading elements: but it is not always wrapping h1-6 tags. -->
+    <!-- It is a Flow content and Palpable content. -->
+    <!-- They cannot contain another header or footer element. -->
+    <article>
+      <header><h2>About me</h2></header>
+      Hey guys, this is me Mohammad Jawad Barati, I've learned the importance of
+      not imitating but rather understanding. Although I can also see why
+      imitation is something that we do. It is because when we are a child we
+      need to pick up on a lot of skills and imitation can make it a bit lighter
+      for us. But when it comes to becoming an original thinker and a creative
+      developer it is better to understand and then build stuff that can be
+      labeled as our own creation.
+    </article>
+    <!-- Self-contained composition; It is complete in and of itself. Meaning if we separate it and put it in a new document. -->
+    <!-- It is a Flow content, Sectioning content, and Palpable content. -->
+    <!-- We can use Flow content elements inside it. -->
+    <section>
+      <header><h2>Services</h2></header>
+      Building web apps And if I get the chance literally anything that you can
+      throw at me :)
+    </section>
+    <!-- Thematic grouping of content: all the contents inside this element should go together. -->
+    <!-- It is a Flow content, Sectioning content, and Palpable content. -->
+    <!-- We can use Flow content elements inside it. -->
+    <section>
+      <header><h2>Skills</h2></header>
+      HTML/CSS NodeJS NestJS ReactJS, NextJS Programming language: JavaScript,
+      Typescript, Python Containerization: Docker IaC: Terraform, Ansible.
+      <footer>Certifications:</footer>
+      <!-- 
+        It is footer for its nearest sectioning content ancestor.
+        it is important to note that it is saying "sectioning content ancestor", and not any ancestor! 
+      -->
+      <!-- It is a Flow content and Palpable content. -->
+      <!-- Cannot use a header or footer element inside it! -->
+    </section>
+    <section>
+      <header><h2>Experiences</h2></header>
+      RYTLE ClimatePartner Spad Salamsakhteman Rahayaft ArianaCloud
+    </section>
+    <section>
+      <header><h2>Portfolio</h2></header>
+      you-say
+    </section>
+    <section>
+      <header><h2>Recommendations</h2></header>
+      Kathi
+    </section>
+    <section>
+      <header><h2>Mailing Address</h2></header>
+      <address>Schokoladenstraße 13, 12134, Berlin</address>
+      <!-- 
+        It represents the contact info for the nearest body or article ancestor.
+        In this example this address "Schokoladenstraße 13, 12134, Berlin" is the contact info for the body, and body is a resume. So this use of address element is correct but do not assume that you can wrap every address with an address tag since its description is clear: "the contact info for the nearest body or article ancestor".
+      -->
+      <!-- It is a Flow content and Palpable content. -->
+      <!-- It accepts Flow content, but with no heading content descendants, no sectioning content descendants, and no header, footer, or address element descendants. -->
+      <aside>
+        Berlin: A beautiful city that is not like most capitals, I mean crowded
+        and with people who are rushing always. But at the same time we have
+        many big companies and Startups there.
+      </aside>
+      <!-- Tangential content: 
+        It represents a section of our page, and that content is tangentially related to the content around it but also can be considered separate. 
+      -->
+      <!-- It is a Flow content, Sectioning content, and Palpable content. -->
+      <!-- We can use Flow content elements inside it. -->
+      <!-- For example, if the main content is an article about climate change, an <aside> element might include a brief biography of a climate scientist mentioned in the article or a small fact box about recent climate statistics. -->
+    </section>
+    <footer>Copyright&copy;</footer>
+    <!-- It contains about its section; who wrote it, license, etc -->
+  </body>
+</html>
