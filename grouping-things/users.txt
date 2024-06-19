@@ -1,0 +1,17 @@
+Name: Alice Johnson
+ID: 101
+Email: alice.johnson@example.com
+Registered: 2023-01-15
+Last Logged In: 2024-06-10
+
+Name: Bob Smith
+ID: 102
+Email: bob.smith@example.com
+Registered: 2022-11-25
+Last Logged In: 2024-06-12
+
+Name: Hinata White
+ID: 103
+Email: hinata.white@example.com
+Registered: 2023-03-08
+Last Logged In: 2024-06-14

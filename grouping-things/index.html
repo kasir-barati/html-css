@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grouping Things</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Resume</h1>
+      </header>
+      <section>
+        <header><h2>About me</h2></header>
+        <!-- Association lists; dl, dt, dd -->
+        <p>Mohammad Jawad Barati</p>
+        <dl>
+          <dt>Title</dt>
+          <!-- dt represents the term/name part of a term description group in a description list (dl) -->
+          <!-- Does not belong to any category in content model -->
+          <!-- It accepts Flow content elements with the exception of: 
+          1. header element
+          2. footer element
+          3. script-supporting elements
+          4. heading content
+        -->
+          <dd>Fullstack Developer</dd>
+          <!-- dd represents the actual value/description/definition part of a term-description in a description list (dl) -->
+          <!-- Does not belong to any category in content model -->
+          <!-- It accepts Flow content elements -->
+          <dd>Language lerner</dd>
+          <dd>Anime fan</dd>
+          <dt>Website</dt>
+          <dd>https://kasir-barati.github.io</dd>
+          <dd>https://linkedin.com/in/kasir-barati</dd>
+          <dt>Twitter</dt>
+          <dd>@kasir_barati</dd>
+        </dl>
+        <!-- dl represents an association list -->
+        <!-- dl is a Flow content element and if it contains at least one name-value group it is Palpable content too -->
+        <!-- name-value group: A value or set of values identified by a name or names -->
+        <!-- Its content model is dt and dd elements or div element -->
+        <!-- dt comes first and then dd elements -->
+      </section>
+      <article>
+        <header><h2>Bio</h2></header>
+        <p>
+          Hey guys, this is me Mohammad Jawad Barati, I've learned the
+          importance of not imitating but rather understanding. Although I can
+          also see why imitation is something that we do. It is because when we
+          are a child we need to pick up on a lot of skills and imitation can
+          make it a bit lighter for us. But when it comes to becoming an
+          original thinker and a creative developer it is better to understand
+          and then build stuff that can be labeled as our own creation.
+        </p>
+        <!-- Represents a paragraph: A group of sentences, or thematic grouping things -->
+        <!-- Flow and Palpable content -->
+        <!-- Can contains a Phrasing content -->
+      </article>
+      <section>
+        <header><h2>Services</h2></header>
+      </section>
+      <section>
+        <header><h2>Skills</h2></header>
+        <!-- Unordered lists and list items -->
+        <!-- ul element contains li and script-supporting elements -->
+        <!-- ul: It represents a list of items where the order of items is not important -->
+        <!-- script-supporting elements are: script and template -->
+        <ul>
+          <li>HTML/CSS</li>
+          <li>NodeJS</li>
+          <li>NestJS</li>
+          <li>ReactJS</li>
+          <li>NextJS</li>
+          <li>
+            Programming language
+            <ul>
+              <li>JavaScript</li>
+              <li>Typescript</li>
+              <li>Python</li>
+            </ul>
+          </li>
+          <li>
+            Containerization
+            <ul>
+              Docker
+            </ul>
+          </li>
+          <li>
+            IaC
+            <ul>
+              <li>Terraform</li>
+              <li>Ansible</li>
+            </ul>
+          </li>
+        </ul>
+        <footer>Certifications:</footer>
+      </section>
+      <section>
+        <header><h2>Experiences</h2></header>
+        <ol reversed>
+          <li>RYTLE</li>
+          <li>ClimatePartner</li>
+          <li>Spad</li>
+          <li>Salamsakhteman</li>
+          <li>Rahayaft</li>
+          <li>ArianaCloud</li>
+        </ol>
+        <!-- Ordered list: represents a list of items where the order maters -->
+        <!-- reversed attribute: 
+        Number the list backwards
+        It is a boolean attribute: its presence means true and its absence means false 
+      --></section>
+      <section>
+        <header><h2>Portfolio</h2></header>
+        <p>you-say</p>
+      </section>
+      <section>
+        <header><h2>Recommendations</h2></header>
+        <blockquote>
+          <p>
+            I have had the privilege of working closely with Kasir on two
+            projects (last mile delivery, route planning and fleet management
+            for cargo bikes) and I can safely say that he is an excellent full
+            stack developer. With his ability to ask questions, understand and
+            solve problems, he contributes significantly to the success of any
+            development project. He is very determined, passionate and
+            resilient. Besides of his technical expertise, Kasir is an awesome
+            team player and has a very positive, supportive and team-oriented
+            attitude. I am convinced, that he is a great addition to any team!
+          </p>
+        </blockquote>
+        <!-- blockquote is Flow content, Sectioning root, and Palpable content -->
+        <!-- A section that is quoted from another source -->
+        <!-- It accepts Flow content -->
+        <p>Kathi</p>
+        <!-- You should put the source of quote outside of the blockquote, in case you wanna mention it. -->
+      </section>
+      <section>
+        <header><h2>Mailing Address</h2></header>
+        <address>Schokoladenstraße 13, 12134, Berlin</address>
+        <aside>
+          <p>
+            Berlin: A beautiful city that is not like most capitals, I mean
+            crowded and with people who are rushing always. But at the same time
+            we have many big companies and Startups there.
+          </p>
+        </aside>
+      </section>
+    </main>
+    <!-- main element represents the dominant content -->
+    <!-- It is Flow content and Palpable content. -->
+    <!-- It can only be used inside body, div, or a form where its ancestors are limited to html, body, div, form -->
+    <!-- In a HTML document we cannot have more than one main element as its name implies; in each HTML document we only have one dominant content. -->
+    <footer>Copyright&copy;</footer>
+  </body>
+</html>
