@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Character</title>
+  </head>
+  <body>
+    &gt;
+    <br />
+    &nbsp;
+    <br />
+    &gamma;
+    <br />
+    &mstpos;
+    <br />
+    &lambda;
+    <!-- Sometimes we need special characters and wanna use them, but Parser interfere with it since they might be something that is part of HTML language; things like greater than and lower than sign. Or it is a special character, we  -->
+    <!-- They are also called HTML entities -->
+    <!--
+      Note that there are discussions around why should we bother with HTML entities while UTF-8 supports most symbols and special characters.
+
+      My take is that it is fine to use them as long as you're not using HTML language characters.
+      And in the future in Frontend frameworks such ReactJS you might realize that there is something called linter and they also will enforce rules such as using HTML entity for double quote and single quote to ensuring that special characters are properly encoded. This can prevent unexpected issues in rendering or functionality.
+    -->
+  </body>
+</html>
