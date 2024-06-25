@@ -1,34 +1,56 @@
-<!-- index.html usually is the default page that will be shown to the user. -->
 <!DOCTYPE html>
-<!-- DOCTYPEs are for backward compatibility and preventing browsers from using something that they deem better. -->
 <html lang="en">
   <head>
-    <title>
-      This is what is being shown in the tab as its title, google search engine
-      and when a user save the page as their favorite. It can only be one.
-    </title>
     <meta charset="UTF-8" />
-    <!-- All the supported characters. UTF-8 covers almost all languages and symbols. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Sectioning</title>
   </head>
-  <!-- Metadata: Data that explains what some other data means.
-    They are data that explains your HTML document
-    E.g. title, style, meta, etc
-  -->
   <body>
+    <header>
+      <h1>Resume</h1>
+    </header>
+    <article>
+      <header><h2>About me</h2></header>
+      Hey guys, this is me Mohammad Jawad Barati, I've learned the importance of
+      not imitating but rather understanding. Although I can also see why
+      imitation is something that we do. It is because when we are a child we
+      need to pick up on a lot of skills and imitation can make it a bit lighter
+      for us. But when it comes to becoming an original thinker and a creative
+      developer it is better to understand and then build stuff that can be
+      labeled as our own creation.
+    </article>
     <section>
-      <section></section>
+      <header><h2>Services</h2></header>
+      Building web apps And if I get the chance literally anything that you can
+      throw at me :)
     </section>
-    <!-- A sectioning root: A node in the tree that represents the root of a new section of the document -->
-    <!-- Container: An element with nested elements inside it. -->
+    <section>
+      <header><h2>Skills</h2></header>
+      HTML/CSS NodeJS NestJS ReactJS, NextJS Programming language: JavaScript,
+      Typescript, Python Containerization: Docker IaC: Terraform, Ansible.
+      <footer>Certifications:</footer>
+    </section>
+    <section>
+      <header><h2>Experiences</h2></header>
+      RYTLE ClimatePartner Spad Salamsakhteman Rahayaft ArianaCloud
+    </section>
+    <section>
+      <header><h2>Portfolio</h2></header>
+      you-say
+    </section>
+    <section>
+      <header><h2>Recommendations</h2></header>
+      Kathi
+    </section>
+    <section>
+      <header><h2>Mailing Address</h2></header>
+      <address>Schokoladenstraße 13, 12134, Berlin</address>
+      <aside>
+        Berlin: A beautiful city that is not like most capitals, I mean crowded
+        and with people who are rushing always. But at the same time we have
+        many big companies and Startups there.
+      </aside>
+    </section>
+    <footer>Copyright&copy;</footer>
   </body>
-  <!-- Represents the content of the document
-    body is a section
-    Creating an Outline: kinda like a table of contents
-    Some tool is gonna create a table of contents from my HTML document
-  -->
 </html>
-<!-- 
-    html element is the root of a HTML document.
-    "lang" attribute specifies the language that the doc is written in, the actual language. Read the HTML spec for seeing valid values for lang attribute.
-  -->
-<!-- Content model: A head element followed by a body element. -->

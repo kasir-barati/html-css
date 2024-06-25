@@ -43,6 +43,7 @@ VSCode = Text editor = IDE stands for Integrated Development Environment.
 # FAQ
 
 - Tag VS Element: Element is, the tag + tag's content + tag's attributes.
+  ![Tag Element](./tag-element.webp)
 - Is HTML the only ML: MLs are everywhere, for instance change a `.docs` file and change its extension to `.zip`. Now extract it. Open the extracted folder in VSCode and there you have it, it is a bunch of XML files.
 - And the following code is a different ML
 
@@ -84,6 +85,8 @@ VSCode = Text editor = IDE stands for Integrated Development Environment.
 Its sole purpose is to prevent a browser from switching into so-called "quirks mode" when rendering a document ([ref](https://developer.mozilla.org/en-US/docs/Glossary/Doctype)).
 What is _Quirks Mode_? A way of differantiating between HTML standards, **used by browsers** ([ref](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)).
 
+DOCTYPEs are for backward compatibility and preventing browsers from using something that they deem better.
+
 ```html
 <!-- https://www.w3.org/wiki/Doctypes_and_markup_styles -->
 <!-- 4.01 -->
@@ -124,6 +127,8 @@ The `body` element represents the contents of the document.
 
 What is metadata? Metadata refers to data that provides information about other data within an HTML document.
 
+In other word Metadata is data that explains what some other data means. E.g. title, style, meta, etc
+
 - Categories: Metadata content.
 - Contexts in which this element can be used:
 
@@ -135,7 +140,7 @@ What is metadata? Metadata refers to data that provides information about other 
 
 ## Charset
 
-It is used to specify the _character encoding_ for the HTML document. Character encoding is essential for correctly displaying text on web pages.
+It is used to specify the _character encoding_ for the HTML document. Character encoding is essential for correctly displaying text on web pages. And `UTF-8` covers almost all languages and symbols.
 
 # title
 
