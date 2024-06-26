@@ -6,8 +6,11 @@ _index.html_ usually is the default page that will be shown to the user.
 
 - `body` is a section.
 - **Sections** create the outline of our HTML document. Some tools will create an outline for us from our HTML documents.
+  ![Sectioning](./sectioning.png)
 - **Sectioning root**: A node in the tree that represents the root of a new section in document
+  ![Sectioning root](./sectioning-root.png)
 - **Container**: An element with nested elements inside it, e.g. `body` element or `html` element itself
+  ![Container](./container.png)
 
 ## `section`
 
@@ -36,14 +39,21 @@ The `header` element represents a group of introductory or navigational aids. Th
 - Contexts in which this element can be used: Where flow content is expected.
 - Content model: Flow content, but with no `header` or `footer` element descendants.
 
-## h1-h6
+## `h1`-`h6`
 
-These elements represent headings for their sections. The heading level corresponds to the levels of nested sections.
+These elements represent headings for their sections. The heading level corresponds to the levels of nested sections. So `h1` has highest ranking and it's sub sections can take lower rank heading elements; `h2`-`h6`.
 
-- Headings and rank: They define the header of a section, you can markup and specify sections with this element in 2 ways:
+- A lower rank heading element implies a sub section:
+  ![Sub section](./sub-section.png)
+- Using similar rank or higher implies start of a new section.
+  ![A new section](./a-new-section.png)
+
+Headings and rank: They define the header of a section, you can markup and specify sections with this element in 2 ways:
 
 1. Implicit: Like what we are doing here with Resume.
+   ![Implicit heading](./implicit-heading.png)
 2. Explicit: Like how we are marking up the services or skills section's header
+   ![Explicit heading](./explicit-heading.png)
 
 ## `footer`
 
@@ -56,19 +66,32 @@ Cannot use a header or footer element inside it!
 
 ## `address`
 
-It represents the contact info for the nearest body or article ancestor.
-In this example this address "Schokoladenstraße 13, 12134, Berlin" is the contact info for the body, and body is a resume. So this use of address element is correct but do not assume that you can wrap every address with an address tag since its description is clear: "the contact info for the nearest body or article ancestor".
+It represents the contact info for the nearest `body` or `article` ancestor.
+In this example this address "Schokoladenstraße 13, 12134, Berlin" is the contact info for the `body`, and `body` is a resume.
 
-It is a _Flow content_ and Palpable content.
+> [!CAUTION]
+>
+> **DO NOT** assume that you can wrap every address with an address tag since its description is clear: "the contact info for the nearest body or article ancestor".
 
-It accepts _Flow content_, but with no heading content descendants, no sectioning content descendants, and no header, footer, or address element descendants.
+- Categories: Flow content, Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model:
+  - Flow content,
+  - **BUT NO** _heading content_ descendants, no _sectioning content_ descendants, and no `header`, `footer`, or `address` element descendants.
 
 ## `aside`
 
-Tangential content:
-It represents a section of our page, and that content is tangentially related to the content around it but also can be considered separate.
+It represents a section of our page, and that content is tangentially related to the content around it but also can be considered separate. For example, if the main content is an article about climate change, an `aside` element might include a brief biography of a climate scientist mentioned in the article or a small fact box about recent climate statistics.
 
-It is a _Flow content_, Sectioning content, and Palpable content.
-We can use _Flow content_ elements inside it.
+> [!NOTE]
+>
+> It's not appropriate to use the aside element just for parentheticals, since those are part of the main flow of the document.Parentheticals refers to additional information that is included within the main content flow of a document. These are usually brief, supplementary pieces of information that enhance the primary content but are still considered part of the main narrative or discussion. They are often enclosed in parentheses or dashes within the text.
+> For example, consider the following text with a parenthetical:
+>
+> "HTML (HyperText Markup Language) is the standard language for creating web pages."
+>
+> In this sentence, the phrase "HyperText Markup Language" is a parenthetical because it provides additional information about what "HTML" stands for, but it is still part of the main flow of the text.
 
-For example, if the main content is an article about climate change, an <aside> element might include a brief biography of a climate scientist mentioned in the article or a small fact box about recent climate statistics.
+- Categories: Flow content, Sectioning content, Palpable content.
+- Contexts in which this element can be used: Where sectioning content is expected.
+- Content model: Flow content.
