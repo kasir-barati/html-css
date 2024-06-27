@@ -142,6 +142,38 @@ In other word Metadata is data that explains what some other data means. E.g. ti
 
 It is used to specify the _character encoding_ for the HTML document. Character encoding is essential for correctly displaying text on web pages. And `UTF-8` covers almost all languages and symbols.
 
+### ASCII
+
+An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange, is a character encoding standard for electronic communication. Each character was mapped to a number between 0 to 256, stored in 8 bits of memory.
+
+- 8 bits = 1 byte
+- ```py
+  # Python
+  print(ord("\n"))
+  print(ord("A"))
+  print(ord("a"))
+  ```
+  ```js
+  // JavaScript
+  console.log("\n".charCodeAt());
+  console.log("A".charCodeAt());
+  console.log("a".charCodeAt());
+  console.log(String.fromCharCode(10));
+  ```
+
+### Modern area
+
+ASCII was not up to the task so we come up with **Unicode character set**. It contains billion of characters, as such it can support pretty much any character that you want.
+
+BUT it is way too large, 4 times larger than what we had with ASCII. So we tried to compress this.
+
+- UTF-32: **Fixed length** .The full unicode.
+- UTF-16: **Fixed length** .A subset of unicode, used in some countries.
+- UTF-8: **Dynamic length**; 1-4 bytes. Best practice when we wanna transfer data between computers. It does the job of UTF-32.
+  But is way more compressed than UTF-32. With an over lap of ASCII.
+
+[Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop)
+
 # title
 
 The `title` element represents the document's title or name. For example it is shown in a user's history or bookmarks, or in search results. There must be no more than one `title` element per document.

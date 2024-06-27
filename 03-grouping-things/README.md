@@ -27,7 +27,7 @@ It represents a section that is quoted from another source.
 
 # `ul`
 
-It represents a list of items where **the order of items is not important**.
+It represents a list of items where **the order of items is not important** (unordered list).
 
 - Categories:
   - Flow content
@@ -37,7 +37,7 @@ It represents a list of items where **the order of items is not important**.
 
 # `ol`
 
-It represents a list of items where the order of items mater.
+It represents a list of items where **the order of items mater** (ordered list).
 
 - `reversed` attribute: Number the list backwards
   - It is a boolean attribute: its presence means `true` and its absence means `false`.
