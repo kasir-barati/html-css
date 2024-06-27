@@ -1,3 +1,79 @@
+# Intro
+
+- script-supporting elements are: `script` and `template`
+
+# `p`
+
+It represents a paragraph.
+
+- A bunch of sentences about a particular topic (A group of sentences that are around a specific subject).
+- We can also use `p` for general thematic grouping.
+
+- Categories: Flow content, Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model: Phrasing content.
+
+# `blockquote`
+
+It represents a section that is quoted from another source.
+
+> [!CAUTION]
+>
+> You should put the source of quote outside of the `blockquote`, in case you wanna mention it.
+
+- Categories: Flow content, Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model: Flow content.
+
+# `ul`
+
+It represents a list of items where **the order of items is not important**.
+
+- Categories:
+  - Flow content
+  - if it has at least one `li` children: Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model: Zero or more `li` and script-supporting elements.
+
+# `ol`
+
+It represents a list of items where the order of items mater.
+
+- `reversed` attribute: Number the list backwards
+  - It is a boolean attribute: its presence means `true` and its absence means `false`.
+- Categories:
+  - Flow content
+  - if it has at least one `li` children: Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model: Zero or more `li` and script-supporting elements.
+
+# `li`
+
+It represents a list item.
+
+- Categories: None.
+- Contexts in which this element can be used:
+  - Inside `ol` elements.
+  - Inside `ul` elements.
+  - Inside `menu` elements.
+- Content model: Flow content.
+
+# Association lists
+
+Here we talk about `dl`, `dt`, `dd`.
+
+## `dl`
+
+It represents the term/name part of a _term description group_ in a _description list_ (`dl`).
+
+- Categories:
+  - Flow content.
+  - If it has at least one _name-value group_ as children: Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model:
+  - Either: Zero or more groups each consisting of one or more dt elements followed by one or more `dd` elements, optionally intermixed with script-supporting elements.
+  - Or: One or more `div` elements, optionally intermixed with script-supporting elements.
+
 # Representing data in a `table` in the wrong way
 
 You have a database.

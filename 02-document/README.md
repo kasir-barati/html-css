@@ -43,6 +43,15 @@ The `header` element represents a group of introductory or navigational aids. Th
 
 These elements represent headings for their sections. The heading level corresponds to the levels of nested sections. So `h1` has highest ranking and it's sub sections can take lower rank heading elements; `h2`-`h6`.
 
+- Resume
+  - Introduction
+    - Biography
+  - Skills
+  - Service
+- Posts
+
+  - HTML/CSS tutorial
+
 - A lower rank heading element implies a sub section:
   ![Sub section](./sub-section.png)
 - Using similar rank or higher implies start of a new section.
@@ -57,12 +66,13 @@ Headings and rank: They define the header of a section, you can markup and speci
 
 ## `footer`
 
-It is footer for its nearest sectioning content ancestor.
-it is important to note that it is saying "sectioning content ancestor", and not any ancestor!
-It contains about its section; who wrote it, license, etc
+It is footer for its nearest sectioning content ancestor. It is important to note that it is saying "sectioning content ancestor", and not any ancestor! It contains about its section; who wrote it, license, etc
 
-It is a _Flow content_ and Palpable content.
-Cannot use a header or footer element inside it!
+- Categories: Flow content, Palpable content.
+- Contexts in which this element can be used: Where flow content is expected.
+- Content model:
+  - Flow content,
+  - **BUT NO** `header` or `footer` element descendants.
 
 ## `address`
 
