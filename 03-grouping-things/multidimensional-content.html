@@ -7,44 +7,28 @@
   </head>
   <body>
     <table>
+      <caption>
+        <p>Users</p>
+        <p>
+          List of all users with their brief info and some historical data
+          regarding their registration date and last date they logged in in our
+          website. In the footer you can also see the earliest signup date
+          between these users shown in this table and when was the last login of
+          the currently listed users.
+        </p>
+      </caption>
       <thead>
         <tr>
-          <th>ID</th>
-          <!-- Represents a header cell in a table. -->
-          <!-- Does not belong to any category -->
-          <!-- Should be only used inside a tr -->
-          <!-- It can contain Flow content, but no header, footer, sectioning content, or heading content descendants. -->
-          <th>Name</th>
-          <th>Email</th>
-          <th>Registered</th>
-          <th>Last Logged In</th>
+          <th abbr="Identifier">ID</th>
+          <th abbr="Full name">Name</th>
+          <th abbr="Email address">Email</th>
+          <th abbr="Registration date">Registered</th>
+          <th abbr="Last time they've logged in date">Last Logged In</th>
         </tr>
-        <!-- It represents a row of cells in a table. -->
-        <!-- It can only be inside:
-          - thead
-          - tbody
-          - tfoot 
-          - table if there are no tbody, and it should be after caption, colgroup, and thead.
-        -->
-        <!-- It is not categorized under any content model -->
-        <!-- It accepts th, td, and script-supporting elements as content model -->
       </thead>
-      <!-- It represents the header of a table (column labels) -->
-      <!-- It is not categorized under any content model -->
-      <!-- 
-        We can use it only as a child of a table element, 
-        after any caption, and colgroup elements 
-        and before any tbody, tfoot, and tr elements, 
-        but only if there are no other thead elements that are children of the table element.
-      -->
-      <!-- Its content model is tr and script-supporting elements -->
       <tbody>
         <tr>
           <td>101</td>
-          <!-- Represents a data cell in a table. -->
-          <!-- It is not categorized under any content model -->
-          <!-- Can only be used inside a tr -->
-          <!-- content model: Flow content -->
           <td>Kagome Johnson</td>
           <td>alice.johnson@example.com</td>
           <td>2023-01-15</td>
@@ -65,14 +49,6 @@
           <td>2024-06-14</td>
         </tr>
       </tbody>
-      <!-- It represent the body of a table -->
-      <!-- It is not categorized under any content model -->
-      <!-- 
-        It can only be used as a child of a table element,
-        after any caption, colgroup, and thead elements,
-        but only if there are no tr elements that are children of the table element.
-      -->
-      <!-- Its content model is tr and script-supporting elements -->
       <tfoot>
         <tr>
           <td colspan="4">Earliest signup</td>
@@ -84,17 +60,5 @@
         </tr>
       </tfoot>
     </table>
-    <!-- Tabular: Consisting of or presented in columns or tables -->
-    <!-- it represents data in the form of a table with more than one dimension -->
-    <!-- It is Flow content and Palpable content. -->
-    <!-- Its content model is a bit picky:
-      In this exact order: 
-      1. Optionally a caption element
-      2. Followed by zero or more colgroup elements
-      3. Followed optionally by a thead element, 
-      4. Followed by either zero or more tbody elements or one or more tr elements
-      5. Followed optionally by a tfoot element, 
-      6. optionally intermixed with one or more script-supporting elements.
-    -->
   </body>
 </html>
