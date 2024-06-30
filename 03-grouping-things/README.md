@@ -152,6 +152,8 @@ It represents data with more than one dimension, in the form of a table.
   5. Followed optionally by a `tfoot` element,
   6. optionally intermixed with one or more script-supporting elements.
 
+![Highlighted cell, row, and column in a table model](./row-column-cell-in-table-model.png)
+
 ## `caption`
 
 It represents the title of the `table` that is its parent. A `caption` can introduce context for a `table`, making it significantly easier to understand.
@@ -165,6 +167,8 @@ It represents the title of the `table` that is its parent. A `caption` can intro
 ## `thead`
 
 It represents the header of a table (column labels).
+
+![Highlighted thead element](./thead.png)
 
 - Categories: None.
 - Contexts in which this element can be used:
@@ -183,6 +187,8 @@ It represents the header of a table (column labels).
 
 It represent the body of a table.
 
+![Highlighted tbody element](./tbody.png)
+
 - Categories: None.
 - It can only be used as a child of a `table` element,
 
@@ -195,6 +201,8 @@ It represent the body of a table.
 ## `tfoot`
 
 It represents footers for the parent `table` element.
+
+![Highlighted tfoot element](./tfoot.png)
 
 - Categories: None.
 - Contexts in which this element can be used:
@@ -222,6 +230,8 @@ It represents a row of cells in a table.
 
 It represents a data cell in a table.
 
+![highlighted td element](./td.png)
+
 - Categories: None.
 - Contexts in which this element can be used: As a child of a `tr` element.
 - Content model: Flow content.
@@ -241,7 +251,9 @@ Represents a header cell in a table.
 # Representing data in a `table` in the wrong way
 
 You have a database. Then you wanna show your database data to the user. And you write a very complicated query to get that data.
+
 ![SQL table](./sql-table.jpg)
+
 Now the HTML author might have a tendency to representing them as they are in the database!
 
 ### Structure VS Semantic
