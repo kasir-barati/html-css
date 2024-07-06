@@ -165,6 +165,8 @@ An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterc
 
 ASCII was not up to the task so we come up with **Unicode character set**. It contains billion of characters, as such it can support pretty much any character that you want.
 
+![Special characters and none-English letters](./special-characters-and-none-english-letters.png)
+
 BUT it is way too large, 4 times larger than what we had with ASCII. So we tried to compress this.
 
 - UTF-32: **Fixed length** .The full unicode.
@@ -172,7 +174,7 @@ BUT it is way too large, 4 times larger than what we had with ASCII. So we tried
 - UTF-8: **Dynamic length**; 1-4 bytes. Best practice when we wanna transfer data between computers. It does the job of UTF-32.
   But is way more compressed than UTF-32. With an over lap of ASCII.
 
-[Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop)
+[Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop). You can see the ASCII codes [here](https://en.wikipedia.org/wiki/ASCII).
 
 # title
 
