@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+    </style>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document.body.style.backgroundColor = "#000000AA";
+          document.body.style.color = "whitesmoke";
+        }, 3000);
+      });
+      console.log(document);
+    </script>
+  </head>
+  <body>
+    <header><h1>DOM</h1></header>
+    <section>
+      <h2>What is DOM?</h2>
+      <figure>
+        <img src="./dom.png" />
+        <figcaption>
+          <p>
+            <b>DOM</b> stands for <i>Document Object Model</i>. In this picture
+            you can see that <i><code>src</code></i> and <i>Text</i> are
+            branches of the <i><code>title</code></i> and
+            <i><code>img</code></i> respectively. <em>Notice</em>, I did not say
+            they are their children. Rather they are <strong>data</strong> for
+            their respective <i>elements</i>.
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>What can we do with DOM?</h2>
+      <p>
+        Through DOM we can <em>dynamically</em> change what user see, the
+        implications are limitless. Some examples:
+      </p>
+      <ul>
+        <li>Add/Delete <i>elements</i></li>
+        <li>Change <i>elements</i>&OpenCurlyQuote; style</li>
+        <li>
+          Click on a <i><code>button</code></i>
+        </li>
+        <li>Add event listeners</li>
+      </ul>
+    </section>
+  </body>
+</html>
