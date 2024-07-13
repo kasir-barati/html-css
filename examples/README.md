@@ -10,3 +10,4 @@ Here you can see a list of website that you can go to and try to markup its cont
 1. [How to be a senior developer](https://www.reddit.com/r/dotnet/comments/tew3vj/how_to_be_a_senior_developer/)
 2. [Kittens 'adopted' by pet rabbit](http://news.bbc.co.uk/2/hi/uk_news/scotland/north_east/7101506.stm)
 3. [How to Play Minecraft (Beginner's Guide)](https://www.dummies.com/article/home-auto-hobbies/games/online-games/minecraft/how-to-play-minecraft-145084/)
+4. [An easy vanilla cake recipe](https://www.houseandgarden.co.uk/recipe/simple-vanilla-cake-recipe)
