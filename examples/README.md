@@ -1,3 +1,5 @@
+![Importance of practice](./hands-on-importance.png)
+
 # HTML
 
 Here you can see a list of website that you can go to and try to markup its content in a way that is compliant with HTML specification. Some heads ups:
