@@ -30,8 +30,16 @@
           <dd>Language learner</dd>
           <dd>Anime writer</dd>
           <dt>Website</dt>
-          <dd>https://kasir-barati.github.io</dd>
-          <dd>https://linkedin.com/in/kasir-barati</dd>
+          <dd>
+            <a href="https://kasir-barati.github.io">
+              https://kasir-barati.github.io
+            </a>
+          </dd>
+          <dd>
+            <a href="https://linkedin.com/in/kasir-barati">
+              https://linkedin.com/in/kasir-barati
+            </a>
+          </dd>
           <dt>Twitter</dt>
           <dd>@kasir_barati</dd>
         </dl>
@@ -160,6 +168,7 @@
       </section>
 
       <footer id="mailingaddress">
+        <!-- Implicit section -->
         <h2>Mailing Address</h2>
         <address>
           <p>
@@ -180,6 +189,81 @@
             </p>
           </aside>
         </address>
+
+        <!-- Explicit section -->
+        <section>
+          <h2>Contact form</h2>
+          <form action="./index.html" method="post">
+            <p>
+              <label for="firstName">Full name</label>
+              <input
+                required
+                type="text"
+                maxlength="200"
+                name="name"
+                id="firstName"
+              />
+            </p>
+            <p>
+              <label for="emailAddress">Email address</label>
+              <input type="email" id="emailAddress" required name="email" />
+            </p>
+            <p>
+              <label for="contactReason">Contact Reason</label>
+              <select multiple id="contactReason">
+                <option label="Consulting" value="consulting"></option>
+                <option label="Need Experienced Developer">
+                  need-experienced-developer
+                </option>
+                <option label="Other" value="other"></option>
+              </select>
+            </p>
+            <p>
+              <label for="userMessage">Message</label>
+              <textarea
+                id="userMessage"
+                name="message"
+                cols="40"
+                row="10"
+              ></textarea>
+            </p>
+            <fieldset>
+              <legend>Best contact time</legend>
+              <p>
+                <label for="bestContactTimeMorning">Morning</label>
+                <input
+                  type="radio"
+                  id="bestContactTimeMorning"
+                  name="contactTime"
+                  value="morning"
+                />
+              </p>
+              <p>
+                <label for="bestContactTimeEvening">Evening</label>
+                <input
+                  type="radio"
+                  id="bestContactTimeEvening"
+                  name="contactTime"
+                  value="evening"
+                />
+              </p>
+              <p>
+                <label for="contactMeThroughEmail">
+                  Contact me through email
+                </label>
+                <input
+                  type="checkbox"
+                  name="emailContact"
+                  id="contactMeThroughEmail"
+                  value="true"
+                />
+              </p>
+            </fieldset>
+            <p>
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </section>
       </footer>
     </main>
   </body>
