@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef John's Vanilla Ice Cream</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img src="allrecipes-logo.png" />
+      <form action="#" method="get">
+        <input type="search" name="searchQuery" />
+        <button type="submit"><img src="magnifier-icon.png" /></button>
+      </form>
+      <!-- Secondary nav -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <!-- Show user's avatar if they are logged in -->
+              <img src="#" hidden />
+              <!-- And if user is not logged in show them only an icon -->
+              <span
+                class="icon-user"
+                role="presentation"
+                aria-label="User"
+              ></span>
+              Log In
+            </a>
+          </li>
+          <li>
+            <button type="button">Magazine</button>
+            <ul>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Manage Your Subscription</a></li>
+              <li><a href="#">Give a Gift Subscription</a></li>
+              <li><a href="#">Get Help</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">Sweepstakes</a></li>
+        </ul>
+      </nav>
+      <!-- Primary nav -->
+      <nav>
+        <a class="uppercase" href="#">dinners</a>
+        <a class="uppercase" href="#">meals</a>
+        <a class="uppercase" href="#">ingredients</a>
+        <a class="uppercase" href="#">occasions</a>
+        <a class="uppercase" href="#">cuisines</a>
+        <a class="uppercase" href="#">kitchen tips</a>
+        <a class="uppercase" href="#">news</a>
+        <a class="uppercase" href="#">features</a>
+        <a class="uppercase" href="#">about us</a>
+      </nav>
+    </header>
+    <!-- removable -->
+    <section>
+      <p>
+        Hurry! Practically everything from Lodge is on sale for Amazon Prime
+        Day.
+      </p>
+      <button type="button">
+        <span class="icon-close" role="img" aria-label="Close"></span>
+      </button>
+    </section>
+    <!-- The element can be used for advertising -->
+    <div class="ad">ads</div>
+    <!-- breadcrumb -->
+    <section>
+      <ol>
+        <li><a href="#">desserts</a></li>
+        <li><a href="#">FROZEN DESSERT RECIPES</a></li>
+        <li><a href="#">ICE CREAM</a></li>
+        <li><a href="#">VANILLA ICE CREAM RECIPES</a></li>
+      </ol>
+    </section>
+    <main>
+      <h1>How to Make Vanilla Ice Cream</h1>
+      <!-- Did not wanna communicate any idea, like that they are in one group. -->
+      <div>
+        <p>
+          <a href="#reviewSection">
+            <!-- 
+              Or replace them with this: <span class="icon-w" role="img" aria-label="star"></span>
+             -->
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="half">&star;</span>
+          </a>
+          <a href="#reviewSection">4.6</a>
+          (174)
+        </p>
+        <a href="#reviewSection">135 reviews</a>
+        <button type="button">14 photos</button>
+      </div>
+      <p>
+        This homemade ice cream is easy to make with just 4 ingredients: pure
+        vanilla extract, milk, heavy whipping cream, and sugar. This American or
+        Philadelphia-style ice cream makes for a brighter, more pronounced
+        vanilla flavor.
+      </p>
+      <div>
+        By
+        <address><a href="#">John Mitzewich</a></address>
+        <!-- With JavaScript we remove the hidden attribute when user hovers over the name -->
+        <article hidden>
+          <figure>
+            <img src="John-Mitzewich.png" />
+            <figcaption>
+              John Mitzewich
+              <address>
+                <a href="#">
+                  <span
+                    class="icon-twitter"
+                    role="img"
+                    aria-label="Twitter"
+                  ></span>
+                </a>
+              </address>
+            </figcaption>
+          </figure>
+          <p>
+            John Mitzewich — aka Chef John — has produced more than 1,500
+            cooking videos for Allrecipes. He's the actor, director, and
+            screenwriter whose hands and voice confidently walk you through
+            techniques.
+          </p>
+          <footer>ALLRECIPES' EDITORIAL GUIDELINES &gt;</footer>
+        </article>
+      </div>
+      <p>Updated on <time datetime="2024-05-22">May 22, 2024</time></p>
+      <menu>
+        <li>
+          <button type="button">
+            Save
+            <span
+              class="icon-heart"
+              role="presentation"
+              aria-label="Heart"
+            ></span>
+          </button>
+        </li>
+        <li>
+          <a href="#reviewSection">
+            Rate
+            <span
+              class="icon-star"
+              role="presentation"
+              aria-label="star"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <button type="button">
+            Print
+            <span
+              class="icon-printer"
+              role="presentation"
+              aria-label="Printer"
+            ></span>
+          </button>
+        </li>
+        <li>
+          <button>
+            Share
+            <span
+              class="icon-curve-right-arrow"
+              role="presentation"
+              aria-label="Curve right arrow"
+            ></span>
+          </button>
+          <p>
+            <a href="#">
+              <span class="icon-fb" role="img" aria-label="facebook"></span>
+            </a>
+            <a href="#">
+              <span class="icon-twitter" role="img" aria-label="Twitter"></span>
+            </a>
+            <a href="#">
+              <span
+                class="icon-pinterest"
+                role="img"
+                aria-label="Pinterest"
+              ></span>
+            </a>
+            <a href="#">
+              <span class="icon-email" role="img" aria-label="Email"></span>
+            </a>
+          </p>
+        </li>
+      </menu>
+      <!-- In the HTML spec in section 4.3.2 for article element says: ... any other independent item of content. -->
+      <article>
+        <video
+          controls
+          src="#"
+          autoplay
+          loop
+          muted
+          width="400"
+          height="200"
+        ></video>
+      </article>
+      <!-- gallery -->
+      <p>
+        <button type="button"><img src="image1.png" /></button>
+        <button type="button"><img src="image2.png" /></button>
+        <button type="button"><img src="image3.png" /></button>
+        <button type="button"><img src="image4.png" /></button>
+        <button type="button">
+          <img class="blured" src="image5.png" />
+        </button>
+      </p>
+      <aside>
+        <p>
+          <b>Prep Time:</b>
+          <br />
+          5 mins
+        </p>
+        <p>
+          <b>Cook Time:</b>
+          <br />
+          5 mins
+        </p>
+        <p>
+          <b>Additional Time:</b>
+          <br />
+          2 hrs 20 mins
+        </p>
+        <p>
+          <b>Additional Time:</b>
+          <br />
+          2 hrs 20 mins
+        </p>
+        <p>
+          <b>Servings:</b>
+          <br />
+          4
+        </p>
+        <footer>
+          <a href="#nutritionFacts">Jump to Nutrition Facts</a>
+        </footer>
+      </aside>
+      <p>
+        Homemade ice cream is incredibly easy to make with just a few simple
+        ingredients you likely already have on hand. This vanilla ice cream
+        recipe will quickly become a go-to in your repertoire.
+      </p>
+      <section>
+        <h2>How to Make Ice Cream</h2>
+        <p>
+          You'll find a detailed ingredient list and step-by-step instructions
+          in the recipe below, but let's go over the basics:
+        </p>
+        <section>
+          <h3>Vanilla Ice Cream Ingredients</h3>
+          <p>
+            These are the four ingredients you’ll need to make this homemade
+            vanilla ice cream recipe:
+          </p>
+          <ul>
+            <li>
+              <b>Milk</b>: This homemade vanilla ice cream starts with 2 ¼ cups
+              of milk.
+            </li>
+            <li>
+              <b>Heavy whipping cream</b>: A cup of heavy whipping cream comes
+              next.
+            </li>
+            <li><b>Sugar</b>: White sugar sweetens things up.</li>
+            <li>
+              <b>Vanilla</b>: Two teaspoons of vanilla extract enhances the
+              overall flavor.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>How to Make Homemade Ice Cream</h3>
+          <p>
+            Wondering how to make ice cream at home? We’ve got you covered.
+            Here’s a brief overview of what you can expect when you make vanilla
+            ice cream at home:
+          </p>
+          <ol>
+            <li>
+              Cook the milk, cream, and sugar until the sugar has dissolved.
+            </li>
+            <li>
+              Transfer the mixture to a measuring cup, then add the vanilla
+              extract. Chill overnight.
+            </li>
+            <li>
+              Pour the mix into an ice cream maker and churn according to the
+              manufacturer's directions.
+            </li>
+            <li>Serve immediately or ripen in the freezer before serving.</li>
+          </ol>
+        </section>
+      </section>
+      <section>
+        <h2>How Long Does Ice Cream Last?</h2>
+        <p>
+          Homemade ice cream won’t last as long as store-bought ice cream. Store
+          your vanilla ice cream in an airtight storage container, recycled ice
+          cream container, or zip-top freezer bag. Try to enjoy the ice cream
+          within a few weeks for the best taste.
+        </p>
+      </section>
+      <section>
+        <h2>What to Serve With Ice Cream</h2>
+        <ul>
+          <li>
+            Drizzle your homemade ice cream with
+            <a href="#">chocolate syrup</a> caramel sauce, or fruit sauce.
+          </li>
+          <li>
+            Pair the vanilla ice cream with
+            <a href="#">a fruit crisp or cobbler</a>
+          </li>
+          <li>
+            For an impressive presentation, consider serving your ice cream in a
+            store-bought or <a href="#">homemade waffle cone</a>.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Allrecipes Community Tips and Praise</h2>
+        <!-- 
+            The use of q elements to mark up quotations is entirely optional; using explicit quotation punctuation without q elements is just as correct.
+
+            Really handy if we use cite attribute alongside it.
+        -->
+        <p>
+          <q>Great base recipe,</q> raves Sweets4mysweet.
+          <q>
+            Have made it several times. You can add pretty much anything to it
+            and it comes out great. I've added Creme de Menthe and mini
+            chocolate chips, cocoa powder, and vanilla bean and they have all
+            been wonderful!
+          </q>
+        </p>
+        <p>
+          <q>Best recipe I have found for my ice cream maker,</q>
+          says one Allrecipes community member.
+          <q>
+            It's a little soft when done, but sets up nicely after freezing for
+            about an hour.
+          </q>
+        </p>
+        <aside>Editorial contributions by <a href="#">Corey Williams</a></aside>
+      </section>
+      <section>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>2 ¼ cups milk</li>
+          <li>1 cup heavy whipping cream</li>
+          <li>¾ cup white sugar</li>
+          <li>2 teaspoons vanilla extract</li>
+        </ul>
+      </section>
+      <iframe src="https://ads.com/?cusotmerId=1"></iframe>
+      <section>
+        <h2>Directions</h2>
+        <dl>
+          <dt>Step 1</dt>
+          <dd>
+            Stir milk, cream, and sugar in a saucepan over low heat until sugar
+            has dissolved. Heat just until the mixture is hot and a small ring
+            of foam appears around the edge.
+          </dd>
+          <dt>Step 2</dt>
+          <dd>
+            Transfer cream mixture to a pourable container such as a large
+            measuring cup. Stir in vanilla extract and chill mix thoroughly, at
+            least 2 hours. (Overnight is best.)
+          </dd>
+          <dt>Step 3</dt>
+          <dd>
+            Pour cold ice cream mix into an ice cream maker, turn on the
+            machine, and churn according to manufacturer's directions, 20 to 25
+            minutes.
+          </dd>
+          <dt>Step 4</dt>
+          <dd>
+            When ice cream is softly frozen, serve immediately or place a piece
+            of plastic wrap directly on the ice cream and place in the freezer
+            to ripen, 2 to 3 hours.
+          </dd>
+        </dl>
+        <figure>
+          <img src="vanilla.png" alt="Vanilla ice cream in a cup" />
+          <figcaption class="uppercase">photo: rainbowjewels</figcaption>
+        </figure>
+      </section>
+      <p>
+        <a href="#reviewSection">
+          I made it
+          <span
+            class="icon-spoon"
+            role="presentation"
+            aria-label="Spoon"
+          ></span>
+        </a>
+        <button type="button">
+          print
+          <span
+            class="icon-printer"
+            role="presentation"
+            aria-label="Printer"
+          ></span>
+        </button>
+      </p>
+    </main>
+    <section>
+      <h2>Nutrition Facts <span class="text-sm">(per serving)</span></h2>
+      <p>
+        <b>425</b>
+        <br />
+        Calories
+      </p>
+      <p>
+        <b>25g</b>
+        <br />
+        Fat
+      </p>
+      <p>
+        <b>46g</b>
+        <br />
+        Carbs
+      </p>
+      <p>
+        <b> 6g </b>
+        <br />
+        Protein
+      </p>
+      <details>
+        <summary>Show Full Nutrition Label</summary>
+        <figure>
+          <table>
+            <caption>
+              <h3>Nutrition Facts</h3>
+              <p>Servings Per Recipe: 4</p>
+              <p>Calories: 425</p>
+            </caption>
+            <thead>
+              <tr>
+                <th colspan="2">% Daily Value *</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Total Fat:</b> 25g</td>
+                <td>32%</td>
+              </tr>
+              <tr>
+                <td><b>Saturated Fat:</b> 15g</td>
+                <td>77%</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <figcaption>
+          <!-- 
+            Note: I did not use footnotes but we could do that too, though it is not done in the web page.
+            https://html.spec.whatwg.org/multipage/semantics-other.html#footnotes
+          -->
+          <p>
+            * Percent Daily Values are based on a 2,000 calorie diet. Your daily
+            values may be higher or lower depending on your calorie needs.
+          </p>
+          <p>
+            ** Nutrient information is not available for all ingredients. Amount
+            is based on available nutrient data.
+          </p>
+          <p>
+            (-) Information is not currently available for this nutrient. If you
+            are following a medically restrictive diet, please consult your
+            doctor or registered dietitian before preparing this recipe for
+            personal consumption.
+          </p>
+        </figcaption>
+      </details>
+    </section>
+    <!-- ... other content that is considered separate from the main content of the page. -->
+    <aside id="reviewSection">
+      <h2>Reviews (135)</h2>
+      <p>Check out our <a href="#">Community Guidelines</a> about reviews.</p>
+      <article>
+        <img src="fower.png" alt="Flower" />
+        <h3>How to Make Vanilla Ice Cream</h3>
+        <form action="#" method="post">
+          <!-- Required -->
+          <fieldset>
+            <legend><b>Your Rating</b></legend>
+            <p>
+              <input type="radio" name="rating" required value="1" />
+              <span class="icon-star" role="img" aria-label="1 star"></span>
+            </p>
+            <p>
+              <input type="radio" name="rating" required value="2" />
+              <span class="icon-star" role="img" aria-label="2 star"></span>
+            </p>
+            <p>
+              <input type="radio" name="rating" required value="3" />
+              <span class="icon-star" role="img" aria-label="3 star"></span>
+            </p>
+            <p>
+              <input type="radio" name="rating" required value="4" />
+              <span class="icon-star" role="img" aria-label="4 star"></span>
+            </p>
+            <p>
+              <input type="radio" name="rating" required value="5" />
+              <span class="icon-star" role="img" aria-label="5 star"></span>
+            </p>
+            <!-- The following part will be managed via JavaScript -->
+            <p>
+              <span hidden>Couldn't eat it!</span>
+              <span hidden>Didn't like it!</span>
+              <span hidden>It was OK!</span>
+              <span hidden>Liked it!</span>
+              <span hidden>Loved it!</span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <label for="review">Your Review</label>
+            </legend>
+            <!-- This part is managed by JavaScript dynamically -->
+            <p id="default-reviews" hidden>
+              <label for="missingSomething">Missing something</label>
+              <input
+                hidden
+                type="checkbox"
+                id="missingSomething"
+                name="defaultReview"
+                value="missing-something"
+              />
+            </p>
+            <textarea
+              id="review"
+              name="review"
+              placeholder="What did you think about this recipe? Did you make any changes or notes?"
+            ></textarea>
+          </fieldset>
+          <p>
+            <button type="reset">Cancel</button>
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+        <article>
+          <img src="shorecook-avatar.png" />
+          <b>SHORECOOK</b>
+          <p>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+            <span class="filled">&star;</span>
+          </p>
+          <time datetime="2013-08-25">08/25/2013</time>
+          <figure>
+            <img alt="shorecook's vanilla" src="shorecook-vanilla.png" />
+            <figcaption>
+              EXCELLENT! Chef John has never let me down. This recipe was so
+              easy, I found myself giving it over the phone to a friend without
+              even looking at the recipe. I watched the video first which is
+              always a plus. I did make one change and that was to use vanilla
+              bean paste in place of vanilla extract. I like seeing the vanilla
+              beans in the ice cream and the flavor was oh so good!!! Thank you
+              Chef John for sharing such an EXCELLENT recipe! I will be making
+              this many times over!
+            </figcaption>
+          </figure>
+          <footer>
+            <button type="button">
+              <span
+                class="icon-like"
+                role="presentation"
+                aria-label="Like"
+              ></span>
+              Helpful <small>(84)</small>
+            </button>
+          </footer>
+        </article>
+      </article>
+      <p>
+        <span class="float-left">135 Reviews</span>
+        <span class="float-right">
+          <button type="button">
+            <span
+              class="icon-hamburger"
+              role="presentation"
+              aria-label="Hamburger"
+            ></span>
+            Sort
+          </button>
+          <button type="button">
+            <span
+              class="icon-strawberry"
+              role="presentation"
+              aria-label="Strawberry"
+            ></span>
+            Filter
+          </button>
+        </span>
+      </p>
+      <article>
+        <img src="cindy-sherwood-avatar.png" />
+        <b>Cindy Sherwood</b>
+        <p>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+        </p>
+        <time datetime="2024-07-14">07/14/2024</time>
+        <figure>
+          <img alt="Cindy Sherwood's vanilla" src="shorecook-vanilla.png" />
+          <figcaption>Absolutely delicious and so easy!</figcaption>
+        </figure>
+        <footer>
+          <button type="button">
+            <span
+              class="icon-like"
+              role="presentation"
+              aria-label="Like"
+            ></span>
+            Helpful <small>(0)</small>
+          </button>
+        </footer>
+      </article>
+      <article>
+        <img src="allrecipes-member-avatar.png" />
+        <b>Allrecipes Member</b>
+        <p>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+          <span class="filled">&star;</span>
+        </p>
+        <time datetime="2024-04-02">04/02/2024</time>
+        <figure>
+          <img alt="shorecook vanilla" src="shorecook-vanilla.png" />
+          <figcaption>
+            <p>
+              <span class="mr-2">
+                <span
+                  class="icon-like"
+                  role="presentation"
+                  aria-label="Like"
+                ></span>
+                Easy to follow
+              </span>
+              <span class="mr-2">
+                <span
+                  class="icon-like"
+                  role="presentation"
+                  aria-label="Like"
+                ></span>
+                A keeper!
+              </span>
+              <span class="mr-2">
+                <span
+                  class="icon-like"
+                  role="presentation"
+                  aria-label="Like"
+                ></span>
+                Worth the effort
+              </span>
+            </p>
+          </figcaption>
+        </figure>
+        <footer>
+          <button type="button">
+            <span
+              class="icon-like"
+              role="presentation"
+              aria-label="Like"
+            ></span>
+            Helpful <small>(0)</small>
+          </button>
+        </footer>
+      </article>
+      <footer>
+        <button type="button" class="uppercase">load more reviews</button>
+      </footer>
+    </aside>
+    <iframe src="https://ads.com/?cusotmerId=1"></iframe>
+    <section>
+      <h2>You’ll Also Love</h2>
+      <section>
+        <!-- each section contains 5 article with same structure but different data -->
+        <article>
+          <a href="#">
+            <figure>
+              <img src="ice-cream.png" alt="Frozen Vanilla Custard" />
+              <figcaption>
+                <p class="uppercase">vanilla ice cream recipe</p>
+                <h3>Frozen Vanilla Custard</h3>
+                <p>
+                  <span class="filled">&star;</span>
+                  <span class="filled">&star;</span>
+                  <span class="filled">&star;</span>
+                  <span class="filled">&star;</span>
+                  <span class="filled">&star;</span>
+                </p>
+                37 Ratings
+              </figcaption>
+            </figure>
+          </a>
+          <button type="button">
+            <span class="icon-heart" role="img" aria-label="Heart"></span>
+          </button>
+        </article>
+      </section>
+      <section>
+        <!-- Again another 5 article same as previous section -->
+      </section>
+      <iframe src="ads.com/?cusotmerId=1"></iframe>
+    </section>
+    <footer>
+      <article>
+        <a href="/"><img src="logo.png" /></a>
+        <button type="button" class="uppercase">newsletters</button>
+        <p>
+          Follow Us
+          <br />
+          <a href="#">
+            <span class="icon-fb" role="img" aria-label="Facebook"></span>
+          </a>
+          <a href="#">
+            <span
+              class="icon-instagram"
+              role="img"
+              aria-label="Instagram"
+            ></span>
+          </a>
+          <a href="#">
+            <span
+              class="icon-pinterest"
+              role="img"
+              aria-label="Pinterest"
+            ></span>
+          </a>
+          <a href="#">
+            <span class="icon-tiktok" role="img" aria-label="Tiktok"></span>
+          </a>
+          <a href="#">
+            <span class="icon-youtube" role="img" aria-label="YouTube"></span>
+          </a>
+          <a href="#">
+            <span class="icon-twitter" role="img" aria-label="Twitter"></span>
+          </a>
+          <a href="#">
+            <span
+              class="icon-flipboard"
+              role="img"
+              aria-label="Flipboard"
+            ></span>
+          </a>
+        </p>
+      </article>
+      <nav>
+        <ul>
+          <li>
+            <a class="uppercase" href="#">dinners</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">meals</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">ingredients</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">occasions</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">cuisines</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">kitchen tips</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">news</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">features</a>
+          </li>
+          <li>
+            <a class="uppercase" href="#">about us</a>
+          </li>
+        </ul>
+      </nav>
+      <article>
+        <div>
+          <p>
+            <a href="#"> About Us </a>
+            <a href="#"> Anti-Racism Pledge </a>
+            <a href="#"> Product Vetting </a>
+            <a href="#"> Advertise </a>
+            <a href="#"> Contact </a>
+          </p>
+          <p>
+            <a href="#">Editorial Process</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Careers</a>
+            <a href="#">EU Privacy</a>
+          </p>
+        </div>
+        <a href="#">
+          <img
+            src="privacy-mark.png"
+            alt="Privacy feedback. Powered by TRUSTe"
+          />
+        </a>
+      </article>
+      <p>
+        <img src="dotdash-mere-dith-logo.png" />
+        <small>
+          Allrecipes is part of the <a href="#">Dotdash Meredith</a> publishing
+          family.
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>
