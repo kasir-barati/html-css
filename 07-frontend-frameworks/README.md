@@ -49,5 +49,5 @@ So now that we realized that what ever we talked about it up until still applies
 So, when we make good choices while marking up our documents it is going to improve readability and as a result maintainability.
 
 [1]: https://react.dev/
-[2]: https://angular.dev/
-[3]: https://vuejs.org/
+[2]: https://vuejs.org/
+[3]: https://angular.dev/
