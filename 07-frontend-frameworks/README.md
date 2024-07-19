@@ -30,20 +30,20 @@ In this example we are editing an element's content and its class.
 
 These are the main stream frameworks: ReactJS, Angular, Vue. They all have HTML templates in order to manipulate DOM. They might look a bit different from one another but they're all working towards same goal.
 
-| Framework | Code in the JS framework                                                     | Final HTML                               |
-| --------- | ---------------------------------------------------------------------------- | ---------------------------------------- |
-| ReactJS   | https://github.com/kasir-barati/html-css/07-frontend-frameworks/react.tsx    | `<div>Hello なると. What's up?</div>` 　 |
-| VueJS     | https://github.com/kasir-barati/html-css/07-frontend-frameworks/vue.vue      | `<div>User updated!</div>` 　            |
-| Angular   | https://github.com/kasir-barati/html-css/07-frontend-frameworks/angular.html | `<div>Purple luggage.</div>`　           |
+| Framework | Code in the JS framework                                                               | Final HTML                               |
+| --------- | -------------------------------------------------------------------------------------- | ---------------------------------------- |
+| ReactJS   | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/react.tsx    | `<div>Hello なると. What's up?</div>` 　 |
+| VueJS     | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/vue.vue      | `<div>User updated!</div>` 　            |
+| Angular   | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/angular.html | `<div>Purple luggage.</div>`　           |
 
 These HTML templates might look a bit different but the point here is that the result is still ultimately a HTML document. So here is the most important question: <strong>Is the manipulated DOM still semantic?</strong>
 
 So now that we realized that what ever we talked about it up until still applies. But when you're using these frameworks you might need to put some code to do something somewhere. That's probably why you might code like this. But is it the only viable option?
 
-| Framework | Code in the JS framework                                                            |
-| --------- | ----------------------------------------------------------------------------------- |
-| ReactJS   | https://github.com/kasir-barati/html-css/07-frontend-frameworks/better-react.tsx    |
-| VueJS     | https://github.com/kasir-barati/html-css/07-frontend-frameworks/better-vue.vue      |
-| Angular   | https://github.com/kasir-barati/html-css/07-frontend-frameworks/better-angular.html |
+| Framework | Code in the JS framework                                                                      |
+| --------- | --------------------------------------------------------------------------------------------- |
+| ReactJS   | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/better-react.tsx    |
+| VueJS     | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/better-vue.vue      |
+| Angular   | https://github.com/kasir-barati/html-css/tree/main/07-frontend-frameworks/better-angular.html |
 
 So, when we make good choices while marking up our documents it is going to improve readability and as a result maintainability.
