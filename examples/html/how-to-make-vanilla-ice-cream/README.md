@@ -18,8 +18,6 @@ I was really puzzled by this, for a while I was thinking what should I do. So I 
 
 I noticed something, previously I used `ul` instead of `ol` while now that I put it perspective I believe it should be marked up with ol. Because the order matters.
 
-https://www.w3.org/WAI/ARIA/apg/patterns/radio/examples/radio-rating/
-
 ## `section`
 
 I was confused at the time I was trying to markup the following part since I did think we can use `section` only when we wanna define a header for it (in other word it'll be listed in the outline). So that's when I read the HTML spec and learned that it is not a section. So I decided to wrap it with with a `div`.
@@ -28,7 +26,7 @@ I was confused at the time I was trying to markup the following part since I did
 
 ## Advertisements or ads
 
-I noticed that I was mistakenly using `section` element for advertisements. While the appropriate element is either an `iframe` tag ([ref](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)). Read more:
+I noticed that I was mistakenly using `section` element for advertisements. While the appropriate element is either an `iframe` tag ([ref](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)), or `div` element. Read more:
 
 - [Stackoverflow Q&A](https://stackoverflow.com/q/11002621/8784518)
 - [Stackoverflow comment](https://stackoverflow.com/questions/14384431/html-element-for-ad/14405396#comment138856933_14405396)
@@ -50,7 +48,7 @@ There is a very fascinating discussion on [here](https://stackoverflow.com/a/250
 
 ### Why not `img`
 
-Thought `img` as it's semantic is aligned with icons, and `alt` attribute can give it even more meaning. But, we should not also use `img` because even empty `src` attribute sends a request to server ([learn more](https://humanwhocodes.com/blog/2009/11/30/empty-image-src-can-destroy-your-site/)).
+Though `img` as it's semantic is aligned with icons, and `alt` attribute can give it even more meaning. But, we should not also use `img` because even empty `src` attribute sends a request to server ([learn more](https://humanwhocodes.com/blog/2009/11/30/empty-image-src-can-destroy-your-site/)).
 
 ### Why `span`
 

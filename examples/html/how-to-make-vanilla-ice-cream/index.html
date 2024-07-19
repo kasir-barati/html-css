@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chef John's Vanilla Ice Cream</title>
+    <link rel="icon" href="./allrecipes-favicon.ico" />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <img src="allrecipes-logo.png" />
+      <a href="/"><img src="allrecipes-logo.png" /></a>
       <form action="#" method="get">
         <input type="search" name="searchQuery" />
-        <button type="submit"><img src="magnifier-icon.png" /></button>
+        <button type="submit">
+          <span
+            class="icon-magnifier"
+            role="img"
+            aria-label="Magnifier Icon"
+          ></span>
+        </button>
       </form>
       <!-- Secondary nav -->
       <nav>
@@ -30,8 +37,8 @@
             </a>
           </li>
           <li>
-            <button type="button">Magazine</button>
-            <ul>
+            <p class="" id="magazineItemSecondaryNav">Magazine</p>
+            <ul hidden id="magazineSubElements">
               <li><a href="#">Subscribe</a></li>
               <li><a href="#">Manage Your Subscription</a></li>
               <li><a href="#">Give a Gift Subscription</a></li>
@@ -55,365 +62,353 @@
         <a class="uppercase" href="#">about us</a>
       </nav>
     </header>
-    <!-- removable -->
-    <section>
-      <p>
-        Hurry! Practically everything from Lodge is on sale for Amazon Prime
-        Day.
-      </p>
-      <button type="button">
-        <span class="icon-close" role="img" aria-label="Close"></span>
-      </button>
-    </section>
     <!-- The element can be used for advertising -->
-    <div class="ad"></div>
+    <iframe src="https://ads.com/?cusotmerId=1"></iframe>
     <!-- breadcrumb -->
-    <section>
-      <ol>
-        <li><a href="#">desserts</a></li>
-        <li><a href="#">FROZEN DESSERT RECIPES</a></li>
-        <li><a href="#">ICE CREAM</a></li>
-        <li><a href="#">VANILLA ICE CREAM RECIPES</a></li>
-      </ol>
-    </section>
+    <ol class="breadcrumb">
+      <li><a class="uppercase" href="#">desserts</a></li>
+      <li><a class="uppercase" href="#">frozen desert recipes</a></li>
+      <li><a class="uppercase" href="#">ice cream</a></li>
+      <li><a class="uppercase" href="#">vanilla ice cream recipes</a></li>
+    </ol>
     <main>
-      <h1>How to Make Vanilla Ice Cream</h1>
-      <!-- Did not wanna communicate any idea, like that they are in one group. -->
-      <div>
+      <section>
+        <h1>How to Make Vanilla Ice Cream</h1>
+        <!-- Did not wanna communicate any idea, like that they are in one group. -->
+        <div>
+          <p>
+            <a href="#reviewSection">
+              <!-- 
+                Or replace them with this: <span class="icon-star" role="img" aria-label="star"></span>
+               -->
+              <span class="filled">&star;</span>
+              <span class="filled">&star;</span>
+              <span class="filled">&star;</span>
+              <span class="filled">&star;</span>
+              <span class="half">&star;</span>
+            </a>
+            <a href="#reviewSection">4.6</a>
+            (174)
+          </p>
+          <a href="#reviewSection">135 reviews</a>
+          <button type="button">14 photos</button>
+        </div>
+        <p>
+          This homemade ice cream is easy to make with just 4 ingredients: pure
+          vanilla extract, milk, heavy whipping cream, and sugar. This American
+          or Philadelphia-style ice cream makes for a brighter, more pronounced
+          vanilla flavor.
+        </p>
+        <div>
+          By
+          <address><a href="#">John Mitzewich</a></address>
+          <!-- With JavaScript we remove the hidden attribute when user hovers over the name -->
+          <article hidden>
+            <figure>
+              <img src="John-Mitzewich.png" />
+              <figcaption>
+                <a href="#">John Mitzewich</a>
+                <address>
+                  <a href="#">
+                    <span
+                      class="icon-twitter"
+                      role="img"
+                      aria-label="Twitter"
+                    ></span>
+                  </a>
+                </address>
+              </figcaption>
+            </figure>
+            <p>
+              John Mitzewich — aka Chef John — has produced more than 1,500
+              cooking videos for Allrecipes. He's the actor, director, and
+              screenwriter whose hands and voice confidently walk you through
+              techniques.
+            </p>
+            <footer class="uppercase">
+              Allrecipes' editorial guidelines
+              <span class="text-orange">&gt;</span>
+            </footer>
+          </article>
+        </div>
+        <p>Updated on <time datetime="2024-05-22">May 22, 2024</time></p>
+        <menu>
+          <li>
+            <button type="button">
+              Save
+              <span
+                class="icon-heart"
+                role="presentation"
+                aria-label="Heart"
+              ></span>
+            </button>
+          </li>
+          <li>
+            <a href="#reviewSection">
+              Rate
+              <span
+                class="icon-star"
+                role="presentation"
+                aria-label="star"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <button type="button">
+              Print
+              <span
+                class="icon-printer"
+                role="presentation"
+                aria-label="Printer"
+              ></span>
+            </button>
+          </li>
+          <li>
+            <button>
+              Share
+              <span
+                class="icon-curve-right-arrow"
+                role="presentation"
+                aria-label="Curve right arrow"
+              ></span>
+            </button>
+            <!-- With JS I'll manage the following p element -->
+            <p hidden>
+              <a href="#">
+                <span class="icon-fb" role="img" aria-label="facebook"></span>
+              </a>
+              <a href="#">
+                <span
+                  class="icon-twitter"
+                  role="img"
+                  aria-label="Twitter"
+                ></span>
+              </a>
+              <a href="#">
+                <span
+                  class="icon-pinterest"
+                  role="img"
+                  aria-label="Pinterest"
+                ></span>
+              </a>
+              <a href="#">
+                <span class="icon-email" role="img" aria-label="Email"></span>
+              </a>
+            </p>
+          </li>
+        </menu>
+        <!-- In the HTML spec in section 4.3.2 for article element says: ... any other independent item of content. -->
+        <article>
+          <video
+            controls
+            src="#"
+            autoplay
+            loop
+            muted
+            width="400"
+            height="200"
+          ></video>
+        </article>
+        <!-- gallery -->
+        <p>
+          <button type="button"><img src="image1.png" /></button>
+          <button type="button"><img src="image2.png" /></button>
+          <button type="button"><img src="image3.png" /></button>
+          <button type="button"><img src="image4.png" /></button>
+          <button type="button">
+            <img class="blured" src="image5.png" />
+            <p>
+              <span
+                class="icon-img"
+                role="presentation"
+                aria-label="Image icon"
+              ></span>
+              14
+            </p>
+          </button>
+        </p>
+        <aside>
+          <dl>
+            <dt><b>Prep Time:</b></dt>
+            <dd>5 mins</dd>
+            <!-- ... -->
+          </dl>
+          <footer>
+            <a href="#nutritionFacts">Jump to Nutrition Facts</a>
+          </footer>
+        </aside>
+        <p>
+          Homemade ice cream is incredibly easy to make with just a few simple
+          ingredients you likely already have on hand. This vanilla ice cream
+          recipe will quickly become a go-to in your repertoire.
+        </p>
+        <section>
+          <h2>How to Make Ice Cream</h2>
+          <p>
+            You'll find a detailed ingredient list and step-by-step instructions
+            in the recipe below, but let's go over the basics:
+          </p>
+          <section>
+            <h3>Vanilla Ice Cream Ingredients</h3>
+            <p>
+              These are the four ingredients you’ll need to make this homemade
+              vanilla ice cream recipe:
+            </p>
+            <ul>
+              <li>
+                <b>Milk</b>: This homemade vanilla ice cream starts with 2 ¼
+                cups of milk.
+              </li>
+              <li>
+                <b>Heavy whipping cream</b>: A cup of heavy whipping cream comes
+                next.
+              </li>
+              <li><b>Sugar</b>: White sugar sweetens things up.</li>
+              <li>
+                <b>Vanilla</b>: Two teaspoons of vanilla extract enhances the
+                overall flavor.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>How to Make Homemade Ice Cream</h3>
+            <p>
+              Wondering how to make ice cream at home? We’ve got you covered.
+              Here’s a brief overview of what you can expect when you make
+              vanilla ice cream at home:
+            </p>
+            <ol>
+              <li>
+                Cook the milk, cream, and sugar until the sugar has dissolved.
+              </li>
+              <li>
+                Transfer the mixture to a measuring cup, then add the vanilla
+                extract. Chill overnight.
+              </li>
+              <li>
+                Pour the mix into an ice cream maker and churn according to the
+                manufacturer's directions.
+              </li>
+              <li>Serve immediately or ripen in the freezer before serving.</li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <h2>How Long Does Ice Cream Last?</h2>
+          <p>
+            Homemade ice cream won’t last as long as store-bought ice cream.
+            Store your vanilla ice cream in an airtight storage container,
+            recycled ice cream container, or zip-top freezer bag. Try to enjoy
+            the ice cream within a few weeks for the best taste.
+          </p>
+        </section>
+        <section>
+          <h2>What to Serve With Ice Cream</h2>
+          <ul>
+            <li>
+              Drizzle your homemade ice cream with
+              <a href="#">chocolate syrup</a> caramel sauce, or fruit sauce.
+            </li>
+            <li>
+              Pair the vanilla ice cream with
+              <a href="#">a fruit crisp or cobbler</a>
+            </li>
+            <li>
+              For an impressive presentation, consider serving your ice cream in
+              a store-bought or <a href="#">homemade waffle cone</a>.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Allrecipes Community Tips and Praise</h2>
+          <!-- 
+              The use of q elements to mark up quotations is entirely optional; using explicit quotation punctuation without q elements is just as correct.
+  
+              Really handy if we use cite attribute alongside it.
+          -->
+          <p>
+            <q>Great base recipe,</q> raves Sweets4mysweet.
+            <q>
+              Have made it several times. You can add pretty much anything to it
+              and it comes out great. I've added Creme de Menthe and mini
+              chocolate chips, cocoa powder, and vanilla bean and they have all
+              been wonderful!
+            </q>
+          </p>
+          <p>
+            <q>Best recipe I have found for my ice cream maker,</q>
+            says one Allrecipes community member.
+            <q>
+              It's a little soft when done, but sets up nicely after freezing
+              for about an hour.
+            </q>
+          </p>
+          <aside>
+            Editorial contributions by <a href="#">Corey Williams</a>
+          </aside>
+        </section>
+        <section>
+          <h2>Ingredients</h2>
+          <ul>
+            <li>2 ¼ cups milk</li>
+            <li>1 cup heavy whipping cream</li>
+            <li>¾ cup white sugar</li>
+            <li>2 teaspoons vanilla extract</li>
+          </ul>
+        </section>
+        <iframe src="https://ads.com/?cusotmerId=1"></iframe>
+        <section>
+          <h2>Directions</h2>
+          <dl>
+            <dt>Step 1</dt>
+            <dd>
+              Stir milk, cream, and sugar in a saucepan over low heat until
+              sugar has dissolved. Heat just until the mixture is hot and a
+              small ring of foam appears around the edge.
+            </dd>
+            <dt>Step 2</dt>
+            <dd>
+              Transfer cream mixture to a pourable container such as a large
+              measuring cup. Stir in vanilla extract and chill mix thoroughly,
+              at least 2 hours. (Overnight is best.)
+            </dd>
+            <dt>Step 3</dt>
+            <dd>
+              Pour cold ice cream mix into an ice cream maker, turn on the
+              machine, and churn according to manufacturer's directions, 20 to
+              25 minutes.
+            </dd>
+            <dt>Step 4</dt>
+            <dd>
+              When ice cream is softly frozen, serve immediately or place a
+              piece of plastic wrap directly on the ice cream and place in the
+              freezer to ripen, 2 to 3 hours.
+            </dd>
+          </dl>
+          <figure>
+            <img src="vanilla.png" alt="Vanilla ice cream in a cup" />
+            <figcaption class="uppercase">photo: rainbowjewels</figcaption>
+          </figure>
+        </section>
         <p>
           <a href="#reviewSection">
-            <!-- 
-              Or replace them with this: <span class="icon-w" role="img" aria-label="star"></span>
-             -->
-            <span class="filled">&star;</span>
-            <span class="filled">&star;</span>
-            <span class="filled">&star;</span>
-            <span class="filled">&star;</span>
-            <span class="half">&star;</span>
-          </a>
-          <a href="#reviewSection">4.6</a>
-          (174)
-        </p>
-        <a href="#reviewSection">135 reviews</a>
-        <button type="button">14 photos</button>
-      </div>
-      <p>
-        This homemade ice cream is easy to make with just 4 ingredients: pure
-        vanilla extract, milk, heavy whipping cream, and sugar. This American or
-        Philadelphia-style ice cream makes for a brighter, more pronounced
-        vanilla flavor.
-      </p>
-      <div>
-        By
-        <address><a href="#">John Mitzewich</a></address>
-        <!-- With JavaScript we remove the hidden attribute when user hovers over the name -->
-        <article hidden>
-          <figure>
-            <img src="John-Mitzewich.png" />
-            <figcaption>
-              John Mitzewich
-              <address>
-                <a href="#">
-                  <span
-                    class="icon-twitter"
-                    role="img"
-                    aria-label="Twitter"
-                  ></span>
-                </a>
-              </address>
-            </figcaption>
-          </figure>
-          <p>
-            John Mitzewich — aka Chef John — has produced more than 1,500
-            cooking videos for Allrecipes. He's the actor, director, and
-            screenwriter whose hands and voice confidently walk you through
-            techniques.
-          </p>
-          <footer>ALLRECIPES' EDITORIAL GUIDELINES &gt;</footer>
-        </article>
-      </div>
-      <p>Updated on <time datetime="2024-05-22">May 22, 2024</time></p>
-      <menu>
-        <li>
-          <button type="button">
-            Save
+            I made it
             <span
-              class="icon-heart"
+              class="icon-spoon"
               role="presentation"
-              aria-label="Heart"
-            ></span>
-          </button>
-        </li>
-        <li>
-          <a href="#reviewSection">
-            Rate
-            <span
-              class="icon-star"
-              role="presentation"
-              aria-label="star"
+              aria-label="Spoon"
             ></span>
           </a>
-        </li>
-        <li>
           <button type="button">
-            Print
+            print
             <span
               class="icon-printer"
               role="presentation"
               aria-label="Printer"
             ></span>
           </button>
-        </li>
-        <li>
-          <button>
-            Share
-            <span
-              class="icon-curve-right-arrow"
-              role="presentation"
-              aria-label="Curve right arrow"
-            ></span>
-          </button>
-          <p>
-            <a href="#">
-              <span class="icon-fb" role="img" aria-label="facebook"></span>
-            </a>
-            <a href="#">
-              <span class="icon-twitter" role="img" aria-label="Twitter"></span>
-            </a>
-            <a href="#">
-              <span
-                class="icon-pinterest"
-                role="img"
-                aria-label="Pinterest"
-              ></span>
-            </a>
-            <a href="#">
-              <span class="icon-email" role="img" aria-label="Email"></span>
-            </a>
-          </p>
-        </li>
-      </menu>
-      <!-- In the HTML spec in section 4.3.2 for article element says: ... any other independent item of content. -->
-      <article>
-        <video
-          controls
-          src="#"
-          autoplay
-          loop
-          muted
-          width="400"
-          height="200"
-        ></video>
-      </article>
-      <!-- gallery -->
-      <p>
-        <button type="button"><img src="image1.png" /></button>
-        <button type="button"><img src="image2.png" /></button>
-        <button type="button"><img src="image3.png" /></button>
-        <button type="button"><img src="image4.png" /></button>
-        <button type="button">
-          <img class="blured" src="image5.png" />
-        </button>
-      </p>
-      <aside>
-        <p>
-          <b>Prep Time:</b>
-          <br />
-          5 mins
-        </p>
-        <p>
-          <b>Cook Time:</b>
-          <br />
-          5 mins
-        </p>
-        <p>
-          <b>Additional Time:</b>
-          <br />
-          2 hrs 20 mins
-        </p>
-        <p>
-          <b>Additional Time:</b>
-          <br />
-          2 hrs 20 mins
-        </p>
-        <p>
-          <b>Servings:</b>
-          <br />
-          4
-        </p>
-        <footer>
-          <a href="#nutritionFacts">Jump to Nutrition Facts</a>
-        </footer>
-      </aside>
-      <p>
-        Homemade ice cream is incredibly easy to make with just a few simple
-        ingredients you likely already have on hand. This vanilla ice cream
-        recipe will quickly become a go-to in your repertoire.
-      </p>
-      <section>
-        <h2>How to Make Ice Cream</h2>
-        <p>
-          You'll find a detailed ingredient list and step-by-step instructions
-          in the recipe below, but let's go over the basics:
-        </p>
-        <section>
-          <h3>Vanilla Ice Cream Ingredients</h3>
-          <p>
-            These are the four ingredients you’ll need to make this homemade
-            vanilla ice cream recipe:
-          </p>
-          <ul>
-            <li>
-              <b>Milk</b>: This homemade vanilla ice cream starts with 2 ¼ cups
-              of milk.
-            </li>
-            <li>
-              <b>Heavy whipping cream</b>: A cup of heavy whipping cream comes
-              next.
-            </li>
-            <li><b>Sugar</b>: White sugar sweetens things up.</li>
-            <li>
-              <b>Vanilla</b>: Two teaspoons of vanilla extract enhances the
-              overall flavor.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3>How to Make Homemade Ice Cream</h3>
-          <p>
-            Wondering how to make ice cream at home? We’ve got you covered.
-            Here’s a brief overview of what you can expect when you make vanilla
-            ice cream at home:
-          </p>
-          <ol>
-            <li>
-              Cook the milk, cream, and sugar until the sugar has dissolved.
-            </li>
-            <li>
-              Transfer the mixture to a measuring cup, then add the vanilla
-              extract. Chill overnight.
-            </li>
-            <li>
-              Pour the mix into an ice cream maker and churn according to the
-              manufacturer's directions.
-            </li>
-            <li>Serve immediately or ripen in the freezer before serving.</li>
-          </ol>
-        </section>
-      </section>
-      <section>
-        <h2>How Long Does Ice Cream Last?</h2>
-        <p>
-          Homemade ice cream won’t last as long as store-bought ice cream. Store
-          your vanilla ice cream in an airtight storage container, recycled ice
-          cream container, or zip-top freezer bag. Try to enjoy the ice cream
-          within a few weeks for the best taste.
         </p>
       </section>
-      <section>
-        <h2>What to Serve With Ice Cream</h2>
-        <ul>
-          <li>
-            Drizzle your homemade ice cream with
-            <a href="#">chocolate syrup</a> caramel sauce, or fruit sauce.
-          </li>
-          <li>
-            Pair the vanilla ice cream with
-            <a href="#">a fruit crisp or cobbler</a>
-          </li>
-          <li>
-            For an impressive presentation, consider serving your ice cream in a
-            store-bought or <a href="#">homemade waffle cone</a>.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Allrecipes Community Tips and Praise</h2>
-        <!-- 
-            The use of q elements to mark up quotations is entirely optional; using explicit quotation punctuation without q elements is just as correct.
-
-            Really handy if we use cite attribute alongside it.
-        -->
-        <p>
-          <q>Great base recipe,</q> raves Sweets4mysweet.
-          <q>
-            Have made it several times. You can add pretty much anything to it
-            and it comes out great. I've added Creme de Menthe and mini
-            chocolate chips, cocoa powder, and vanilla bean and they have all
-            been wonderful!
-          </q>
-        </p>
-        <p>
-          <q>Best recipe I have found for my ice cream maker,</q>
-          says one Allrecipes community member.
-          <q>
-            It's a little soft when done, but sets up nicely after freezing for
-            about an hour.
-          </q>
-        </p>
-        <aside>Editorial contributions by <a href="#">Corey Williams</a></aside>
-      </section>
-      <section>
-        <h2>Ingredients</h2>
-        <ul>
-          <li>2 ¼ cups milk</li>
-          <li>1 cup heavy whipping cream</li>
-          <li>¾ cup white sugar</li>
-          <li>2 teaspoons vanilla extract</li>
-        </ul>
-      </section>
-      <iframe src="https://ads.com/?cusotmerId=1"></iframe>
-      <section>
-        <h2>Directions</h2>
-        <dl>
-          <dt>Step 1</dt>
-          <dd>
-            Stir milk, cream, and sugar in a saucepan over low heat until sugar
-            has dissolved. Heat just until the mixture is hot and a small ring
-            of foam appears around the edge.
-          </dd>
-          <dt>Step 2</dt>
-          <dd>
-            Transfer cream mixture to a pourable container such as a large
-            measuring cup. Stir in vanilla extract and chill mix thoroughly, at
-            least 2 hours. (Overnight is best.)
-          </dd>
-          <dt>Step 3</dt>
-          <dd>
-            Pour cold ice cream mix into an ice cream maker, turn on the
-            machine, and churn according to manufacturer's directions, 20 to 25
-            minutes.
-          </dd>
-          <dt>Step 4</dt>
-          <dd>
-            When ice cream is softly frozen, serve immediately or place a piece
-            of plastic wrap directly on the ice cream and place in the freezer
-            to ripen, 2 to 3 hours.
-          </dd>
-        </dl>
-        <figure>
-          <img src="vanilla.png" alt="Vanilla ice cream in a cup" />
-          <figcaption class="uppercase">photo: rainbowjewels</figcaption>
-        </figure>
-      </section>
-      <p>
-        <a href="#reviewSection">
-          I made it
-          <span
-            class="icon-spoon"
-            role="presentation"
-            aria-label="Spoon"
-          ></span>
-        </a>
-        <button type="button">
-          print
-          <span
-            class="icon-printer"
-            role="presentation"
-            aria-label="Printer"
-          ></span>
-        </button>
-      </p>
     </main>
     <section>
       <h2>Nutrition Facts <span class="text-sm">(per serving)</span></h2>
@@ -460,29 +455,31 @@
                 <td><b>Saturated Fat:</b> 15g</td>
                 <td>77%</td>
               </tr>
+              <!-- ... -->
             </tbody>
           </table>
+          <figcaption>
+            <!-- 
+              Note: I did not use footnotes but we could do that too, though it is not done in the web page.
+              https://html.spec.whatwg.org/multipage/semantics-other.html#footnotes
+            -->
+            <p>
+              * Percent Daily Values are based on a 2,000 calorie diet. Your
+              daily values may be higher or lower depending on your calorie
+              needs.
+            </p>
+            <p>
+              ** Nutrient information is not available for all ingredients.
+              Amount is based on available nutrient data.
+            </p>
+            <p>
+              (-) Information is not currently available for this nutrient. If
+              you are following a medically restrictive diet, please consult
+              your doctor or registered dietitian before preparing this recipe
+              for personal consumption.
+            </p>
+          </figcaption>
         </figure>
-        <figcaption>
-          <!-- 
-            Note: I did not use footnotes but we could do that too, though it is not done in the web page.
-            https://html.spec.whatwg.org/multipage/semantics-other.html#footnotes
-          -->
-          <p>
-            * Percent Daily Values are based on a 2,000 calorie diet. Your daily
-            values may be higher or lower depending on your calorie needs.
-          </p>
-          <p>
-            ** Nutrient information is not available for all ingredients. Amount
-            is based on available nutrient data.
-          </p>
-          <p>
-            (-) Information is not currently available for this nutrient. If you
-            are following a medically restrictive diet, please consult your
-            doctor or registered dietitian before preparing this recipe for
-            personal consumption.
-          </p>
-        </figcaption>
       </details>
     </section>
     <!-- ... other content that is considered separate from the main content of the page. -->
@@ -518,11 +515,11 @@
             </p>
             <!-- The following part will be managed via JavaScript -->
             <p>
-              <span hidden>Couldn't eat it!</span>
-              <span hidden>Didn't like it!</span>
-              <span hidden>It was OK!</span>
-              <span hidden>Liked it!</span>
-              <span hidden>Loved it!</span>
+              <span id="1" hidden>Couldn't eat it!</span>
+              <span id="2" hidden>Didn't like it!</span>
+              <span id="3" hidden>It was OK!</span>
+              <span id="4" hidden>Liked it!</span>
+              <span id="5" hidden>Loved it!</span>
             </p>
           </fieldset>
           <fieldset>
@@ -553,6 +550,8 @@
             <button type="submit">Submit</button>
           </p>
         </form>
+        <!-- Missed rating overview part. -->
+        <!-- Most helpful positive review -->
         <article>
           <img src="shorecook-avatar.png" />
           <b>SHORECOOK</b>
@@ -564,19 +563,24 @@
             <span class="filled">&star;</span>
           </p>
           <time datetime="2013-08-25">08/25/2013</time>
-          <figure>
-            <img alt="shorecook's vanilla" src="shorecook-vanilla.png" />
-            <figcaption>
-              EXCELLENT! Chef John has never let me down. This recipe was so
-              easy, I found myself giving it over the phone to a friend without
-              even looking at the recipe. I watched the video first which is
-              always a plus. I did make one change and that was to use vanilla
-              bean paste in place of vanilla extract. I like seeing the vanilla
-              beans in the ice cream and the flavor was oh so good!!! Thank you
-              Chef John for sharing such an EXCELLENT recipe! I will be making
-              this many times over!
-            </figcaption>
-          </figure>
+          <!-- Not sure if it is appropriate to use div here! -->
+          <div>
+            <figure>
+              <img alt="shorecook's vanilla" src="shorecook-vanilla.png" />
+              <figcaption>
+                EXCELLENT! Chef John has never let me down. This recipe was so
+                easy, I found myself giving it over the phone to a friend
+                without even looking at the recipe. I watched the video first
+                which is always a plus. I did make one change and that was to
+                use vanilla bean paste in place of vanilla extract. I like
+                seeing the vanilla beans in the ice cream and the flavor was oh
+                so good!!! Thank you Chef John for sharing such an EXCELLENT
+                recipe! I will be making this many times over!
+              </figcaption>
+            </figure>
+            <!-- JS will hide this when it has been clicked by user! -->
+            <button type="button">Read more</button>
+          </div>
           <footer>
             <button type="button">
               <span
@@ -697,7 +701,7 @@
     <section>
       <h2>You’ll Also Love</h2>
       <section>
-        <!-- each section contains 5 article with same structure but different data -->
+        <!-- each section contains 4 article with same structure but different data -->
         <article>
           <a href="#">
             <figure>
@@ -716,7 +720,8 @@
               </figcaption>
             </figure>
           </a>
-          <button type="button">
+          <!-- But with CSS I will put it in the top right corner of the image -->
+          <button class="relative top-2 right-2" type="button">
             <span class="icon-heart" role="img" aria-label="Heart"></span>
           </button>
         </article>
@@ -724,7 +729,7 @@
       <section>
         <!-- Again another 5 article same as previous section -->
       </section>
-      <iframe src="ads.com/?cusotmerId=1"></iframe>
+      <iframe src="https?//ads.com/?cusotmerId=1"></iframe>
     </section>
     <footer>
       <article>
