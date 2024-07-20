@@ -1,0 +1,3 @@
+li:nth-child(even of li + li) {
+  color: turquoise;
+}
