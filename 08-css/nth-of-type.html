@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #comments article {
+        border: 1px solid;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+      #comments article:nth-of-type(odd) {
+        background-color: lightyellow;
+        border: 1px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="typedChildIndexedPseudoClasses">
+      <h1>
+        <a href="typedChildIndexedPseudoClasses">#</a> Typed Child-indexed
+        Pseudo-classes
+      </h1>
+      <p>
+        The pseudo-classes in this section are similar to the Child Index
+        Pseudo-classes, but they resolve based on an element’s index among
+        elements of the same type (tag name) in their sibling list.
+        <br />
+        It is just kind added feature for us. Meaning for example we do not need
+        to use <code>:nth-child(An+B of S)</code> anymore. It is kinda a syntax
+        sugar if you will.
+      </p>
+    </main>
+
+    <article id="comments">
+      <h2><a href="#comments">#</a> Comments</h2>
+      <article>
+        <h3>
+          <a href="#commentsYeahItMakesOurLivesMuchEasier1721426400000">#</a>
+          Yeah it makes our lives much easier
+        </h3>
+        <p>Liked: 10</p>
+        <p>Was posted on <time datetime="2024-20-07">July/20/2024</time></p>
+        <address><a href="#">nostack_dev</a></address>
+        <p>Here is the main message</p>
+        <p>
+          Reply to this comment by clicking <button type="button">here</button>.
+        </p>
+      </article>
+      <article>
+        <h3>
+          <a href="commentsIGuessItIsGoodToHaveItAround1718834400000">#</a>
+          I guess it is good to have it around
+        </h3>
+        <p>Liked: 26</p>
+        <p>Was posted on <time datetime="2024-20-06">June/20/2024</time></p>
+        <address><a href="#">lifetime_learner_dev</a></address>
+        <p>
+          Since <code>:nth-child(An+B of S)</code> is not still supported
+          completely we can use this one instead.
+        </p>
+        <p>
+          Reply to this comment by clicking <button type="button">here</button>.
+        </p>
+      </article>
+    </article>
+  </body>
+</html>

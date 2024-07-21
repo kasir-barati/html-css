@@ -48,7 +48,14 @@ There is a very fascinating discussion on [here](https://stackoverflow.com/a/250
 
 ### Why not `img`
 
-Though `img` as it's semantic is aligned with icons, and `alt` attribute can give it even more meaning. But, we should not also use `img` because even empty `src` attribute sends a request to server ([learn more](https://humanwhocodes.com/blog/2009/11/30/empty-image-src-can-destroy-your-site/)).
+Though `img` as it's semantic is aligned with icons, and `alt` attribute can give it even more meaning. But,
+
+1. We should not also use `img` because even empty `src` attribute sends a request to server ([learn more](https://humanwhocodes.com/blog/2009/11/30/empty-image-src-can-destroy-your-site/)).
+2. This is what Google has to say on the matter, but the fact that at some point we were employing techniques like [CSS Sprites (not used anymore)](https://alistapart.com/article/sprites/) makes it clear that we wanna avoid having unnecessary images as much as possible:
+
+   > Consider using CSS instead of images where possible.
+
+   \- [Ref](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent)
 
 ### Why `span`
 
