@@ -10,7 +10,7 @@
 
 ### Example
 
-Let's say you want to style all <h1>, <h2>, and <h3> headers to have a blue color and a bottom margin of 20px.
+Let's say you want to style all `h1`, `h2`, and `h3` headers to have a blue color and a bottom margin of 20px. This might not show you exactly when you need it but I believe the next example would do.
 
 ```html
 <style>
