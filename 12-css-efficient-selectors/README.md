@@ -18,7 +18,7 @@ How we can write optimized selectors?
 > E.g.
 >
 > ```css
-> section p.post__published-at {
+> section p.post__publishedAt {
 >   font-size: 0.3em;
 > }
 > #mainMenu {
