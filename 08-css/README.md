@@ -93,7 +93,7 @@ By now you should have realized it that CSS3 is another buzzword favored by the 
 >
 > \*Smaller pieces, focusing on specific areas like selectors or flex box.
 
-## User agents stylesheet
+## User agent's stylesheet
 
 It is a collection of stylistic rules that browser follows when displaying a HTML document.
 
@@ -153,13 +153,11 @@ So when we have one or multiple declarations in a declaration block, browser:
 
 # Let's do some styling
 
-- We can now call ourselves CSS authors.
-- And we are authoring CSS.
-- We need `link` element
+We wanna call ourselves CSS authors. To do that we need to do some CSS authoring. But first we need `link` element.
 
-## `link` element
+## [`link` element](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element)
 
-So we wanna link our HTML document to an external document. The `link` element allows authors to link their document to other resources.
+It enables us to link our HTML document to an external resource/documents.
 
 > [!NOTE]
 >
@@ -178,7 +176,7 @@ So we wanna link our HTML document to an external document. The `link` element a
 
 > [!NOTE]
 >
-> Because we can link our styles to the HTML document then we do not feel compelled to change my markup just for visual reasons.
+> Because we can link our styles to the HTML document then we do not need to change our HTML document just for visual reasons. This is exactly what the CSS thesis meant where it says:
 >
 > > authors would get their fair share of influence over the presentation and would not feel compelled to use presentational HTML and other tricks.
 >
@@ -186,10 +184,12 @@ So we wanna link our HTML document to an external document. The `link` element a
 
 ### Some performance considerations
 
-In the contemporary era we use technologies such as [ReactJS](https://react.dev/) or [NextJS](https://nextjs.org/) to build our frontend applications but nonetheless knowing these things definitely won't hurt. On the contrary will help you to gain a deeper understanding of how modern technologies work:
-
 1. Minify your CSS in order to have faster page load time.
-2. Bundle all css files in one file to prevent multiple HTTP requests (although with HTTP version 2 we do not have to worry about this. [Ref](https://stackoverflow.com/a/49397312/8784518)).
+2. Bundle all\* css files in one file to prevent multiple HTTP requests (although with HTTP version 2 we do not have to worry about this. [Ref](https://stackoverflow.com/a/49397312/8784518)).
+
+   \*Why bother with multiple CSS files? To be more modular and flexible when developing big web apps.
+
+In the contemporary era we use technologies such as [ReactJS](https://react.dev/) or similar libs/frameworks to build our frontend applications, and they take care of these things for us most of the times automatically. So what's the point of talking about them here? Because it will help you to gain a deeper understanding of how modern technologies work.
 
 # Universal selector
 
@@ -223,13 +223,9 @@ Apply the _directions_ to all elements with the `lang` attribute and its value m
 
 ![Attribute value selector](./attribute-value.png)
 
-### `class` global attribute
-
-A set of space-separated tokens[^1] representing the various classes that the element belongs to.
-
 ## `[attribute~=value]`
 
-We use this selector to elements whose specified attribute value is a list of space-separated words, one of which matches the given value exactly. Like `class` attribute.
+We use this selector to select elements whose the value of their specified attribute is a list of _space-separated_ words, one of which matches the given value exactly. Like `class` attribute.
 
 If "val":
 
@@ -246,11 +242,15 @@ If "val":
   }
   ```
 
+### [`class` attribute in HTML](https://html.spec.whatwg.org/multipage/dom.html#classes)
+
+A set of _space-separated tokens_[^1] representing the various classes that the element belongs to.
+
 ![Attribute tilde](./attribute-tilde.png)
 
 # ID selector
 
-We could find it with [Attribute selector](./README.md#attribute-selectors) but since it is really common we have a simpler way to select them.
+We could find it with [attribute selectors](./README.md#attribute-selectors) too, but since it is really common to want to select an element based on their ids we have a syntax sugar for it.
 
 | ID selector       | Attribute selector      |
 | ----------------- | ----------------------- |
