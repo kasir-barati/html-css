@@ -1,6 +1,6 @@
 # CSS
 
-CSS is **a language** for describing the rendering of structured documents (such as HTML and XML) on screen, on paper, in speech, etc.
+CSS is **a language** for describing the rendering of structured documents (such as HTML and XML) on screen, on paper, [in speech](https://www.w3.org/TR/css-speech-1/), etc.
 
 But before starting to work learn ways of CSS we kinda should look at the topic of trees once more.
 
