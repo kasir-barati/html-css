@@ -2,7 +2,7 @@
 
 CSS is **a language** for describing the rendering of structured documents (such as HTML and XML) on screen, on paper, [in speech](https://www.w3.org/TR/css-speech-1/), etc.
 
-But before starting to work learn ways of CSS we kinda should look at the topic of trees once more.
+But before starting to learn ways of CSS we kinda should look at the topic of trees once more.
 
 ## Tree
 
@@ -18,8 +18,8 @@ Some examples:
 
 - elements with a specific attribute value.
 - a certain type elements.
-- Elements that are decedents of a particular element.
-- All elements with a specific attribute which are direct children of another element.
+- elements that are descendants of a particular element.
+- all elements with a specific attribute which are direct children of another element.
 - ...
 
 ### Selection
@@ -28,15 +28,13 @@ So querying is simply asking user agent to go through my DOM tree and select all
 
 ## CSS Specification
 
-Like what we did in HTML we need to understand the [CSS spec](https://www.w3.org/Style/CSS/specs.en.html).
+Like what we did in HTML we need to understand the [CSS spec](https://www.w3.org/Style/CSS/specs.en.html). And W3 is a group of people who maintains the CSS specifications. They are called [CSS Working Group](https://www.w3.org/groups/wg/css/participants/).
 
-W3 is a group of people that maintain CSS spec. The are called [CSS Working Group](https://www.w3.org/groups/wg/css/participants/).
-
-What does "stylesheet" mean in Cascading Stylesheet? a collection of stylistic rules.
+But first let's see what does "style sheet" mean in Cascading Style Sheet? Style sheet is **a collection of stylistic rules**.
 
 ### Modules
 
-We **DO NOT** have only one CSS spec unlike HTML spec. They are **separated into modules**. It is easier to look at their snapshots.
+We **DO NOT** have only one CSS spec unlike HTML spec. They are **separated into modules**. And that's why we have _snapshots_.
 
 > [!NOTE]
 >
@@ -44,34 +42,36 @@ We **DO NOT** have only one CSS spec unlike HTML spec. They are **separated into
 
 #### Snapshots
 
-They collect all the specs that define the current state of CSS in each snapshot.
-
-And it's primary audience is CSS implementors but it can help us to set/reset our mental model to what is accurate and correct.
+They collect all the specs/modules that define the current state of CSS in one snapshot. And we have a new snapshot almost every year. Note that it's primary audience is CSS implementors but it is beneficial for us as well to set/reset our mental model to what is accurate and correct.
 
 ##### Possible states of a spec/module:
 
-- Working Draft: We are still working on it.
-- Candidate Recommendation: Module/Spec is ready to be implemented but there might be some changes as they receive feedback from implementors.
-- Recommendation: When a css spec/module is in this state it means that it is ready to be implemented. But this does not mean that it has been implemented in the browser too.
+They are sorted ascendingly. Meaning that the last item is the final stage.
+
+1. **Working Draft**: working on it.
+2. **Candidate Recommendation**: ready to be implemented **but** there might be some changes as they receive feedback from implementors.
+3. **Recommendation**: ready to be implemented **but** this does not mean that it has been implemented in the browser too.
 
 > [!TIP]
 >
 > For example you can look at [the blink's codebase](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/core/css/) to see their core CSS supported feature.
 
-##### Possible state of a CSS module's/spec's stability and implementation experience
+##### Possible state of a module's/spec's stability and implementation experience
 
-- Stable: If everyone has implemented it and went through various rigorous process then it is categorized in this category.
-- Fairly stable: They have not actual testing in the browsers.
-- Rough interoperable: If the implementations of that CSS module/spec are similar enough to work well in most production websites, despite some differences, they can be considered interoperable.
+Here we are sorting them descendingly. Meaning the first item is the last state for a module/spec (and the highest state too :slightly_smiling_face:).
+
+1. **Stable**: everyone has implemented it, it had gone through various rigorous process.
+2. **Fairly stable**: do not have actual testing in the browsers.
+3. **Rough interoperable**: the implementations are similar enough to work well in most production websites, despite some differences, they can be considered _interoperable_.
 
 ##### CSS levels
 
-CSS snapshots have different levels:
+Cascading Style Sheets does not have versions in the traditional sense; instead it has levels:
 
-- CSS Level 1: Features defined in the original CSS.
-- CSS Level 2: Adds more features to what was already in CSS Level 1.
-- CSS Level 2.1: A revision of CSS Level 2 that fixes problems and clarifies things.
-- CSS Level 3: And this one was build on top of the CSS Level 2 while it is using CSS2.1 spec as its core.
+- **CSS Level 1**: Features defined in the original CSS.
+- **CSS Level 2**: Adds more features to what was already in CSS Level 1.
+- **CSS Level 2.1**: A revision of CSS Level 2 that fixes problems and clarifies things.
+- **CSS Level 3**: And this one was build on top of the CSS Level 2 while it is using CSS2.1 spec as its core.
 
   > Each module adds functionality and/or replaces part of the CSS2.1 specification.
 
@@ -81,49 +81,49 @@ CSS snapshots have different levels:
 
 ###### CSS3?
 
-By now you should have realized it that CSS3 is another buzzword favored by the crowd.
-
-Modules/Specs can move independently from level 1 to higher levels. And the language as a whole does not have level anymore.
+By now you should have realized it that CSS3 is another buzzword favored by the crowd. Modules can move independently from level 1 to higher levels. And **the language as a whole does not have level anymore**.
 
 > [!CAUTION]
 >
-> I misunderstood something after I read the spec and that was that at some point CSS Level 1 should be empty since module can move independently to higher levels but that is not the case. CSS Level 1 stays as the foundation for CSS and we just add new features on top of it.
+> I misunderstood something after I read the spec. I though at some point in time all CSS Level 1 modules should've been moved independently to higher levels, therefore we will have an empty CSS level 1. But that is not the case. CSS Level 1 stays as the foundation for CSS and we just add new features on top of it.
 
 > [!TIP]
 >
-> Modularity was added in CSS Level 3. Before that CSS was developed as released as monolithic versions. So CSS Level 3 divided the CSS into modules (smaller pieces focusing on specific areas like selectors or flexbox), updating and releasing them independently.
+> Modularity was added in CSS Level 3. Before that CSS was developed and released as a monolithic document. So CSS Level 3 divided the CSS into modules\*, updating and releasing them independently.
+>
+> \*Smaller pieces, focusing on specific areas like selectors or flex box.
 
 ## User agents stylesheet
 
 It is a collection of stylistic rules that browser follows when displaying a HTML document.
 
-So let's look at the [CSS PhD thesis section 1.3](https://www.wiumlie.no/2006/phd/#h-33). So we wanna negotiate how things should be presented to the reader visually and there are times that author do not wanna define the presentation. So that's where we decided that browsers need default presentation of HTML.
+But why we have it? To answer it we need to read [CSS PhD thesis section 1.3](https://www.wiumlie.no/2006/phd/#h-33). There it states that we needed to negotiate how things should be presented to the reader visually and there are times that author do not wanna define the presentation. So that's where we decided that browsers need default presentation of HTML.
 
-In General we have 3 source of presentation definition details:
+In General 3 sources can define styles that should be applied to a document:
 
-1. Authors: through different means we can change presentation of HTML.
-2. Readers: They can do the same thing via things like browser extensions and other methods.
-3. Browsers: [Here](https://chromium.googlesource.com/chromium/src/+/HEAD/third_party/blink/renderer/core/html/resources/html.css) is where for example our lovely blink is defining its default presentation for HTML documents it renders.
+1. **Authors**: Developers/Programmers who author CSS.
+2. **Readers**: End users can change styles, applied to a page in a browser with browser extensions or other tools(e.g. [Stylish](https://chromewebstore.google.com/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en)).
+3. **Browsers**: [Here](https://chromium.googlesource.com/chromium/src/+/HEAD/third_party/blink/renderer/core/html/resources/html.css) is where our lovely blink is defining its default presentation for HTML documents.
 
 ### CSS core concept
 
-Now that we saw what is the default stylistic rules defined for blink you understand at a deeper level what "querying" different HTML elements means.
+Here is a break down of CSS language syntax.
 
 ![CSS syntax](./css-syntax.png)
 
-[Credits for the picture goes to](https://www.scientecheasy.com/2024/05/css-syntax.html/)
-
 ## CSS Level 2.1
 
-So here we focus on this level since it is the core of CSS Level 3 and we just need to read the changed sections can help us to use CSS spec.
+In general we can focus on this level since it is the core of CSS Level 3 and we need to read the changed modules in their respective pages.
 
-## Selectors
+## Selectors module
 
-- It is right now (when I am writing this doc) Level 3.
-- So selectors are pattern matching mechanism.
-- **NOTE**: you read them from right to the left.
+- They're **pattern matching** mechanism.
+- As of the time of writing this part (24.07.2024) **it is Level 3**.
+- **NOTE**: read them from right to the left.
 
 ### Typed selectors
+
+Match or find elements in the DOM based on their types, things like `p`, `section`, `article`, etc. E.g.
 
 ```css
 p {
@@ -131,25 +131,23 @@ p {
 }
 ```
 
-Match or find elements in the DOM based on their types, things like `p`, `section`, `article`, etc.
+Here for example we have the DOM, generated by Parser. And then the process of looking up for the patterns and then applying styles. We know that HTML data structure is a tree. And CSS utilized this feature of HTML in order to efficiently find/query/search HTML elements.
 
 ![CSS Type selectors](./css-selectors.png)
-
-Remember that we talked about HTML structure. Now you can understand why we talked about HTML data structure which is a tree. CSS utilized this fact in order to efficiently find HTML elements to apply stylistic rules.
 
 > Style sheet languages and structured document formats are mutually dependent on each other.
 
 \- [Ref](https://www.wiumlie.no/2006/phd/#ch-structure).
 
-So when we have one/multiple declarations in a declaration block, browser:
+So when we have one or multiple declarations in a declaration block, browser:
 
 1. Traverses the DOM based on the selector.
 2. And then applies the declarations to the previously selected elements.
 
 ### CSS Cascading and Inheritance
 
-- ATM (19.07.2024) it is in the CSS Level 4.
-- Inheritance means that children inherit properties from their parents and their descendants may inherit them too.
+- ATM (19.07.2024) it is CSS Level 4.
+- Inheritance means that **children inherit properties from their parents and, possibly their ancestors**.
 
 ![CSS Inheritance](./css-inheritance.png)
 
