@@ -356,7 +356,7 @@ section p a {
 
 Here we are saying to select all `a` elements within any `p` where the `p` is inside `section`. We do not wanna be supper specific about which child or descendant.
 
-> [!CATION]
+> [!CAUTION]
 >
 > Keep an open eye for [CSS inheritance](./README.md#css-cascading-and-inheritance) mechanisms.
 
