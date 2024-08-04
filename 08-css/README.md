@@ -441,8 +441,7 @@ We call them pseudo since there is nothing in DOM tree, and browser has to compu
   - `An+B` is what is called microsyntax in CSS.
     - It helps us with determining indexes in a list.
     - `A`: integer step. Divide the list into groups of `A` elements.
-    - `B`: offset. The starting point for the selection within each step.
-      - if `B > 0` The first element has an index of 1 (**NOT** 0).
+    - `B`: integer offset. The starting point for the selection within each step.
     - `n`: any positive integer or zero.
 - `S`: Apply the `:nth-child` logic only to siblings that match a given selector (`S` selector).
   - If `S` is omitted, all siblings are considered.
@@ -455,6 +454,9 @@ We call them pseudo since there is nothing in DOM tree, and browser has to compu
 | https://github.com/kasir-barati/html-css/blob/6a77e0007cd1bfaf71b690034726adf570c028c0/08-css/pseudo-class-nth-child-of.css#L1-L3 | https://github.com/kasir-barati/html-css/blob/6a77e0007cd1bfaf71b690034726adf570c028c0/08-css/pseudo-classs-nth-child.html#L1-L11 | ![Visual outcome of the selector](./pseudo-class-nth-child-of.png) |
 
 #### Caniuse `nth-child(An+B of S)`
+
+![Can I use nth-child-of](./caniuse-nth-child-of.png)
+\- [Ref](https://caniuse.com/css-nth-child-of)
 
 ### `:first-child`
 
@@ -483,8 +485,6 @@ dl *:first-child {
   color: turquoise;
 }
 ```
-
-[Can I use nth-child-of](./caniuse-nth-child-of.png)
 
 ## Typed Child-indexed Pseudo-classes
 
