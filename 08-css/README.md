@@ -593,7 +593,7 @@ a:visited {
 }
 ```
 
-> [!INFO]
+> [!NOTE]
 >
 > Since it is possible for style sheet authors to abuse the `:link` and `:visited` pseudo-classes to determine which sites a user has visited without the user’s consent, UAs may treat all links as unvisited links or implement other measures to preserve the user’s privacy while rendering visited and unvisited links differently.
 
