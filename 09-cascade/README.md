@@ -1,6 +1,6 @@
 # Cascade
 
-CSS stands for **C**ascading **S**tyle**s**heet. So let's first get something straight, inheriting properties from parents, or descendent is **NOT** cascade.
+CSS stands for **C**ascading **S**tyle **S**heet. So let's first get something straight, inheriting properties from parents, or descendent is **NOT** cascade.
 
 ![Who wins when we use same selector in different CSS files linked to one HTML Document](./cascade-who-wins.jpg)
 
