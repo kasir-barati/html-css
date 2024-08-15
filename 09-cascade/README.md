@@ -84,7 +84,7 @@ When we have multiple declarations for same element in different place UA sort d
 So here we are gonna talk about `important` vs "normal" styles. So here are a few notes:
 
 - In fact we usually group the origin and importance together ([ref](https://drafts.csswg.org/css-cascade-4/#cascade-origin)).
-- The UA's important styles take precedence over our styles:exclamation:
+- The UA's important styles take precedence over our styles!
 - It is very hard to manage. So use it only if:
   - You do not have much control over CSS, e.g. FusionAuth login page.
 
@@ -220,3 +220,7 @@ They help us by giving us a more structured way of organizing declarations withi
 > [!NOTE]
 >
 > Unlayered CSS rules have higher weight when we compare them to the layered CSS rules..
+
+# Side notes:
+
+- Specified values: So now that we talked about specificity, cascade values, and initial/inherited value we reach to the last station and our destination. After UA goes through all of those previous steps it comes up with the specified value for a property.

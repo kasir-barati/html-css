@@ -49,7 +49,3 @@ Notes:
 - This is a shorthand syntax.
 - Elements won't inherit it from their parents unless you say it.
 - No initial value defined in the UA's default stylesheet.
-
-# Specified values
-
-So now that we talked about specificity, cascade values, and initial/inherited value we reach to the last station and our destination. After UA goes through all of those previous steps it comes up with the specified value for a property.
