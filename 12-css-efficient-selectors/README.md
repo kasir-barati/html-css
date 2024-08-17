@@ -4,8 +4,8 @@ How we can write optimized selectors?
 
 - We know that UAs traverse the DOM tree and then try to find all the elements who matches our elements.
 - Then we've been reading selectors from right to left: `form *`. And the browser also does the same thing.
-- Key selector: the last selector.
 - UA reads the key selector and then goes from the right to left to filter DOM tree nodes.
+  - Key selector: the last selector.
 
 ![CSS selector optimization and how it works](./form-universal-selector.gif)
 

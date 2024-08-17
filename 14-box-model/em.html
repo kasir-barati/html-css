@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EM - relative length unit</title>
+    <style>
+      .right {
+        float: left;
+      }
+      .mt-1 {
+        margin-top: 1em;
+      }
+
+      body {
+        font-size: 14px;
+      }
+      p {
+        font-size: 2em;
+      }
+      strong {
+        font-size: 2em;
+      }
+      img {
+        margin-right: 2em;
+        border-radius: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="right" src="./em.png" />
+    <p>
+      <b>Computed value</b> of the <code>font-size</code> property, of the
+      element on which it is used.
+      <br />
+      In this case it is inheriting <code>font-size</code> from the
+      <code>body</code> and then it is gonna double it, and that is the computed
+      value for this <code>p</code> element.
+    </p>
+    <p class="mt-1">
+      And the same process is happening for the rest of CSS properties we've
+      used here; <code>margin-right</code>, <code>border-radius</code>.
+    </p>
+    <p class="mt-1">
+      <strong>Important</strong>: Please note that here
+      <code>strong</code> element is inheriting its font-size from its
+      <code>p</code> parent. Therefore when we are specifying its value it is
+      relative to its parent (which is already doubled <small>14 * 2</small>).
+      Thus it is gonna be 24 * 2
+    </p>
+  </body>
+</html>
