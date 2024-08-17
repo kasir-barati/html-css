@@ -11,7 +11,9 @@
 - But with this CSS property we can position boxes on top of each other in a way that overlap each other.
 - It is a coordinate-based positioning and offsetting approaches/schemes.
 - We are laying out boxes in a coordinate space.
+
   ![Coordinate space of a html document](./coordinate-space-of-a-html-doc.png)
+
 - So now we can with `position` offset and coordinate our boxes.
 
 ## `position: static`
