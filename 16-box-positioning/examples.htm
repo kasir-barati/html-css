@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Example</title>
+    <style>
+      body {
+        padding: 50px;
+        height: 200vh; /* Makes the page scrollable */
+      }
+
+      /* #region Absolute positioning */
+      .tooltip {
+        position: relative;
+        color: orange;
+      }
+      .tooltip-text {
+        position: absolute;
+        left: -200%;
+        bottom: 125%; /* Position the tooltip above the word */
+
+        visibility: hidden;
+        border: 2px dashed black;
+        padding: 5px;
+        width: max-content;
+      }
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+      }
+      /* #endregion */
+
+      /* #region Relative positioning */
+      .signup-button {
+        position: relative;
+        padding: 8px 32px;
+        background-color: green;
+      }
+      .signup-button:hover {
+        top: -5px;
+        left: 5px;
+      }
+      /* #endregion */
+
+      /* #region Fixed positioning */
+      .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: gray;
+      }
+      /* #endregion */
+
+      /* #region Sticky positioning */
+      .main-menu {
+        position: sticky;
+        position: -webkit-sticky; /* For Safari */
+        top: 0;
+        margin: 0;
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it stays above other content */
+      }
+      /* #endregion */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        Logo
+        <button type="button" class="signup-button">Signup</button>
+      </nav>
+    </header>
+
+    <nav class="main-menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <main class="content">
+      <section>
+        <h1>CSS</h1>
+        <p>Use fixed positioned "Back to Top" button to go back to the top.</p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          officia, nulla consequuntur ullam perferendis recusandae tenetur
+          beatae repellat eveniet quisquam laborum neque assumenda veniam error?
+          Tempore voluptates rerum officiis porro?
+        </p>
+      </section>
+      <section>
+        <h2>
+          What is
+          <span class="tooltip">
+            CSS
+            <span class="tooltip-text">Cascading Style Sheets</span>
+          </span>
+          in web development?
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+          aliquid neque iusto optio. Nihil, doloribus laboriosam fugit
+          aspernatur laudantium, sit excepturi nemo explicabo inventore corporis
+          laborum commodi ex deserunt modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio
+          ipsam eveniet quae commodi officia. Hic beatae ipsam nemo maiores
+          consectetur distinctio expedita iste natus, ex quis, totam a fugiat?.
+        </p>
+      </section>
+    </main>
+
+    <button type="button" class="back-to-top">Top</button>
+  </body>
+</html>
