@@ -1,0 +1,21 @@
+# Images
+
+- You can [read the `img` spec in HTML spec](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
+  - Categories:
+    - Flow content.
+    - Phrasing content.
+    - Embedded content,
+    - Form-associated element.
+    - If the element has a usemap attribute: Interactive content.
+    - Palpable content.
+  - Contexts in which this element can be used:
+    - Where embedded content is expected.
+    - As a child of a picture element, after all source elements.
+  - Content model: Nothing.
+  - It represents an image.
+  - Common attributes:
+    - `src`: Address of the resource.
+    - `alt`: Replacement text for use when images are not available. This is a must and behaves as if I wanna replace the image with a text.
+- In CSS images are [replaced elements](https://drafts.csswg.org/css-display-3/#replaced-element). Simply put they are elements that are outside of the CSS [formatting model](../14-box-model/formatting-boxes.png) scope.
+- Images have natural dimensions; it is when we ain't specifying neither `width` or `height`.
+  - If you specify only one of them (`width` or `height`) then it will keep the ratio in a way that your image won't loss its original shape.

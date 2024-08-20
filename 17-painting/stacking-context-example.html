@@ -1,0 +1,52 @@
+<style>
+  body {
+    margin: 20px;
+  }
+
+  :is(.parent1, .parent2) {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    color: white;
+  }
+
+  .child1,
+  .child2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 50px;
+  }
+
+  .parent1 {
+    position: relative; /* Creates a stacking context */
+    background-color: blue;
+    z-index: 1; /* Lower z-index, painted first. */
+  }
+  .child1 {
+    background-color: red;
+    z-index: 110; /* Higher z-index within .parent1 but it cannot interfere with the stacking context created for the .parent2 */
+  }
+
+  .parent2 {
+    position: absolute;
+    background-color: green;
+    z-index: 10; /* Higher z-index, painted next. */
+    top: 0;
+    left: 0;
+  }
+  .child2 {
+    background-color: yellow;
+    z-index: -1; /* Lower z-index within .parent2 */
+  }
+</style>
+
+<div class="parent1">
+  Parent 1 (Blue)
+  <div class="child1">Child 1 (Red)</div>
+</div>
+<div class="parent2">
+  Parent 2 (Green)
+  <div class="child2">Child 2 (Yellow)</div>
+</div>
