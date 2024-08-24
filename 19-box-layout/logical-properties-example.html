@@ -13,10 +13,14 @@
       }
 
       body {
+        writing-mode: vertical-rl;
+        /* direction: rtl; */
+
         /* margin: 0; */
         margin-inline: 0;
         margin-block: 0;
-        /* padding: 0; */
+        /* padding-left: 0; */
+        /* padding-right: 0; */
         padding-inline: 0;
         padding-block: 50px;
         /* width: 100%; */
@@ -35,8 +39,12 @@
             padding-left: 5%;
             padding-right: 5%;
         */
-        padding-inline: 5%;
-        padding-block: 15px;
+        /* padding-inline: 5%; */
+        padding-inline-start: 5%;
+        padding-inline-end: 5%;
+        /* padding-block: 15px; */
+        padding-block-start: 15px;
+        padding-block-end: 15px;
         background-color: white;
       }
 
@@ -54,6 +62,11 @@
         margin-inline-end: 10px;
       }
 
+      nav > a:last-child {
+        /* margin-left: 10px */
+        margin-inline-end: 0;
+      }
+
       header {
         /*
             padding-top: 1rem;
@@ -66,6 +79,7 @@
         padding-block: 1rem;
         /* Works in the same fashion for logical and physical dimensions. */
         text-align: center;
+
         color: white;
         background-color: green;
       }
@@ -107,6 +121,10 @@
       }
 
       .faq {
+        /*
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        */
         margin-block: 1rem;
         margin-inline: auto;
         inline-size: 90%;
@@ -150,6 +168,10 @@
 
         color: white;
         background-color: darkslategray;
+      }
+
+      .footer__copyright {
+        text-align: center;
       }
     </style>
   </head>
@@ -202,7 +224,7 @@
       Subscribe to our newsletter!
     </section>
     <footer>
-      <p>&copy; 2024 My Simple Web Page</p>
+      <p class="footer__copyright">&copy; 2024 My Simple Web Page</p>
     </footer>
   </body>
 </html>

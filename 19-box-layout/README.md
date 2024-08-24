@@ -120,7 +120,6 @@ So far we've understood that we have different approaches to laying out boxes. A
 ## BFC -- Block Formatting Context
 
 - In [this example](./float-bfc-example.html) we have a floated element (`img`) which has floated outside of the boundaries of background color (float is not abiding by the rules of normal flow). And it is overlapping its container since they (floated element - `img` - and `section`) belong to the same BFC.
-- The region in which the layout of block boxes occurs and in which floats interact with other elements.
 - The element that primarily forms a BFC is the _root_ element.
 - Walls that inside it all the elements are laid out. Nothing leaves the `html` container.
 - Inside the `html` container all other boxes can overlap each other.
@@ -134,7 +133,7 @@ So far we've understood that we have different approaches to laying out boxes. A
 - block-level block container that establishes a new block formatting context (BFC).
 - Now in [this example](./float-bfc-example.html) you can see that by changing the display of `section` element to `flow-root` it is gonna act as its impenetrable walls where everything lives inside it and cannot go outside of it.
 
-## Multilingual language web pages
+## Multilingual web pages
 
 - In languages such as English:
 
@@ -187,8 +186,30 @@ So far we've understood that we have different approaches to laying out boxes. A
 | Inherited  | yes           |
 
 - Bidirectionality or bidi: Characters in most scripts are written from left to right, but certain scripts are written from right to left. In some documents, in particular those written with the Arabic or Hebrew script, and in some mixed-language contexts, text in a single (visually displayed) block may appear with mixed directionality.
-- The `writing-mode` only says that inline direction is either horizontal or vertical but not left to right or right to left. So this CSS property take care of that for us.
-- Recommendation: HTML authors use the HTML `dir` attribute and `bdo` element in case CSS was disabled.
+- Recommendation: HTML authors use the HTML `dir` attribute and `bdo` element in case [CSS was disabled](https://chromewebstore.google.com/detail/css-block/gmlafnjffcblkipjaelgjdgdpmgmjbfp?hl=en).
+
+  - `bdo` element in HTML:
+
+    - Categories: Flow content, phrasing content, palpable content.
+    - Contexts in which this element can be used: Where phrasing content is expected.
+    - Content model: Phrasing content.
+    - Represents explicit text directionality formatting control for its children.
+    - **Must** specify the `dir` attribute on this element
+    - **Cannot** use `auto` as a value for `dir` attribute.
+
+    ```html
+    <h1>Famous seaside songs</h1>
+    <p>The Chinese song "War song" sing by CoCo Lee</p>
+    <p>
+      Looks like this in Persian:
+      <span dir="rtl">آهنگ رزم</span>
+    </p>
+    <p>
+      In the computer's memory, this is stored as
+      <bdo dir="ltr">آهنگ رزم</bdo>
+    </p>
+    ```
+
 - Specifies the inline base direction or directionality of any bidi paragraph, embedding, isolate, or override established by the box.
 
 > [!CAUTION]
@@ -215,7 +236,7 @@ So far we've understood that we have different approaches to laying out boxes. A
 
   ![Logical properties](./logical-properties.png)
 
-- Now if I add margin to each edge it is gonna work the same since they are gonna be working with different wiring modes and directions. look at [this example](./logical-properties-example.html).
+- Now if I add margin to each edge it is gonna work the same since they are gonna be working with different writing modes and directions. look at [this example](./logical-properties-example.html).
 
   ![Logical properties examples](./logical-properties-examples.png)
 
