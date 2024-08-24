@@ -1,0 +1,95 @@
+<style>
+  a {
+    text-decoration: none;
+  }
+  ul.main-list > li::first-letter {
+    font-weight: bold;
+    color: yellowgreen;
+  }
+</style>
+
+<h1>SOLID</h1>
+<ul class="main-list">
+  <li>
+    Single-responsibility Principle: A class should have
+    <strong>one and only one reason</strong>
+    to change, meaning that a class should have only one job.
+  </li>
+  <li>
+    Open-closed Principle: Objects or entities should be
+    <strong>open for extension but closed for modification</strong>.
+  </li>
+  <li>
+    Liskov Substitution Principle: objects of a superclass will be
+    <strong>replaceable</strong>
+    with objects of its subclasses without breaking the application.
+  </li>
+  <li>
+    Interface Segregation Principle <small>(ISP)</small>: a class should not be
+    forced to implement or depend on methods it doesn't need.
+    <details>
+      <summary>A practical example of non-complying code in TS</summary>
+      <pre>
+            <code>
+interface Worker {
+    work(): void;
+    eat(): void;
+    sleep(): void;
+}
+
+class HumanWorker implements Worker {
+    work(): void {
+        console.log("Human is working...");
+    }
+
+    eat(): void {
+        console.log("Human is eating...");
+    }
+
+    sleep(): void {
+        console.log("Human is sleeping...");
+    }
+}
+
+class RobotWorker implements Worker {
+    work(): void {
+        console.log("Robot is working...");
+    }
+
+    // The RobotWorker is forced to implement these methods
+    // even though it doesn't need or use them.
+    eat(): void {
+        throw new Error("Robot does not eat!");
+    }
+
+    sleep(): void {
+        throw new Error("Robot does not sleep!");
+    }
+}            
+            </code>
+      </pre>
+      <ul>
+        <li>
+          The <code>RobotWorker</code> class is forced to implement the
+          <code>eat()</code>
+          and <code>sleep()</code> methods, even though a robot doesn't eat or
+          sleep. These methods are irrelevant to the robot, but it has to
+          implement them because they are part of the Worker interface.
+        </li>
+        <li>
+          This situation can lead to confusing, error-prone code where the
+          <code>RobotWorker</code> either implements these methods with empty
+          bodies, throws errors, or does something meaningless, like logging a
+          message that it can't perform the action.
+        </li>
+      </ul>
+    </details>
+  </li>
+  <li>
+    <a
+      href="https://github.com/kasir-barati/awesome-js-ts/blob/main/.github/docs/dependency-injection.md#dependency-inversion-principle"
+    >
+      Dependency Inversion Principle.
+    </a>
+  </li>
+</ul>

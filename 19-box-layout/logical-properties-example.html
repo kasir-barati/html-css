@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Page with CSS Logical Properties</title>
+    <style>
+      * {
+        /* 
+            Note: this css prop won't be inherited, thus we need to use universal selector. I mistakenly added this css prop first to the body and then I was wondering why it is not working.
+        */
+        box-sizing: border-box;
+      }
+
+      body {
+        /* margin: 0; */
+        margin-inline: 0;
+        margin-block: 0;
+        /* padding: 0; */
+        padding-inline: 0;
+        padding-block: 50px;
+        /* width: 100%; */
+        inline-size: 100%;
+      }
+
+      nav {
+        position: fixed;
+        /* top: 0; */
+        inset-block-start: 0;
+        /* width: 100%; */
+        inline-size: 100%;
+        /* height: 50px; */
+        block-size: 50px;
+        /*
+            padding-left: 5%;
+            padding-right: 5%;
+        */
+        padding-inline: 5%;
+        padding-block: 15px;
+        background-color: white;
+      }
+
+      /* Skips the first a */
+      nav > a + a {
+        /*
+            margin-left: 10px;
+            margin-right: 10px;
+        */
+        margin-inline: 10px;
+      }
+
+      nav > a:first-child {
+        /* margin-left: 10px */
+        margin-inline-end: 10px;
+      }
+
+      header {
+        /*
+            padding-top: 1rem;
+            padding-block-start: 1rem;
+        */
+        /*
+            padding-bottom: 1rem;
+            padding-block-end: 1rem;
+        */
+        padding-block: 1rem;
+        /* Works in the same fashion for logical and physical dimensions. */
+        text-align: center;
+        color: white;
+        background-color: green;
+      }
+
+      main {
+        /* padding-top: 2rem; */
+        padding-block-start: 2rem;
+        /* padding-right: 2rem; */
+        padding-inline-end: 1rem;
+        /*
+            margin-left: auto;
+            margin-right: auto;
+        */
+        margin-inline: auto;
+        /* height: auto; */
+        block-size: auto;
+        /* width: 90% */
+        inline-size: 90%;
+      }
+
+      main > section:first-child::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      img {
+        /* float: left; */
+        float: inline-start;
+        /* width: 300px */
+        inline-size: 300px;
+        /* margin-right: 1rem; */
+        margin-inline-end: 1rem;
+      }
+
+      p {
+        /* text-align: left; */
+        text-align: start;
+      }
+
+      .faq {
+        margin-block: 1rem;
+        margin-inline: auto;
+        inline-size: 90%;
+      }
+
+      .newsletter-subscription {
+        /*
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        */
+        margin-block: 3rem;
+        /*
+            margin-left: 3rem;
+            margin-right: 3rem;
+        */
+        margin-inline: auto;
+        /* border: 2px dashed black; */
+        border-block: 2px dashed black;
+        border-inline: 2px dashed black;
+        /* max-width: 90%; */
+        max-inline-size: 90%;
+        /*
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        */
+        padding-block: 3rem;
+        /* Works in the same fashion for logical and physical dimensions. */
+        text-align: center;
+      }
+
+      footer {
+        position: fixed;
+        /* width: 100%; */
+        inline-size: 100%;
+        /* bottom: 0; */
+        inset-block-end: 0;
+        /* height: 50px */
+        block-size: 50px;
+        /* Works in the same fashion for logical and physical dimensions. */
+        text-align: center;
+
+        color: white;
+        background-color: darkslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">home</a>
+      <a href="#">Team</a>
+      <a href="#">Contact us</a>
+      <a href="#">Shop</a>
+    </nav>
+    <header>
+      <h1>My Simple Web Page</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Welcome to My Page</h2>
+        <img src="swords.jpeg" />
+        <p>
+          This is an example of a simple webpage that uses CSS logical
+          properties.
+        </p>
+      </section>
+    </main>
+    <section class="faq">
+      <h2>Faq</h2>
+      <dl>
+        <dt>How to learn HTML/CSS?</dt>
+        <dd>
+          By watching my
+          <a
+            target="_blank"
+            href="https://www.youtube.com/playlist?list=PL3rtLbBxT1QopesoNzoOlV_ka4TJ1C5pp"
+          >
+            YouTube videos
+          </a>
+          <small>
+            (uploaded
+            <a
+              target="_blank"
+              href="https://www.aparat.com/v/nmw2zm2?playlist=10409680"
+            >
+              here on Aparat
+            </a>
+            too.)
+          </small>
+        </dd>
+      </dl>
+    </section>
+    <section class="newsletter-subscription">
+      Subscribe to our newsletter!
+    </section>
+    <footer>
+      <p>&copy; 2024 My Simple Web Page</p>
+    </footer>
+  </body>
+</html>

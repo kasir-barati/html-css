@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        /* Width of line box is constrained by is containing block. */
+        width: 500px;
+        /* This css property affects the height of line box. */
+        line-height: 50px;
+      }
+      img {
+        /* The width of line box is also affected by the presence of floating boxes. */
+        float: left;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="./lorem.jpg" />
+      <p>
+        <span>
+          The company itself is a very successful company.
+          <b>Some text</b>
+          The company itself is a very successful company.
+        </span>
+        <span lang="ja">
+          治研ろほ住能へよなけ還産カホハフ修野5登リテ
+          <b> ヒ投無2対エヌメネ右7 </b>
+          朝地ヤテヱノ柔職イフネリ年安1消単射窃るつすと。
+        </span>
+        <span lang="de">
+          Das Unternehmen selbst ist ein sehr erfolgreiches Unternehmen.
+        </span>
+      </p>
+    </section>
+  </body>
+</html>

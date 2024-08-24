@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Example</title>
+    <style>
+      .sidebar {
+        width: 25%;
+        float: left;
+        background-color: gray;
+      }
+
+      .main-content {
+        width: 75%;
+        float: left;
+      }
+
+      /* Clearfix to contain floats */
+      /* Learn more about pseudo elements https://drafts.csswg.org/selectors-3/#gen-content */
+      .container::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <aside class="sidebar">
+        <h1>Sidebar</h1>
+        <p>This is the sidebar content. It's 25% of the container's width.</p>
+        <ul>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </aside>
+
+      <section class="main-content">
+        <h1>Main Content</h1>
+        <p>This is the main content area. It's 75% of the container's width.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          nihil, eaque pariatur numquam veritatis maiores dignissimos culpa
+          tenetur reiciendis ipsum aut
+          <span>perspiciatis</span>
+          voluptatum odio incidunt hic, fugit error sapiente corrupti!
+        </p>
+      </section>
+    </section>
+
+    <h1>Hi</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsum
+      doloribus odit sunt quis labore commodi quas vitae eligendi nulla ut quo
+      veniam at a, minus distinctio vero, eaque sit.
+    </p>
+  </body>
+</html>

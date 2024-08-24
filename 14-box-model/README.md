@@ -258,7 +258,7 @@ For example for `width` and `height` the `auto` keyword behaves differently base
 - Containing block:
   - Might be ancestor/parent element.
   - Or what a box is laid out relative to.
-- Formatting context: An approach to laying out boxes.
+- <span id="formattingContextDef">Formatting context</span>: An approach to laying out boxes.
 
   - Block formatting boxes: stack on top of each other while filling the entire available width.
   - Inline formatting boxes: their size is calculated based on their content and elements sits next to each other.
