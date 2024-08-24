@@ -138,22 +138,22 @@ So far we've understood that we have different approaches to laying out boxes. A
 
 - In languages such as English:
 
-  - The inline direction is **left to right** on the X-axis.
-  - And when the text wraps it goes in the block direction from top to bottom on the Y-axis.
+  - The inline direction is **left to right**.
+  - And when the text wraps it goes in the block direction from top to bottom.
 
   ![English block and inline direction](./english-block-inline-direction.png)
 
 - In languages such as Persian:
 
-  - The inline direction is **right to left** on the X-axis.
-  - And when you run out of space in the inline direction we move in the block direction from top to bottom in Y-axis.
+  - The inline direction is **right to left**.
+  - And when you run out of space in the inline direction we move in the block direction from top to bottom.
 
   ![Persian block and inline direction](./persian-block-inline-direction.png)
 
 - In languages such as Japanese:
 
-  - The inline direction is **top to bottom** on the Y-axis.
-  - And when we wanna go to the next line we move horizontally. Thus the block direction is **right to left** on the X-axis.
+  - The inline direction is **top to bottom**.
+  - And when we wanna go to the next line we move horizontally. Thus the block direction is **right to left**.
 
   ![Japanese block and inline direction](./japanese-block-inline-direction.png)
 
