@@ -248,7 +248,7 @@ So far we've understood that we have different approaches to laying out boxes. A
 - It sets outer display time to inline.
 - But the inner display type is a new [BFC](#bfc----block-formatting-context), resulting in children participating in a normal flow.
 - In other word we needed a box which was inline but its children was laid out in a more complex fashion.
-- Nowadays we have better ways to do this. We'll not explore this topic in details for this reason.
+- Nowadays we have [better ways](../20-flex-box/README.md#display-inline-flex) to do this. We'll not explore this topic in details for this reason.
 - [Example](./inline-block-example.html).
 
 ## [`display: none`](https://drafts.csswg.org/css-display/#valdef-display-none)

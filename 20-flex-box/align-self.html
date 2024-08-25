@@ -1,0 +1,53 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .container {
+    block-size: 500px;
+  }
+  .flex-item {
+    background: tomato;
+    padding-inline: 10px;
+    padding-block: 10px;
+    margin-inline: 5px;
+    margin-block: 5px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .self-start {
+    align-self: flex-start;
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .self-center {
+    align-self: center;
+  }
+  .self-baseline {
+    align-self: baseline;
+  }
+  .self-stretch {
+    align-self: stretch;
+  }
+</style>
+
+<section class="container flex">
+  <article class="flex-item self-start">
+    <code>align-self: start;</code>
+  </article>
+  <article class="flex-item self-end">
+    <code>align-self: end;</code>
+  </article>
+  <article class="flex-item self-center">
+    <code>align-self: center;</code>
+  </article>
+  <article class="flex-item self-baseline">
+    <code>align-self: baseline;</code>
+  </article>
+  <article class="flex-item self-stretch">
+    <code>align-self: stretch;</code>
+  </article>
+</section>

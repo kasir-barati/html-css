@@ -1,0 +1,40 @@
+<style>
+  .filter {
+    text-align: center;
+  }
+  .button-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  .button-group button {
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    padding-inline: 10px;
+    padding-block: 20px;
+    border-block: 1px solid turquoise;
+    border-inline: 1px solid turquoise;
+    background-color: turquoise;
+  }
+</style>
+
+<section class="filter">
+  <p>Remove shows based on</p>
+  <ul class="button-group">
+    <li>
+      <button type="button">Sold out</button>
+    </li>
+    <li>
+      <button type="button">Already seen</button>
+    </li>
+    <li>
+      <button type="button">Blacklisted genre</button>
+    </li>
+    <li>
+      <button type="button">Blacklisted directors</button>
+    </li>
+  </ul>
+  <p>Available shows...</p>
+</section>

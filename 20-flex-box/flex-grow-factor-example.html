@@ -1,0 +1,128 @@
+<style>
+  section {
+    display: flex;
+    background-color: darkorange;
+    padding-inline: 0.25rem;
+    padding-block: 0.25rem;
+  }
+  article {
+    flex-grow: 0;
+    background-color: brown;
+    padding-inline: 0.25rem;
+    padding-block: 0.25rem;
+    margin-inline: 0.25rem;
+    margin-block: 0.25rem;
+  }
+</style>
+
+<h1><code>flex-grow: 0</code></h1>
+<section>
+  <article>Article 0</article>
+  <article>Article 1</article>
+  <article>Article 2</article>
+  <article>Article 3</article>
+  <article>Article 4</article>
+</section>
+
+<style>
+  section {
+    display: flex;
+    background-color: darkorange;
+    padding-inline: 0.25rem;
+    padding-block: 0.25rem;
+  }
+  .article {
+    flex-grow: 1;
+    background-color: brown;
+    padding-inline: 0.25rem;
+    padding-block: 0.25rem;
+    margin-inline: 0.25rem;
+    margin-block: 0.25rem;
+  }
+</style>
+
+<h1><code>flex-grow: 1</code></h1>
+<section>
+  <article class="article">Article 0</article>
+  <article class="article">Article 1</article>
+  <article class="article">Article 2</article>
+  <article class="article">Article 3</article>
+  <article class="article">Article 4</article>
+</section>
+
+<p>
+  Here we ain't gonna create new flex lines since the
+  <code>inline-size</code> content is still less than the available space.
+</p>
+<section>
+  <article class="article">Article 0</article>
+  <article class="article">Article 1</article>
+  <article class="article">Article 2</article>
+  <article class="article">Article 3</article>
+  <article class="article">Article 4</article>
+  <article class="article">Article 5</article>
+  <article class="article">Article 6</article>
+  <article class="article">Article 7</article>
+  <article class="article">Article 8</article>
+  <article class="article">Article 9</article>
+</section>
+
+<p>
+  Here we ain't gonna create new flex lines since the
+  <code>flex-wrap</code> property is not <code>wrap</code>. But if we add
+  <code>style="flex-wrap: wrap"</code> attribute to the next
+  <code>section</code> <i>element</i> then it is gonna do it for us.
+</p>
+<section>
+  <article class="article">Article with more content 0</article>
+  <article class="article">Article with more content 1</article>
+  <article class="article">Article with more content 2</article>
+  <article class="article">Article with more content 3</article>
+  <article class="article">Article with more content 4</article>
+  <article class="article">Article with more content 5</article>
+  <article class="article">Article with more content 6</article>
+  <article class="article">Article with more content 7</article>
+  <article class="article">Article with more content 8</article>
+  <article class="article">Article with more content 9</article>
+  <article class="article">Article with more content 10</article>
+  <article class="article">Article with more content 11</article>
+  <article class="article">Article with more content 12</article>
+  <article class="article">Article with more content 13</article>
+  <article class="article">Article with more content 14</article>
+</section>
+
+<style>
+  .grow-0 {
+    flex-grow: 0;
+  }
+  .grow-1 {
+    flex-grow: 1;
+  }
+  .grow-2 {
+    flex-grow: 2;
+  }
+  .grow-3 {
+    flex-grow: 3;
+  }
+  .grow-4 {
+    flex-grow: 4;
+  }
+</style>
+
+<h1>Variable <code>flex-grow</code> for each flex item</h1>
+<section>
+  <article class="article grow-0"><code>flex-grow: 0;</code></article>
+  <article class="article grow-1"><code>flex-grow: 1;</code></article>
+  <article class="article grow-2"><code>flex-grow: 2;</code></article>
+  <article class="article grow-3"><code>flex-grow: 3;</code></article>
+  <article class="article grow-4"><code>flex-grow: 4;</code></article>
+</section>
+
+<h1><code>flex-grow: 1</code>, but with variable content length</h1>
+<section>
+  <article class="article grow-1">Lorem ipsum dollor</article>
+  <article class="article grow-1">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae omnis
+    iure repellat quasi doloremque accusantium.
+  </article>
+</section>

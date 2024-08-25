@@ -1,0 +1,26 @@
+<style>
+  article.sale-item {
+    display: flex;
+    flex-flow: column;
+  }
+  article.sale-item > img {
+    order: -1; /* Shift image before other content (in layout order) */
+    width: 20%;
+  }
+</style>
+
+<article class="sale-item">
+  <h1>Computer Starter Kit</h1>
+  <p>This is the best computer money can buy, if you don't have much money.</p>
+  <ul>
+    <li>Computer</li>
+    <li>Monitor</li>
+    <li>Keyboard</li>
+    <li>Mouse</li>
+  </ul>
+
+  <img
+    src="./computer.jpg"
+    alt="You get: a mechanical desktop computer with matching peripherals."
+  />
+</article>

@@ -44,7 +44,7 @@
 
 ## `position: sticky`
 
-- Laid out relative to its nearest scrollable ancestor.
+- Laid out relative to its scrollable parent.
   - In our [examples.htm](./examples.htm) the `nav` element is laid out relative to the `body` since it is the nearest scrollable ancestor.
 - Is positioned somewhere inside the web page but when it is about to leave the viewport it will offset relative to the viewport and like fixed stays inside the viewport.
 
