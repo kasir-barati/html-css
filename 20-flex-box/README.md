@@ -40,6 +40,10 @@
 > 1. How do we wanna lay things out.
 > 2. What do we wanna do with available space.
 
+> [!IMPORTANT]
+>
+> CSS flex box has gone through major revisions. As such you might see different style of doing the same thing. You can learn about it [here](https://stackoverflow.com/a/16280118/8784518), [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-flex).
+
 ### [`flow-direction`](https://drafts.csswg.org/css-flexbox-1/#flex-direction-property)
 
 | Name       | flex-direction                                   |
@@ -61,6 +65,8 @@
   ![Writing-mode horizontal, block direction top to bottom. inline direction right to left](./horizontal-tb-writing-mode-flex-direction.png)
 
   **Note**: block direction is top to bottom, and inline direction is right to left. But since we are saying it should layout flex boxes inside that flex container in `column-reverse` then we are creating them from bottom to top.
+
+- [Example](./flex-direction.html).
 
 ### [`flex-wrap`](https://drafts.csswg.org/css-flexbox-1/#propdef-flex-wrap)
 

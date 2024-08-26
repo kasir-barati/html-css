@@ -1,0 +1,228 @@
+<style>
+  .p-inline-0 {
+    padding-inline: 0;
+  }
+  .p-block-0 {
+    padding-block: 0;
+  }
+  .m-inline-0 {
+    margin-inline: 0;
+  }
+  .m-block-0 {
+    margin-block: 0;
+  }
+  .m-inline-1 {
+    margin-inline: 0.25rem;
+  }
+  .m-block-1 {
+    margin-block: 0.25rem;
+  }
+  .list-none {
+    list-style-type: none;
+  }
+  .flex {
+    display: flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+  }
+  .flex-row {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+  }
+  .flex-col {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  .flex-col-reverse {
+    flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+  }
+  .inline-size-12 {
+    inline-size: 3rem;
+  }
+  .block-size-12 {
+    inline-size: 3rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .text-white {
+    color: white;
+  }
+  .bg-red-600 {
+    background-color: rgb(220 38 38);
+  }
+  .bg-green-500 {
+    background-color: rgb(34 197 94);
+  }
+  .bg-cyan-500 {
+    background-color: rgb(6 182 212);
+  }
+  .bg-yellow-400 {
+    background-color: rgb(250 204 21);
+  }
+  .border-inline-4 {
+    border-inline-start-width: 4px;
+    border-inline-start-width: 4px;
+  }
+  .border-block-4 {
+    border-inline-end-width: 4px;
+    border-inline-end-width: 4px;
+  }
+  .border-black {
+    border-color: black;
+  }
+  .border-solid {
+    border-style: solid;
+  }
+</style>
+
+<section
+  class="border-inline-4 border-block-4 border-black border-solid m-inline-1 m-block-1"
+>
+  <h1><code>flex-direction: row;</code></h1>
+  <ul class="flex m-inline-0 m-block-0 p-inline-0 p-block-0 list-none row">
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600"
+    >
+      1
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600"
+    >
+      2
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600"
+    >
+      3
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600"
+    >
+      4
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600"
+    >
+      5
+    </li>
+  </ul>
+</section>
+
+<section
+  class="border-inline-4 border-block-4 border-black border-solid m-inline-1 m-block-1"
+>
+  <h1><code>flex-direction: row-reverse;</code></h1>
+  <ul
+    class="flex m-inline-0 m-block-0 p-inline-0 p-block-0 list-none flex-row-reverse"
+  >
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-yellow-400"
+    >
+      1
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-yellow-400"
+    >
+      2
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-yellow-400"
+    >
+      3
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-yellow-400"
+    >
+      4
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-yellow-400"
+    >
+      5
+    </li>
+  </ul>
+</section>
+
+<section
+  class="border-inline-4 border-block-4 border-black border-solid m-inline-1 m-block-1"
+>
+  <h1><code>flex-direction: column;</code></h1>
+  <ul class="flex m-inline-0 m-block-0 p-inline-0 p-block-0 list-none flex-col">
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-cyan-500"
+    >
+      1
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-cyan-500"
+    >
+      2
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-cyan-500"
+    >
+      3
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-cyan-500"
+    >
+      4
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-cyan-500"
+    >
+      5
+    </li>
+  </ul>
+</section>
+
+<section
+  class="border-inline-4 border-block-4 border-black border-solid m-inline-1 m-block-1"
+>
+  <h1><code>flex-direction: column-reverse;</code></h1>
+  <ul
+    class="flex m-inline-0 m-block-0 p-inline-0 p-block-0 list-none flex-col-reverse"
+  >
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-green-500"
+    >
+      1
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-green-500"
+    >
+      2
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-green-500"
+    >
+      3
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-green-500"
+    >
+      4
+    </li>
+    <li
+      class="m-inline-1 m-block-1 block-size-12 inline-size-12 text-center text-white text-4xl font-bold bg-red-600 bg-green-500"
+    >
+      5
+    </li>
+  </ul>
+</section>
