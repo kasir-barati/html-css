@@ -189,6 +189,12 @@
 
   ![justify-content values](./justify-content.png)
 
+> [!IMPORTANT]
+>
+> There are CSS props called `justify-items` and `justify-self`. Keep this in mind that they cannot be applied to a flex box item. But they work with grid containers and grid items respectively.
+>
+> &mdash; [Ref](https://stackoverflow.com/a/48553129/8784518)
+
 ### [`align-items`](https://drafts.csswg.org/css-flexbox-1/#align-items-property)
 
 | Name       | align-items                                               |
@@ -228,6 +234,17 @@
 
 ![align-content](./align-content.png)
 
+### [`flex-flow`](https://drafts.csswg.org/css-flexbox-1/#flex-flow-property)
+
+| Name       | flex-flow                  |
+| ---------- | -------------------------- |
+| Value      | `flex-direction flex-wrap` |
+| Initial    | see individual properties. |
+| Applies to | see individual properties. |
+| Inherited  | see individual properties. |
+
+- A shorthand for setting the `flex-direction` and `flex-wrap` properties.
+
 ## [`display: inline-flex`](https://drafts.csswg.org/css-display-3/#valdef-display-inline-flex)
 
 - We talked about it [inline-block](../19-box-layout/README.md#display-inline-block) and said that it is not something we wanna do in contemporary era. It's because we have more powerful and developer friendlier css props such as `inline-flex`.
@@ -240,6 +257,18 @@
 > MDN calls this type of specifying value for `display` legacy: `display: inline-flex;`. And says that you should use the multi-keyword syntax: `display: inline flex;`.
 >
 > &mdash; [Ref](https://developer.mozilla.org/en-US/docs/Web/CSS/display#which_syntax_should_you_use).
+
+# Practice time:
+
+1. Design a webpage similar to [this](./practice/1/1.html).
+   - Uncomment the `1-responsive.css` link and comment the default one. You also need to uncomment the input and label elements in HTML. After ward decrease your viewport's width and try to think how you can implement it in HTML and CSS. If you did not manage to find it do not worry too much about it since it is not really something important.
+2. Design a webpage similar to [this](./practice/2/index.html).
+3. Design a webpage similar to [this](./practice/3/calculator.html).
+4. [Go to MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills) and exercise you newly acquired skills for flex box in CSS.
+5. Try to recreate [this page](https://grafana.com/pricing/). You do not need to implement all of it, just from "Start with Grafana Cloud for free, then pay as you grow" to the end of "Contact us for volume discounts and expert support".
+6. Play [this fun game called Flexbox Froggy](https://flexboxfroggy.com/).
+7. Try to implement [these examples](https://eneax.github.io/learn-flexbox/).
+8. [This one](https://github.com/oakmac/flexbox-layout-exercises) is **optional** since TBF I did not find it really helpful.
 
 ## Footnotes
 

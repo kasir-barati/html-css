@@ -1,0 +1,185 @@
+* {
+  color: white;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-block: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2c3e50;
+  margin-block: 3rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* #region calculator */
+
+.calculator {
+  display: block flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.calculator__header {
+  flex: 0 0 100%;
+  margin-block-end: 1rem;
+}
+
+.calculator__numbers {
+  display: block flex;
+  flex-direction: column;
+}
+
+.calculator__numbers button {
+  background: #225378;
+  border: none;
+  margin-block: 0.1em;
+  margin-inline: 0.1em;
+  block-size: 4em;
+  inline-size: 4em;
+}
+
+.calculator__numbers button:hover {
+  background-color: #2253ff;
+}
+
+:is(.calculator__action-buttons, .calculator__numbers__row) {
+  display: block flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.calculator__operators {
+  display: block flex;
+  flex-direction: column;
+  margin-inline-start: 0.6em;
+}
+
+.calculator__operators button {
+  background: #1695a3;
+  border: none;
+  margin-block: 0.1em;
+  margin-inline: 0.1em;
+  block-size: 4em;
+  inline-size: 4em;
+}
+
+.calculator__operators button:hover {
+  background: #169ff3;
+}
+
+.calculator__operators {
+  display: block flex;
+  flex-direction: column;
+}
+
+button[title="enter"] {
+  margin-block-start: 1em;
+  background: #85db18;
+  border: none;
+  block-size: 3em;
+  inline-size: 6em;
+  margin-inline-start: 1em;
+}
+
+button[title="enter"]:hover {
+  background-color: #154b18;
+}
+
+button[title="clear"] {
+  background: #e74c3c;
+  border: none;
+  block-size: 3em;
+  inline-size: 6em;
+  margin-block-start: 1em;
+}
+
+button[title="clear"]:hover {
+  background: #a74c3c;
+}
+
+/* #endregion */
+
+/* #region table */
+.accounting {
+  display: block flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+}
+.accounting__header {
+  flex: 0 0 100%;
+}
+.accounting__table {
+  display: block flex;
+  flex-flow: column nowrap;
+  line-height: 1.25;
+  border: 0;
+  margin-inline: 1rem;
+}
+
+.accounting__table caption {
+  padding-block: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: gray;
+  text-align: justify;
+}
+
+.accounting__table tr {
+  display: block flex;
+}
+
+.accounting__table tr:nth-of-type(odd) {
+  background-color: darkslategray;
+}
+
+.accounting__table thead th {
+  font-weight: 700;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.accounting__table th,
+.accounting__table td {
+  display: block flex;
+  flex: 1 0;
+  align-items: start;
+  justify-content: start;
+  padding-inline: 0.2rem;
+  padding-block: 0.5rem;
+  border-inline: 1px solid black;
+  border-block: 1px solid black;
+}
+
+.accounting__table th:nth-child(1),
+.accounting__table td:nth-child(1) {
+  flex: 0.5 0;
+}
+.accounting__table th:nth-child(2),
+.accounting__table td:nth-child(2) {
+  flex: 0.4 0;
+}
+.accounting__table th:nth-child(3),
+.accounting__table td:nth-child(3) {
+  flex: 0.8 0;
+}
+.accounting__table th:nth-child(4),
+.accounting__table td:nth-child(4) {
+  flex: 0.4 0;
+}
+.accounting__table th:nth-child(5),
+.accounting__table td:nth-child(5) {
+  flex: 0.7 0;
+}
+
+.numbers {
+  word-break: break-word;
+}
+/* #endregion */

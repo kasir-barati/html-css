@@ -242,6 +242,21 @@ So far we've understood that we have different approaches to laying out boxes. A
 
 - Sometimes browsers are not supporting the newest things written in the spec, so in these cases we can check caniuse. For example [`float: inline-start` browser support in caniuse](https://caniuse.com/?search=inline-start).
 
+| Physical property | Logical property      |
+| ----------------- | --------------------- |
+| `width`           | `inline-size`         |
+| `height`          | `block-size`          |
+| `border-left`     | `border-inline-start` |
+| `border-right`    | `border-inline-end`   |
+| `border-top`      | `border-block-start`  |
+| `border-bottom`   | `border-block-end`    |
+| `top`             | `inset-block-start`   |
+| `bottom`          | `inset-block-end`     |
+| `left`            | `inset-inline-start`  |
+| `right`           | `inset-inline-end`    |
+| `float: left`     | `float: inline-start` |
+| `float: right`    | `float: inline-end`   |
+
 ## [`display: inline-block`](https://drafts.csswg.org/css-display/#valdef-display-inline-block)
 
 - Shorthand version of `display: inline flow-root;`.

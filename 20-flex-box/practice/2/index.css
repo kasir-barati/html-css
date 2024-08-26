@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #021320;
+  color: white;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.header {
+  text-transform: uppercase;
+  padding-block: 32px;
+  max-inline-size: 1000px;
+  /* Centralizes the pictures */
+  margin-inline: auto;
+}
+
+.previous-get-togethers__header {
+  text-align: start;
+  max-inline-size: 1000px;
+  /* Centralizes the pictures */
+  margin-inline: auto;
+}
+
+.previous-get-togethers__list {
+  display: block flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  list-style-type: none;
+  max-inline-size: 70%;
+  margin-block-end: 20px;
+  margin-block-start: 50px;
+  margin-inline: auto;
+}
+
+.previous-get-togethers__list > li {
+  block-size: 9rem;
+  inline-size: 9rem;
+  background-color: white;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 9rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.previous-get-togethers__list > li a {
+  text-decoration: none;
+}
+
+li.small {
+  inline-size: 5rem;
+  block-size: 5rem;
+  line-height: 5rem;
+}
+li.big {
+  width: 12rem;
+  height: 12rem;
+  line-height: 12rem;
+}
+li:nth-child(even) {
+  align-self: flex-end;
+}
+li:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.gallery {
+  display: block flex;
+  flex-wrap: wrap;
+  max-inline-size: 1000px;
+  /* Centralizes the pictures */
+  margin-inline: auto;
+  margin-block-end: 1rem;
+}
+.gallery__header {
+  flex: 0 0 100%;
+}
+.column {
+  /* flex: 25%; */
+  flex: 1 1 25%;
+  padding-inline: 4px;
+}
+.column img {
+  margin-block-start: 8px;
+  inline-size: 100%;
+}
+
+.counter {
+  padding-inline: 80px;
+  inline-size: 100%;
+}
+
+.counter__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter__fields {
+  /* flex: 1 1 0; */
+  flex: 1;
+  display: flex;
+  margin-inline-end: 10px;
+  position: relative; /* To position :after psuedo element */
+  align-items: center;
+  justify-content: center;
+}
+
+.counter__fields:last-of-type {
+  margin-inline-end: 0;
+}
+
+.counter__fields > span {
+  flex: 1;
+  text-align: center;
+  margin-inline-end: 1px;
+  background-color: red;
+  font-size: 4rem;
+}
+
+/* psuedo element */
+.counter__fields:after {
+  content: "Days";
+  position: absolute;
+  inline-size: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 100%;
+  margin-block-start: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.counter__fields:nth-of-type(2):after {
+  content: "Hours";
+}
+
+.counter__fields:nth-of-type(3):after {
+  content: "Minutes";
+}
+
+.counter__fields:nth-of-type(4):after {
+  content: "Secsonds";
+}

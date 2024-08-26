@@ -224,3 +224,29 @@ They help us by giving us a more structured way of organizing declarations withi
 # Side notes:
 
 - Specified values: So now that we talked about specificity, cascade values, and initial/inherited value we reach to the last station and our destination. After UA goes through all of those previous steps it comes up with the specified value for a property.
+
+> [!CAUTION]
+>
+> It is important to note that inheritance through `body`/`html` selector is not gonna work when UA has defined a style for that CSS prop. Look at [this](https://stackoverflow.com/q/52956070/8784518). In short if you want your styles to have precedence over UA's default stylesheet, you need to apply them to the same element. For example if user agent's default stylesheet is this
+>
+> ```css
+> button {
+>   color: black;
+> }
+> ```
+>
+> And you have
+>
+> ```css
+> body {
+>   color: white;
+> }
+> ```
+>
+> It is not gonna change the button's color. What you can do instead is using universal selector since here the value will be cascaded from our stylistic rule.
+>
+> ```css
+> * {
+>   color: white;
+> }
+> ```

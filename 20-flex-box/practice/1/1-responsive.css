@@ -1,0 +1,116 @@
+@charset "UTF-8";
+body {
+  margin-block: 25px;
+  margin-inline: 25px;
+  background: #021320;
+  color: white;
+}
+#nav {
+  position: relative;
+}
+#nav ul {
+  display: none;
+  inline-size: 100%;
+  list-style-type: none;
+  margin-block: 0px;
+  margin-inline: 0px;
+  padding-block: 0px;
+  padding-inline: 0px;
+}
+#nav ul li:hover > ul {
+  display: block flow;
+}
+#nav ul li a {
+  display: block flow;
+  padding-block: 1em;
+  padding-inline: 1em;
+  background: #0f9962;
+  color: white;
+  text-decoration: none;
+  border-inline-start: 1px solid #0a6b44;
+}
+#nav ul li a:hover {
+  background: #0d8253;
+}
+#nav ul li:first-of-type a {
+  border-inline-start: 0px;
+}
+#nav ul li ul li a {
+  padding-inline-start: 1.5em;
+}
+#nav ul li ul li ul li a {
+  padding-inline-start: 3.125em;
+}
+
+/* #region Responsive menu */
+
+#nav label {
+  display: block flow;
+  position: relative;
+  min-block-size: 2em;
+  font-size: 1.1em;
+  padding-block: 0.45em;
+  padding-inline: 0.45em;
+  margin-block: 0;
+  margin-inline: 0;
+  cursor: pointer;
+  background-color: #005292;
+  line-height: 2em;
+}
+#nav label:after {
+  content: "≡";
+  position: absolute;
+  inset-inline-end: 1em;
+  inset-block-start: 0.2em;
+  font-size: 1.8em;
+}
+#mainNavButton {
+  display: none;
+}
+/* Subsequent-sibling combinator because there is a label between the input and ul */
+#mainNavButton:checked ~ ul,
+#mainNavButton:checked ~ ul li ul {
+  display: block flow !important;
+}
+/* apply these styles when the viewport width is at least 48 em units wide. */
+@media (min-width: 48em) {
+  #mainNavButton:checked ~ ul,
+  #mainNavButton:checked ~ ul li ul {
+    display: block flex;
+    flex-direction: row;
+  }
+  #nav ul {
+    display: block flex;
+    flex-direction: row;
+  }
+  #nav ul li {
+    position: relative;
+    text-align: center;
+    /* flex: 1 1 0; */
+    flex: 1;
+  }
+  #nav ul li ul {
+    display: none;
+    position: absolute;
+    inset-block-start: 3.0625em;
+    inset-inline-start: 0;
+    inline-size: 12.5em;
+    z-index: 200;
+  }
+  #nav ul li ul li {
+    text-align: start;
+  }
+  #nav ul li ul li ul {
+    z-index: 300;
+    inset-block-start: 0px;
+    inset-inline-start: 12.4em;
+  }
+  #nav ul li ul li ul li a {
+    padding-inline-start: 30px !important;
+  }
+  #nav label {
+    display: none;
+  }
+}
+
+/* #endregion */
