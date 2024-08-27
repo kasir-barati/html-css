@@ -94,8 +94,6 @@
 | Inherited  | no                                                        |
 
 - Specifies the flex factors (`grow` and `shrink`) and the _flex basis_.
-- Note: `inline-size` and `width` does not work for flex items.
-  - Then reason is clear, because we wanna respond to the available space automatically. Design responsive websites.
 
 #### [`flex-grow`](https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow)
 
