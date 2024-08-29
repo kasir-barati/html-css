@@ -35,7 +35,7 @@ header.header {
 /* Added this in order to bring the nav center with space-between */
 header.header::after {
   content: "";
-  display: block;
+  display: block flow;
 }
 
 :is(header.header h1:first-child, .header__title) {

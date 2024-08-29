@@ -203,7 +203,7 @@
 | Inherited  | no                                                        |
 
 - Specifies how flex items in **one** flex line in which they have probably different block-sizes should be laid out.
-- Note: baseline line up all boxes according to the bottom of characters (Look at [this example](./align-items.html) for a better understanding).
+- Note: baseline line up all boxes according to the bottom of characters (Look at [this example](./align-items.html) for a better understanding). **Just for the first line**.
 
   ![align-items different values](./align-items.png)
 
