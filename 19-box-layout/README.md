@@ -242,20 +242,30 @@ So far we've understood that we have different approaches to laying out boxes. A
 
 - Sometimes browsers are not supporting the newest things written in the spec, so in these cases we can check caniuse. For example [`float: inline-start` browser support in caniuse](https://caniuse.com/?search=inline-start).
 
-| Physical property | Logical property      |
-| ----------------- | --------------------- |
-| `width`           | `inline-size`         |
-| `height`          | `block-size`          |
-| `border-left`     | `border-inline-start` |
-| `border-right`    | `border-inline-end`   |
-| `border-top`      | `border-block-start`  |
-| `border-bottom`   | `border-block-end`    |
-| `top`             | `inset-block-start`   |
-| `bottom`          | `inset-block-end`     |
-| `left`            | `inset-inline-start`  |
-| `right`           | `inset-inline-end`    |
-| `float: left`     | `float: inline-start` |
-| `float: right`    | `float: inline-end`   |
+| Physical property            | Logical property            |
+| ---------------------------- | --------------------------- |
+| `width`                      | `inline-size`               |
+| `height`                     | `block-size`                |
+| `border-left`                | `border-inline-start`       |
+| `border-right`               | `border-inline-end`         |
+| `border-top`                 | `border-block-start`        |
+| `border-bottom`              | `border-block-end`          |
+| `border-top-left-radius`     | `border-start-start-radius` |
+| `border-top-right-radius`    | `border-start-end-radius`   |
+| `border-bottom-left-radius`  | `border-end-start-radius`   |
+| `border-bottom-right-radius` | `border-end-end-radius`     |
+| `top`                        | `inset-block-start`         |
+| `bottom`                     | `inset-block-end`           |
+| `left`                       | `inset-inline-start`        |
+| `right`                      | `inset-inline-end`          |
+| `float: left`                | `float: inline-start`       |
+| `float: right`               | `float: inline-end`         |
+| `margin-top`                 | `margin-block-start`        |
+| `margin-bottom`              | `margin-block-end`          |
+| `margin-left`                | `margin-inline-start`       |
+| `margin-right`               | `margin-inline-end`         |
+| `margin: 10px 0`             | `margin-block: 10px`        |
+| `margin: 0  10px`            | `margin-inline: 10px`       |
 
 ## [`display: inline-block`](https://drafts.csswg.org/css-display/#valdef-display-inline-block)
 

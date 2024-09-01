@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  border-inline: 0;
+  border-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  padding-inline: 0;
+  padding-block: 0;
+}
+
+body {
+  background-color: #021320;
+  color: white;
+  margin-inline: 13rem;
+  padding-block: 2rem;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.m-block-3 {
+  margin-block: 3rem;
+}
+
+.get-together-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.get-together-gallery > p {
+  /* flex: 1 1 25%; */
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(25% - 10px);
+  margin-inline-end: 10px;
+}
+
+.get-together-gallery img {
+  margin-block-end: 10px;
+  inline-size: 100%;
+}
+
+.get-together-gallery > p:last-child {
+  flex-basis: 25%;
+  margin-inline-end: 0;
+}
+
+.get-together-gallery__header {
+  flex: 0 0 100%;
+}
+
+.counter {
+  margin-inline: -7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counter__header {
+  flex: 0 0 100%;
+}
+
+.counter > section {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.counter > section > p {
+  font-size: 2rem;
+  display: flex;
+  flex: 1 1 20%;
+  flex-wrap: wrap;
+}
+
+.counter > section > p + p {
+  margin-inline-start: 10px;
+}
+
+.counter span {
+  background-color: red;
+  margin-inline-end: 5px;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.counter span:last-of-type {
+  margin-inline-end: 0;
+}
+
+.counter__days > span {
+  flex: 1 1 calc(33.333% - 5px);
+}
+
+.counter__hours > span,
+.counter__minutes > span,
+.counter__seconds > span {
+  flex: 1 1 calc(50% - 5px);
+}
+
+.counter__days::after {
+  display: flex;
+  content: "days";
+  text-transform: uppercase;
+  justify-content: center;
+  flex: 0 0 100%;
+  font-size: 1rem;
+}
+
+.counter__hours::after {
+  display: flex;
+  content: "hours";
+  text-transform: uppercase;
+  justify-content: center;
+  flex: 0 0 100%;
+  font-size: 1rem;
+}
+
+.counter__minutes::after {
+  display: flex;
+  content: "minutes";
+  text-transform: uppercase;
+  justify-content: center;
+  flex: 0 0 10%;
+  font-size: 1rem;
+}
+
+.counter__seconds::after {
+  display: flex;
+  content: "seconds";
+  text-transform: uppercase;
+  justify-content: center;
+  flex: 0 0 100%;
+  font-size: 1rem;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav > li {
+  inline-size: 10rem;
+  block-size: 10rem;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.nav > li.small {
+  inline-size: 5rem;
+  block-size: 5rem;
+  align-self: flex-end;
+}
+
+.nav > li.big {
+  inline-size: 13rem;
+  block-size: 13rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 3rem;
+}

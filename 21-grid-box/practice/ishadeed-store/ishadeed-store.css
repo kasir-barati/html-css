@@ -1,0 +1,338 @@
+:root {
+  --link-color: #1a6ccc;
+  --primary-color: #1a6ccc;
+  --header-icon-color: #e6af32;
+}
+
+* {
+  box-sizing: border-box;
+  margin-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  border-block: 0;
+  border-inline: 0;
+}
+
+body {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-areas:
+    "header  header       header      "
+    "sidebar main-content main-content"
+    "sidebar latest       latest      ";
+  background-color: #edf2f7;
+  margin-inline: 50px;
+  column-gap: 2rem;
+  margin-block-end: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  background-color: #1a6ccc;
+  color: white;
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  grid-area: header;
+  margin-inline: -50px;
+}
+
+.main-menu a {
+  color: white;
+}
+
+.main-menu > p:last-child {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.main-menu__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-menu__links {
+  justify-self: end;
+  border-inline-end: 2px solid gray;
+  margin-inline-end: 0.5rem;
+  padding-inline-end: 0.5rem;
+}
+
+.main-menu__links > a + a {
+  margin-inline-start: 0.5rem;
+}
+
+.main-menu__user {
+  background-color: transparent;
+}
+
+.main-menu__user:focus-visible {
+  outline: 0;
+}
+
+.user-avatar {
+  inline-size: 50px;
+  border-radius: 100%;
+}
+
+.size-6 {
+  inline-size: 1.25rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: grid;
+  inline-size: fit-content;
+  background-color: white;
+  max-block-size: 400px;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 1fr;
+  align-content: space-between;
+  gap: 0.25rem;
+}
+
+.sidebar > p,
+.sidebar > small {
+  margin-inline: 1rem;
+}
+
+.sidebar small {
+  align-self: flex-end;
+}
+
+.sidebar__footer-links a:hover {
+  color: #1a6ccc;
+}
+
+.sidebar *:where(:not(path):not(svg)) {
+  color: gray;
+}
+
+.sidebar__list {
+  display: grid;
+  gap: 0.25rem;
+  /* Do not need them, either because of initial values or default behavior */
+  /* grid-auto-flow: row;
+  grid-template-rows: 1fr; */
+  list-style-type: none;
+  font-size: 1.25rem;
+  padding-inline-start: 0;
+}
+
+.sidebar__list a {
+  display: flex;
+  padding-block: 0.5rem;
+  margin-inline-end: 1rem;
+  border-start-end-radius: 3rem;
+  border-end-end-radius: 3rem;
+  align-items: center;
+  padding-inline-start: 1rem;
+}
+
+.sidebar__list > li > a svg {
+  margin-inline-end: 0.5rem;
+}
+
+.active,
+.sidebar__list a:hover {
+  color: var(--link-color);
+  background-color: #f3f7fc;
+}
+
+.tops {
+  grid-area: main-content;
+  background-color: white;
+  border-radius: 1rem;
+  padding-block: 1rem;
+}
+
+.top-sellers {
+  display: grid;
+  row-gap: 1rem;
+  grid-template: 1fr / repeat(4, 1fr);
+  border-block-end: 2px solid gray;
+  padding-inline: 1rem;
+  padding-block-end: 1rem;
+  margin-block-end: 1rem;
+}
+
+.top-sellers > a {
+  display: grid;
+  gap: 0.25rem;
+  align-content: center;
+  grid-template-columns: auto [second-column] 1fr;
+  align-items: end;
+}
+
+.top-sellers > a > b {
+  margin-block-start: 0.25rem;
+}
+
+.top-sellers > a img {
+  align-self: center;
+  grid-row: 1 / span 3;
+}
+
+.top-sellers > a p {
+  grid-area: second-column;
+}
+
+.top-sellers__header {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.top-sellers__filter {
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+
+.top-articles__header {
+  grid-column: 1 / -1;
+}
+
+.top-sellers__header > h1,
+.top-articles__header > h1,
+.latest__header > h1 {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 0.25rem;
+}
+
+.top-sellers__header > h1 > a,
+.top-articles__header > h1 > a {
+  color: var(--link-color);
+}
+
+.top-sellers__header > h1 > svg,
+.top-articles__header > h1 > svg,
+.latest__header > h1 > svg {
+  color: var(--header-icon-color);
+}
+
+.top-articles {
+  display: grid;
+  row-gap: 1rem;
+  padding-inline: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.top-articles__article {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.top-articles__article > hgroup {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  color: gray;
+}
+
+.top-articles__article > hgroup > h2 > a,
+.latest__search-results > article > hgroup > h2 > a {
+  color: gray;
+}
+
+.top-articles__article > hgroup > h2 > a:hover,
+.latest__search-results > article > hgroup > h2 > a:hover {
+  color: var(--link-color);
+}
+
+.top-articles__article > hgroup > p > a,
+.latest__search-results > article > hgroup > p > a {
+  color: var(--link-color);
+}
+
+.top-articles__article img {
+  inline-size: 100%;
+  grid-row: 1 / span 3;
+}
+
+.latest {
+  display: grid;
+  grid-area: latest;
+  background-color: white;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  row-gap: 1rem;
+  padding-inline: 1rem;
+}
+
+.latest__search-box {
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  padding-block-end: 1rem;
+  border-block-end: 2px solid gray;
+}
+
+.latest__search-box > p {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 4fr 1fr;
+  gap: 1rem;
+}
+
+/* #search */
+.latest__search-box input[id="search"] {
+  border-block: 2px solid gray;
+  border-inline: 2px solid gray;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  border-radius: 10rem;
+  /* Specified block-size so that our box-sizing can work. Thus our submit button which do not have a border will have the same block-size as this input. */
+  block-size: 2.5rem;
+}
+
+.latest__search-box button[type="submit"] {
+  padding-block: 0.5rem;
+  border-radius: 10rem;
+  block-size: 2.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.latest__search-results {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  column-gap: 2rem;
+  color: gray;
+}
+
+.latest__search-results article {
+  display: grid;
+  /* Note that we are saying auto here so that it will adjust the block-size to how much it does need. */
+  grid-template-rows: [search-result-image] 1fr auto;
+}
+
+.latest__search-results article hgroup {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.latest__search-results a {
+  grid-row: search-result-image;
+}
+
+.latest__search-results a img {
+  inline-size: 100%;
+}

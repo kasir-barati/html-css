@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  background-color: darkslategray;
+}
+body {
+  display: block grid;
+}
+a {
+  color: navy;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: blueviolet;
+}
+
+header.header {
+  /* 
+      First I added sticky to the header__menu and it was not working. Because it sticks relevant to its nearest scrollable parent.
+  
+      Learn more:
+      1. https://stackoverflow.com/a/70236959/8784518
+    */
+  position: sticky;
+  /* inset-inline-start does not work for me. So I had to use top. */
+  top: 0;
+  inset-inline-start: 0;
+  background-color: darkslategray;
+  display: block flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+/* Added this in order to bring the nav center with space-between */
+header.header::after {
+  content: "";
+  display: block flow;
+}
+
+:is(header.header h1:first-child, .header__title) {
+  margin-inline-start: 10px;
+}
+
+.header__menu {
+  display: flex;
+  align-self: center;
+}
+
+.header__menu ul {
+  display: flex;
+  padding-inline-start: 0;
+}
+
+.header__menu ul li {
+  margin-inline-start: 0.25rem;
+  margin-inline-end: 0.25rem;
+  list-style-type: none;
+}
+
+.header__menu ul li a {
+  text-decoration: none;
+}
+
+.header__menu ul li:first-of-type {
+  margin-inline-start: 0;
+}
+
+.header__menu ul li:last-child {
+  margin-inline-end: 0;
+}
+
+#recommendations {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .recommendations__header  */
+#recommendations > header:first-child {
+  flex: 0 0 100%;
+}
+
+#recommendations > div:first-of-type {
+  /*
+      TODO: Since the overflow-inline is not implemented in chrome and most browsers: https://caniuse.com/?search=overflow-inline
+      we're gonna use overflow-x for the time being. Remove it ASAP it was implemented.
+    */
+  overflow-x: scroll;
+  overflow-inline: scroll;
+  flex: 0 0 100%;
+  display: flex;
+}
+
+.recommendations__recommendation {
+  flex: 0 0 50%;
+}
+
+#bio {
+  display: flex;
+  flex-wrap: wrap;
+  /* <SOLUTION> */
+  /* grid-column: 1 / -1; */
+  /* </SOLUTION> */
+}
+
+#bio > header:first-child {
+  order: -2;
+  flex: 0 0 100%;
+}
+
+#bio > footer {
+  order: -1;
+}
+
+.portfolio {
+  display: block grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Here you can see how auto can help us to have a dynamic block-size */
+  grid-template-rows: auto 1fr;
+  /* grid-template-areas:
+      "portfolio-header portfolio-header portfolio-header portfolio-header"
+      "portfolio1 portfolio2 portfolio3 portfolio4"; */
+  gap: 10px;
+}
+
+.portfolio__header {
+  /*
+      A very nice way to tell browser that we wanna have a column to span all.
+  
+      Credits goes to this Stackoverflow answer: https://stackoverflow.com/a/50612664/8784518
+    */
+  grid-column: 1 / -1;
+  /*
+      Instead of the above stylistic rule we could define grid-template-areas and after that use the following CSS property.
+    */
+  /* grid-area: portfolio-header; */
+}
+
+.portfolio img {
+  inline-size: 100%;
+}
+
+/* <SOLUTION> */
+/* main {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+}
+main > * {
+  grid-column: 2;
+} */
+/* </SOLUTION> */
