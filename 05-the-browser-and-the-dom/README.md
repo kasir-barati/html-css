@@ -88,6 +88,7 @@
 ### URL
 
 - It stands for Uniform Resource Locator.
+
 - It is the address of a unique resource on the internet.
 
   ![URL](./url.png)
@@ -103,6 +104,42 @@
     - The path represents the building where your mail should be delivered
     - The parameters represent extra information such as the number of the apartment in the building.
     - The anchor represents the actual person to whom you've addressed your mail.
+
+- It's schema is like this:
+
+  `scheme://host[:port]/path[?query]`
+
+  - It's max length is 2083 character.
+    - Some routers, or browsers might truncate the URL that goes beyond `2083`.
+    - Receive a 414 status code if URL is too long (`414-URI too long`).
+  - Case-sensitive except for the `scheme` and `host`.
+    - Enforce case-sensitivity.
+    - Or sanitize it.
+  - Query parameters order is insignificant and do not matter.
+  - Legal chars in a URL:
+
+    - `A-Z`.
+    - `a-z`.
+    - `0-9`.
+    - `-`, `~`, `_`, and `.` are the special valid characters in a URL.
+    - You can use `/`, `?`, `#`, `[`, `]`, `@`, `!`, `$`, `&`, `'`, `(`, `)`, `*`, `+`, `;`, `=` and `,` too. But depending on where they've used you might need to URL escape them.
+
+      - That's where percent-encoding comes into the picture. For example if you need to have a URL like this:
+
+        `http://example.com/api/users?name=kasir&barati`.
+
+        You need to percent-encode it to:
+
+        `http://example.com/api/users?name=kasir%26barati`.
+
+        You can see a list of them [here on Wikipedia](https://en.wikipedia.org/wiki/Percent-encoding#Reserved_characters).
+
+### An HTTP request needs
+
+1. URL: like we already talked about it, it is identifying a resource on a server. Since it is logged we **usually** do not include things like password in it.
+2. Method: It specifies how a resource should be manipulated.
+3. Headers: Key-value pairs that can be used for purposes such as proxies, caching, authentication, etc.
+4. Body: Usually the state of resource that you intend to create or modify.
 
 #### What is _server_?
 
