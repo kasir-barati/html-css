@@ -267,6 +267,7 @@
 6. Play [this fun game called Flexbox Froggy](https://flexboxfroggy.com/).
 7. Try to implement [these examples](https://eneax.github.io/learn-flexbox/).
 8. [This one](https://github.com/oakmac/flexbox-layout-exercises) is **optional** since TBF I did not find it really helpful.
+9. Implement [this page](../examples/css/facebook/facebook.html).
 
 ## Footnotes
 

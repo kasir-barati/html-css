@@ -1,0 +1,413 @@
+:root {
+  --my-light-gray: #5a5b5c;
+  --my-gray: #3a3b3c;
+  --my-dark-gray: #242526;
+  --my-background: #18191a;
+  --my-blue: #0866ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin-inline: 0;
+  margin-block: 0;
+  padding-inline: 0;
+  padding-block: 0;
+  border-inline: 0;
+  border-block: 0;
+  color: white;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--my-background);
+}
+
+.main-header {
+  position: fixed;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  block-size: 4rem;
+  display: block flex;
+  flex-direction: row;
+  padding-inline: 1rem;
+  background-color: var(--my-dark-gray);
+  justify-content: space-between;
+  inline-size: 100%;
+}
+
+.main-header__logo-and-search {
+  display: block flex;
+  flex: 0 0 auto;
+}
+
+.main-header__logo {
+  display: block flex;
+  align-items: center;
+  margin-inline-end: 1rem;
+}
+
+.main-header__logo img {
+  block-size: 70%;
+}
+
+.main-header__search-box {
+  flex: 0 0 20%;
+  display: block flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-header__search-box > input[name="search"] {
+  background-color: var(--my-gray);
+  font-size: 1.25rem;
+  block-size: 70%;
+  border-radius: 2rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 2.25rem;
+}
+
+.main-header__search-box > input[name="search"]:focus {
+  outline: 0;
+}
+
+.main-header__search-box::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inline-size: 1.25rem;
+  block-size: 70%;
+  /* Note: because this is a pseudo element our align-items declaration does not work on it. */
+  align-self: center;
+  background: url("./assets/magnifier.svg") center / contain no-repeat;
+}
+
+.main-header__navbar {
+  display: block flex;
+  flex: 0 0 auto;
+  margin-inline-end: 15rem;
+}
+
+.main-header__navbar > a {
+  block-size: calc(100% - 0.5rem);
+  justify-content: center;
+  display: block flex;
+  align-items: center;
+  padding-inline: 2rem;
+  margin-inline: 0.25rem;
+  margin-block: 0.25rem;
+}
+
+.main-header__navbar > a:hover {
+  background-color: var(--my-gray);
+  border-radius: 1rem;
+}
+
+.main-header__navbar > a > img {
+  block-size: 60%;
+}
+
+.main-header__navbar > .main-header__navbar--active {
+  margin-block-end: 0;
+  padding-block-end: 0.25rem;
+  block-size: calc(100% - 0.25rem);
+  border-block-end: 3px solid var(--my-blue);
+}
+
+.main-header__navbar > .main-header__navbar--active:hover {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.main-header__account-control-and-setting {
+  flex: 0 0 auto;
+  display: block flex;
+}
+
+.main-header__account,
+.main-header__notifications,
+.main-header__messenger,
+.main-header__menu {
+  display: block flex;
+  flex: 0 0 auto;
+  align-items: center;
+  cursor: pointer;
+  margin-inline-start: 0.5rem;
+  background-color: var(--my-gray);
+  border-radius: 3rem;
+  margin-block: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+.main-header__account:hover,
+.main-header__notifications:hover,
+.main-header__messenger:hover,
+.main-header__menu:hover {
+  background-color: var(--my-light-gray);
+}
+
+.main-header__account > img,
+.main-header__notifications > img,
+.main-header__messenger > img,
+.main-header__menu > img {
+  inline-size: 2rem;
+}
+
+.main-header__account > img {
+  border-radius: 2rem;
+}
+
+.side-navbar {
+  position: fixed;
+  inline-size: 25%;
+  inset-inline-start: 0;
+  inset-block-start: 4rem; /* This 4rem comes from the header's block-size css property. */
+  padding-inline-start: 2rem;
+  padding-block-end: 4rem;
+  min-block-size: 100%;
+  /* Won't work without physical properties */
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  scrollbar-color: var(--my-gray) transparent;
+  scrollbar-width: thin;
+}
+
+.side-navbar__links {
+  margin-block-start: 1rem;
+  list-style-type: none;
+  display: block flex;
+  flex-direction: column;
+  inline-size: fit-content;
+}
+
+.side-navbar__links > li > button,
+.side-navbar__links > li > a {
+  text-decoration: none;
+  display: block flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  border-radius: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.side-navbar__links > li > button {
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: 100%;
+}
+
+.side-navbar__links > li > button > img {
+  background-color: var(--my-light-gray);
+}
+
+.side-navbar__links > li > button:hover,
+.side-navbar__links > li > a:hover {
+  background-color: var(--my-gray);
+}
+
+.side-navbar__links > li > button > img,
+.side-navbar__links > li > a > img {
+  block-size: 2rem;
+  border-radius: 2rem;
+  margin-inline-end: 0.25rem;
+}
+
+.side-navbar__legal {
+  flex: 0 0 100%;
+  margin-block: 1rem;
+}
+
+.side-navbar__legal > a {
+  text-decoration: none;
+}
+
+.side-navbar__legal > a:hover {
+  text-decoration: underline;
+}
+
+.side-navbar__legal__more {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.side-navbar__copyright {
+  font-size: 1rem;
+}
+
+.main-content {
+  display: block flex;
+  margin-inline: auto;
+  margin-block: 4rem;
+  padding-block-start: 2rem;
+  width: 50%;
+  flex-direction: column;
+}
+
+.complementary-sidebar {
+  position: fixed;
+  inset-block-start: 4rem;
+  inset-inline-end: 0;
+  inline-size: 20%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  scrollbar-color: var(--my-gray) transparent;
+  scrollbar-width: thin;
+  padding-block-end: 5rem;
+}
+
+.contacts,
+.birthdays,
+.sponsored,
+.group-chats {
+  display: block flex;
+  flex-direction: column;
+  padding-block: 1rem;
+  border-block-end: 1px solid var(--my-gray);
+}
+
+.group-chats {
+  border-block-end: 0;
+}
+
+.contacts > header,
+.birthdays > header,
+.sponsored > header,
+.group-chats > header {
+  margin-block-end: 0.5rem;
+}
+
+.contacts > header {
+  display: block flex;
+  justify-content: space-between;
+}
+
+.contacts > header > h1,
+.birthdays > header > h1,
+.sponsored > header > h1,
+.group-chats > header > h1 {
+  font-size: 1.5rem;
+}
+
+.contacts > header > h1 {
+  flex: 0 0 auto;
+}
+
+.sponsored__ad {
+  flex: 0 0 100%;
+}
+
+.sponsored__ad + .sponsored__ad {
+  margin-block-start: 1rem;
+}
+
+.sponsored__ad > figure {
+  flex: 0 0 auto;
+  display: block flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sponsored__ad > figure > img {
+  inline-size: 10rem;
+  margin-inline-end: 1rem;
+  border-radius: 1rem;
+}
+
+.sponsored__ad > figure > figcaption {
+  white-space: nowrap;
+  overflow: hidden;
+  block-size: 100%;
+  text-overflow: ellipsis;
+}
+
+.sponsored__ad > figure > figcaption > p {
+  color: var(--my-gray);
+}
+
+.birthdays > a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.birthdays > a:hover {
+  background-color: var(--my-gray);
+  border-radius: 1rem;
+}
+
+.contacts__options,
+.contacts__search {
+  cursor: pointer;
+  inline-size: 2rem;
+  background-color: transparent;
+}
+
+.contacts__options:hover,
+.contacts__search:hover {
+  background-color: var(--my-gray);
+  border-radius: 1rem;
+}
+
+.contacts__list {
+  display: block flex;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+}
+
+.contacts__list > li {
+  inline-size: calc(100% - 1rem);
+  margin-inline-end: 1rem;
+}
+
+.contacts__list > li > a {
+  display: block flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.contacts__list > li > a:hover {
+  background-color: var(--my-gray);
+  border-radius: 1rem;
+}
+
+.contacts__list > li > a > img {
+  block-size: 2rem;
+  border-radius: 1rem;
+  margin-inline-end: 0.5rem;
+}
+
+.group-chats__create {
+  background-color: transparent;
+  position: relative;
+  text-align: start;
+  padding-block-start: 0.5rem;
+  padding-inline-start: 2.5rem;
+  cursor: pointer;
+}
+
+.group-chats__create:focus {
+  outline: none;
+}
+
+.group-chats__create::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inline-size: 2rem;
+  block-size: 2rem;
+  background: url("./assets/plus-circle.svg") center / contain no-repeat;
+  background-color: var(--my-gray);
+  border-radius: 1rem;
+}
