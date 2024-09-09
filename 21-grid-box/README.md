@@ -37,6 +37,10 @@
 
 - Now if we put together columns and rows we'll end up having what's called grid cell. It is the intersection of 4 lines.
 
+> [!TIP]
+>
+> The items themselves **DO NOT** form the layout. But rather grid lines form the layout.
+
 ## [Fractional unit -- fr](https://drafts.csswg.org/css-grid-2/#fr-unit)
 
 - It distributes the left over free space available for other boxes who do not have a fixed size.
