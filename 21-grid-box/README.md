@@ -37,6 +37,8 @@
 
 - Now if we put together columns and rows we'll end up having what's called grid cell. It is the intersection of 4 lines.
 
+  ![Grid cell](./cell.png)
+
 > [!TIP]
 >
 > The items themselves **DO NOT** form the layout. But rather grid lines form the layout.
