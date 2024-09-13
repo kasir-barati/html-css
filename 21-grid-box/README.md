@@ -105,7 +105,7 @@
 | `grid-column-start`, `grid-column-end` | `grid-column: 1 / 5`            |
 | `grid-row`, `grid-column`              | `grid-area: 1 / myline / 1 / 5` |
 | `grid-row: 1 / 3`                      | `grid-row: 1 / span 2`          |
-| `grid-column: 3 / 5`                   | `grid-row: 3 / span 2`          |
+| `grid-column: 3 / 5`                   | `grid-column: 3 / span 2`       |
 
 - What if I wanted my grid item to be placed against the far end and not start? This is also why CSS working group decided to enable you, reference lines by negative numbers.
 
@@ -118,7 +118,7 @@
 | Applies to | grid containers.             |
 | Inherited  | no                           |
 
-- In out example in [`resume.css`](./resume.css) you can see that instead of `grid-column: 1 / -1;` we could leverage named areas.
+- In our example in [`resume.css`](./resume.css) you can see that instead of `grid-column: 1 / -1;` we could leverage named areas.
 - When we use these they'll create named lines too. In our example we'll have `portfolio-start` and `portfolio-end`.
 
 ### [`grid-auto-flow`](https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-flow)
@@ -149,12 +149,12 @@
 
 ### [`align-items`](https://drafts.csswg.org/css-align-3/#propdef-align-items)
 
-| Name       | align-items         |
-| ---------- | ------------------- |
-| Value      | `normal`, `stretch` |
-| Initial    | `normal`            |
-| Applies to | Grid container.     |
-| Inherited  | no.                 |
+| Name       | align-items              |
+| ---------- | ------------------------ |
+| Value      | `normal`, `stretch`, ... |
+| Initial    | `normal`                 |
+| Applies to | Grid container.          |
+| Inherited  | no.                      |
 
 - All `align-*` css properties work on block dimension.
 
@@ -162,7 +162,7 @@
 
 | Name       | align-content                                                                |
 | ---------- | ---------------------------------------------------------------------------- |
-| Value      | `normal`                                                                     |
+| Value      | `normal`, ...                                                                |
 | Initial    | `normal`                                                                     |
 | Applies to | block containers, multicol containers, flex containers, and grid containers. |
 | Inherited  | no                                                                           |
@@ -173,7 +173,7 @@
 
 | Name       | justify-content                                                |
 | ---------- | -------------------------------------------------------------- |
-| Value      | `normal`, <content-distribution>, <overflow-position>          |
+| Value      | `normal`, ...                                                  |
 | Initial    | `normal`                                                       |
 | Applies to | multicol containers, flex containers, and **grid containers**. |
 | Inherited  | no                                                             |
@@ -183,12 +183,12 @@
 
 ### [`justify-items`](https://drafts.csswg.org/css-align-3/#propdef-justify-items)
 
-| Name       | justify-items                |
-| ---------- | ---------------------------- |
-| Value      | `normal`, `stretch`,`legacy` |
-| Initial    | `legacy`                     |
-| Applies to | all elements                 |
-| Inherited  | no                           |
+| Name       | justify-items                     |
+| ---------- | --------------------------------- |
+| Value      | `normal`, `stretch`,`legacy`, ... |
+| Initial    | `legacy`                          |
+| Applies to | all elements                      |
+| Inherited  | no                                |
 
 - Learn more on [CSS spec for grid box](https://drafts.csswg.org/css-grid-2/#row-align).
 
