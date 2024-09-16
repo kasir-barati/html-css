@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Android Apps on Google Play</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <a class="main-nav__logo" href="#">
+        <img src="./assets/logo.png" alt="Google Play Store logo" />
+      </a>
+      <ul class="main-nav__navbar">
+        <li class="main-nav__navbar__item">
+          <!-- TODO: I could add an span element here in order to get the bottom border right but I decided to hold of for now and see what comes next. -->
+          <a class="active" href="#">Games</a>
+        </li>
+        <li class="main-nav__navbar__item"><a href="#">Apps</a></li>
+        <li class="main-nav__navbar__item"><a href="#">Movies & TV</a></li>
+        <li class="main-nav__navbar__item"><a href="#">Books</a></li>
+        <li class="main-nav__navbar__item"><a href="#">Kids</a></li>
+      </ul>
+      <p class="main-nav__account-control-search-help">
+        <button type="button">
+          <img alt="Magnifier" src="./assets/magnifier.png" />
+        </button>
+        <button type="button">
+          <img alt="Question mark" src="./assets/circle-question-mark.png" />
+        </button>
+        <button type="button">
+          <img alt="User avatar" src="./assets/avatar.png" />
+        </button>
+      </p>
+    </nav>
+    <section class="devices">
+      <a href="#">Windows</a>
+      <a class="active" href="#">Phone</a>
+      <a href="#">Tablet</a>
+      <a href="#">TV</a>
+      <a href="#">Chromebook</a>
+      <a href="#">Watch</a>
+    </section>
+    <article class="category">
+      <header class="category__header">
+        <h1>Top-rated games</h1>
+      </header>
+      <article class="category__app">
+        <a href="#">
+          <img
+            alt="App1 banner"
+            title="App1 banner"
+            class="category__app__banner"
+            src="./assets/app1-banner.png"
+          />
+          <figure class="category__app__icon">
+            <img title="App1 icon" alt="App1 icon" src="./assets/app1.png" />
+            <figcaption class="category__app__icon__data">
+              <p class="category__app__name">Write It! Japanese</p>
+              <p class="category__app__category">
+                Educational &CenterDot; Language
+              </p>
+              <p class="category__app__rate">4.1 &starf;</p>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+      <article class="category__app">
+        <a href="#">
+          <img
+            alt="App2 banner"
+            title="App2 banner"
+            class="category__app__banner"
+            src="./assets/app2-banner.png"
+          />
+          <figure class="category__app__icon">
+            <img title="App2 icon" alt="App2 icon" src="./assets/app2.png" />
+            <figcaption class="category__app__icon__data">
+              <p class="category__app__name">Plants vs. Zombies&trade;</p>
+              <p class="category__app__category">
+                Strategy &CenterDot; Tower defense
+              </p>
+              <p class="category__app__rate">4.1 &starf;</p>
+            </figcaption>
+          </figure>
+        </a>
+        <button class="category__app__banner__play">
+          &blacktriangleright;
+        </button>
+      </article>
+      <article class="category__app">
+        <a href="#">
+          <img
+            alt="App3 banner"
+            title="App3 banner"
+            class="category__app__banner"
+            src="./assets/app3-banner.png"
+          />
+          <figure class="category__app__icon">
+            <img title="App3 icon" alt="App3 icon" src="./assets/app3.png" />
+            <figcaption class="category__app__icon__data">
+              <p class="category__app__name">Kingdom Rush Tower Defense TD</p>
+              <p class="category__app__category">
+                Strategy &CenterDot; Tower defense
+              </p>
+              <p class="category__app__rate">4.1 &starf;</p>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+    </article>
+    <article class="top">
+      <header>
+        <h1>Top charts</h1>
+      </header>
+      <p class="top__filter">
+        <button class="active" type="button">Top for &yen;0</button>
+        <button type="button">Top grossing</button>
+        <button type="button">Top selling</button>
+      </p>
+      <section class="top__apps">
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">1</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app1.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">
+                  Puzzle &middot; Board &middot; Chess &middot; Offline &middot;
+                  Block &middot; Multi-player &middot; Casual
+                </p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">2</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app2.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">3</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app3.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">4</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app4.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">5</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app5.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">6</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app1.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">7</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app2.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">8</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app3.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">9</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app4.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <article class="top__apps__app">
+          <a href="#">
+            <p class="top_apps__app__rank">10</p>
+            <figure class="top_apps__app__data">
+              <img
+                class="top_apps__app__data__icon"
+                src="./assets/app5.png"
+                alt="App icon"
+              />
+              <figcaption>
+                <p class="top_apps__app__name">App name</p>
+                <p class="top_apps__app__category">Puzzle</p>
+                <p class="top_apps__app__rate">3.4 &starf;</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+      </section>
+      <!-- With JS we should hide and show this control box -->
+      <p class="control">
+        <button type="button" aria-label="Previous" class="control__prev">
+          &lt;
+        </button>
+        <button type="button" aria-label="Next" class="control__next">
+          &gt;
+        </button>
+      </p>
+    </article>
+    <article class="viral">
+      <header class="viral__header">
+        <hgroup>
+          <h1>In everyone's hands</h1>
+          <p>Download these games</p>
+        </hgroup>
+      </header>
+      <section class="viral__apps">
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>App name</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app1.png" />
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>Kingdom Rush Vengeance TD Game</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app2.png" />
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>App name</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app3.png" />
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>App name</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app4.png" />
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>App name</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app5.png" />
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <figcaption>
+              <h2>App name</h2>
+              <p>4.5 &starf; &nbsp; &euro;7.99</p>
+            </figcaption>
+            <img src="./assets/app1.png" />
+          </figure>
+        </a>
+      </section>
+      <!-- With JS we should hide and show this control box -->
+      <p class="control">
+        <button type="button" aria-label="Previous" class="control__prev">
+          &lt;
+        </button>
+        <button type="button" aria-label="Next" class="control__next">
+          &gt;
+        </button>
+      </p>
+    </article>
+  </body>
+</html>

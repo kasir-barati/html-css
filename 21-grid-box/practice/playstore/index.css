@@ -1,0 +1,433 @@
+* {
+  border-block: 0;
+  border-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: block grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  row-gap: 2rem;
+
+  /* Not necessary in a real world app. Just added it to see my last article better. In other word this is a development state only css rule that I've added. */
+  margin-block-end: 2rem;
+}
+
+.main-nav {
+  display: block grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 170px 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  align-items: center;
+  margin-block-end: 1rem;
+  position: sticky;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.main-nav.is-pinned {
+  box-shadow: 0.25rem 1rem 1rem black;
+}
+
+.main-nav__logo:focus-visible {
+  outline: 0;
+}
+
+.main-nav__logo > img {
+  inline-size: 100%;
+}
+
+.main-nav__navbar {
+  display: block flex;
+  list-style-type: none;
+  flex-direction: row;
+}
+
+.main-nav__navbar__item > a {
+  text-decoration: none;
+  display: block;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  color: gray;
+}
+
+.main-nav__navbar__item > a.active {
+  color: green;
+  border-block-end: 2px solid green;
+}
+
+.main-nav__account-control-search-help {
+  display: block flex;
+  justify-content: end;
+}
+
+.main-nav__account-control-search-help > button {
+  background-color: transparent;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.main-nav__account-control-search-help > button:hover {
+  background-color: gray;
+}
+
+.main-nav__account-control-search-help > button + button {
+  margin-inline-start: 0.5rem;
+}
+
+.main-nav__account-control-search-help > button:focus-visible {
+  outline: 0;
+}
+
+.main-nav__account-control-search-help > button > img {
+  padding-inline: 0.25rem;
+  padding-block: 0.25rem;
+  inline-size: 70%;
+}
+
+.main-nav__account-control-search-help > button > img[alt="User avatar"] {
+  border-radius: 2rem;
+  inline-size: 100%;
+}
+
+.devices {
+  grid-column: 2;
+}
+
+.devices > a {
+  text-decoration: none;
+  border-inline: 1px solid gray;
+  border-block: 1px solid gray;
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  border-radius: 1rem;
+  color: gray;
+}
+
+.devices > a:hover {
+  background-color: lightgray;
+}
+
+.devices > a + a {
+  margin-inline-start: 1rem;
+}
+
+.devices > a.active {
+  color: green;
+  border-color: lightgray;
+  background-color: lightgray;
+}
+
+.devices > a.active:hover {
+  border-color: darkgray;
+  background-color: darkgray;
+}
+
+.category {
+  grid-column: 2;
+  display: block grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+  grid-template-rows: auto 1fr;
+}
+
+/* #region: These two css declaration blocks are helping me to align my first and last app with the header */
+.category .category__app:first-of-type {
+  margin-inline-start: -1rem;
+}
+
+.category .category__app:last-of-type {
+  margin-inline-end: -1rem;
+}
+/* #endregion */
+
+.category__header {
+  grid-column: 1 / -1;
+}
+
+.category__app {
+  display: block flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.category__app > a {
+  text-decoration: none;
+  color: inherit;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
+.category__app > a:hover {
+  border-radius: 1rem;
+  background-color: lightgray;
+}
+
+.category__app__banner {
+  inline-size: 100%;
+  block-size: 250px;
+  border-radius: 0.75rem;
+  margin-block-end: 1rem;
+}
+
+.category__app__banner__play {
+  color: white;
+  background-color: #333333aa;
+  text-align: center;
+  inline-size: 4rem;
+  line-height: 4rem;
+  position: absolute;
+  inset-inline-start: calc(50% - 2rem);
+  inset-block-start: calc(125px - 2rem);
+  z-index: 1;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.category__app__banner__play:hover {
+  /* 14px = 7px + 7px border-block */
+  line-height: calc(4rem - 14px);
+  background-color: #222222aa;
+  border-inline: 7px solid #444444aa;
+  border-block: 7px solid #444444aa;
+}
+
+.category__app__icon {
+  display: block flex;
+  align-items: center;
+}
+
+.category__app__icon > img:first-child {
+  flex: 0 0 20%;
+  inline-size: 20%;
+  border-radius: 1rem;
+}
+
+.category__app__icon__data {
+  flex: 0 0 80%;
+}
+
+.category__app__name,
+.category__app__category,
+.category__app__rate {
+  margin-inline-start: 0.5rem;
+}
+
+.category__app__category,
+.category__app__rate {
+  color: gray;
+}
+
+.top {
+  grid-column: 2;
+  display: block grid;
+  row-gap: 1rem;
+  grid-template-rows: auto auto 1fr;
+}
+
+.top__filter > button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem;
+  color: gray;
+  background-color: transparent;
+  border-inline: 1px solid gray;
+  border-block: 1px solid gray;
+  cursor: pointer;
+}
+
+.top__filter > button + button {
+  margin-inline-start: 0.75rem;
+}
+
+.top__filter > button:hover {
+  background-color: lightgray;
+}
+
+.top__filter > button.active {
+  color: green;
+  border-color: lightgray;
+  background-color: lightgray;
+}
+
+.top__filter > button.active:hover {
+  border-color: darkgray;
+  background-color: darkgray;
+}
+
+.top__apps {
+  display: block grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 33.333%);
+  grid-auto-flow: column;
+  overflow-x: hidden;
+}
+
+.top__apps__app {
+  inline-size: 100%;
+}
+
+.top__apps__app > a {
+  display: block flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  padding-block: 0.75rem;
+  overflow-x: clip;
+  padding-inline: 1.75rem;
+}
+
+.top__apps__app > a:hover {
+  background-color: lightgray;
+  border-radius: 1rem;
+}
+
+.top_apps__app__rank {
+  padding-inline-end: 1rem;
+  flex: 0 0 auto;
+}
+
+.top_apps__app__data {
+  display: block grid;
+  align-items: center;
+  column-gap: 1rem;
+  grid-template-columns: auto 1fr;
+  flex: 0 0 100%;
+}
+
+.top_apps__app__data > figcaption {
+  /* This css property enables us to define margin-inline-end: 1.75rem; for top_apps__app__name, top_apps__app__category, and top_apps__app__rate  */
+  display: grid;
+  row-gap: 0.25rem;
+}
+
+.top_apps__app__data__icon {
+  border-radius: 1rem;
+  inline-size: 6rem;
+}
+
+.top_apps__app__name,
+.top_apps__app__category,
+.top_apps__app__rate {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-inline-end: 1.75rem;
+}
+
+.top_apps__app__category,
+.top_apps__app__rate {
+  color: gray;
+}
+
+.viral {
+  grid-column: 2;
+  display: block grid;
+  row-gap: 1rem;
+}
+
+.viral__header > hgroup > p {
+  color: gray;
+  font-size: 0.9rem;
+  padding-block-start: 0.25rem;
+}
+
+.viral__apps {
+  display: block flex;
+  /* To hide other items that should not be shown to the user */
+  overflow-x: hidden;
+  margin-inline: -1rem;
+}
+
+.viral__apps > a {
+  text-decoration: none;
+  color: inherit;
+  /* Note that you can get rid of this part but keep in mind in case that the name was too long, all siblings will have same block size */
+  block-size: fit-content;
+  /* To fit only 6 item when user sees the apps; 100% ÷ 6 = 16.666% */
+  flex: 0 0 16.666%;
+}
+
+.viral__apps > a:hover {
+  background-color: lightgray;
+  border-radius: 1rem;
+}
+
+.viral__apps > a h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  padding-block-end: 0.25rem;
+}
+
+.viral__apps > a figcaption p {
+  color: gray;
+}
+
+.viral__apps figure {
+  display: block grid;
+  grid-auto-flow: row;
+  row-gap: 0.5rem;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
+.viral__apps figure figcaption {
+  inline-size: 100%;
+}
+
+.viral__apps img {
+  order: -1;
+  inline-size: 100%;
+  border-radius: 1rem;
+}
+
+.control {
+  position: relative;
+}
+
+.control__prev {
+  inset-inline-start: -1.5rem;
+  inset-block-end: 10rem;
+}
+
+.control__next {
+  inset-inline-end: -1.5rem;
+  inset-block-end: 10rem;
+}
+
+.control__prev,
+.control__next {
+  position: absolute;
+  line-height: 3rem;
+  inline-size: 3rem;
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 1px 1px 5px black, -1px -1px 5px red, -1px 1px 5px blue,
+    1px -1px 5px green;
+}
+
+.control__prev:hover,
+.control__next:hover {
+  background-color: lightgray;
+}
