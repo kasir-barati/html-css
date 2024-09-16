@@ -72,7 +72,6 @@
 - `auto` here means: generate the `inline-size`/`block-size` based on the content.
 - You can prevent repeating yourself by utilizing [`repeat`](https://drafts.csswg.org/css-grid/#funcdef-repeat) function.
   - If you use this function then you can name rows/columns like this: `repeat(2, [row-line] 1fr)`. And where you wanted to use it remember to add a number at the end of the name, e.g. `grid-row: row-line 1 / 3`.
-- You can combine these two css properties into one: `grid-template: repeat(2, 1fr) / repeat(4, 1fr);`.
 
 ### [`gap`](https://drafts.csswg.org/css-align-3/#propdef-gap)
 
@@ -99,13 +98,14 @@
 
 #### Shorthands
 
-| Complete syntax                        | Shorthand                       |
-| -------------------------------------- | ------------------------------- |
-| `grid-row-start`, `grid-row-end`       | `grid-row: 1 / myline`          |
-| `grid-column-start`, `grid-column-end` | `grid-column: 1 / 5`            |
-| `grid-row`, `grid-column`              | `grid-area: 1 / myline / 1 / 5` |
-| `grid-row: 1 / 3`                      | `grid-row: 1 / span 2`          |
-| `grid-column: 3 / 5`                   | `grid-column: 3 / span 2`       |
+| Complete syntax                                                                | Shorthand                                        |
+| ------------------------------------------------------------------------------ | ------------------------------------------------ |
+| `grid-row-start`, `grid-row-end`                                               | `grid-row: 1 / myline`                           |
+| `grid-column-start`, `grid-column-end`                                         | `grid-column: 1 / 5`                             |
+| `grid-row`, `grid-column`                                                      | `grid-area: 1 / myline / 1 / 5`                  |
+| `grid-row: 1 / 3`                                                              | `grid-row: 1 / span 2`                           |
+| `grid-column: 3 / 5`                                                           | `grid-column: 3 / span 2`                        |
+| `grid-template-rows: repeat(2, 1fr);`, `grid-template-columns: repeat(4, 1fr)` | `grid-template: repeat(2, 1fr) / repeat(4, 1fr)` |
 
 - What if I wanted my grid item to be placed against the far end and not start? This is also why CSS working group decided to enable you, reference lines by negative numbers.
 
