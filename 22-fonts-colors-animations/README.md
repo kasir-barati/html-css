@@ -166,3 +166,103 @@
 > [!NOTE]
 >
 > Margins have no influence on the `background` and `border`.
+
+## [Colors](https://drafts.csswg.org/css-color-4/)
+
+- A pixel consist of 3 colors: red, green, blue.
+
+  ![Sub pixels](./subpixels.png)
+
+- Due to size of one pixel on a display we usually see a combined color of those **intensities**.
+
+  ![RGB](./rgb.png)
+
+- The intensities ranges from 0 to 255. In other word these are specifying the amount of each color, making different colors.
+
+### Base 10
+
+- 255 is in base 10.
+- In base 10 we count from 0 to 9. In other word we have only 10 digit to use.
+
+  ![Base 10 digits](./base10.png)
+
+- AKA decimal.
+- To count more that 9 we'll reuse the same numbers; e.g. 10 is a combination of 1 and 0.
+
+### Base 16
+
+- We can write numbers in other basis as well.
+- Here we can count up to 15: from 0 to 9 and then A to F.
+
+  ![Hexadecimal characters](./hexadecimal.png)
+
+- AKA hexadecimal.
+
+#### Base 10 VS Base 16
+
+![Compare 0 to 15 between decimal and hexadecimal](./0-15.png) ![Compare 100 to 255 between decimal and hexadecimal](./100-255.png)
+
+- In CSS we add a pound sign (hash) in front of a hexadecimal number.
+
+  ![Color white](./white.png) ![Color red](./red.png)
+
+> [!TIP]
+>
+> For common colors we can use their name, e.g. `turquoise`, `cyan`, etc.
+
+# [`opacity`](https://drafts.csswg.org/css-color-4/#transparency)
+
+| Name       | opacity       |
+| ---------- | ------------- |
+| Value      | `0.3`         |
+| Initial    | `1`           |
+| Applies to | all elements. |
+| Inherited  | no            |
+
+- How hard something is to see through.
+- The more something opaque is, the harder it gets to see through it.
+- Can be specified using [`rgba` function](https://drafts.csswg.org/css-color-4/#funcdef-rgba). That `a` stands for [_alpha channel_](https://developer.mozilla.org/en-US/docs/Glossary/Alpha).
+
+  ![rgba](./rgba.png)
+
+# [`background-image`](https://drafts.csswg.org/css-backgrounds-3/#background-image)
+
+| Name       | background-image         |
+| ---------- | ------------------------ |
+| Value      | `url("./file/path.png")` |
+| Initial    | none                     |
+| Applies to | all elements             |
+| Inherited  | no                       |
+
+- Here we can use [`url`](https://drafts.csswg.org/css-values/#urls) function to tell browser from where it should download the image.
+
+# [`background-size`](https://drafts.csswg.org/css-backgrounds-3/#background-size)
+
+| Name       | background-size                             |
+| ---------- | ------------------------------------------- |
+| Value      | `contain`, `cover`, `15px 15px`, `10% auto` |
+| Initial    | auto                                        |
+| Applies to | all elements                                |
+| Inherited  | no                                          |
+
+- When we use 2 numbers, the first one is width and the second one is height:
+
+  - You can use other [absolute](https://drafts.csswg.org/css-values-4/#absolute-lengths) or [relative](https://drafts.csswg.org/css-values-4/#relative-lengths) length units.
+  - You can also use percentage.
+  - `10% auto` will preserve the aspect ratio of height.
+
+# [`background-repeat`](https://drafts.csswg.org/css-backgrounds-3/#background-repeat)
+
+| Name       | background-repeat                                               |
+| ---------- | --------------------------------------------------------------- |
+| Value      | `repeat-x`, `repeat-y`, `repeat`, `space`, `round`, `no-repeat` |
+| Initial    | repeat                                                          |
+| Applies to | all elements                                                    |
+| Inherited  | no                                                              |
+
+- `repeat-x`: computes to `repeat no-repeat`.
+- `repeat-y`: computes to `no-repeat repeat`.
+- `repeat`: computes to `repeat repeat`.
+- `space`: computes to `space space`.
+- `round`: computes to `round round`.
+- `no-repeat`: computes to `no-repeat no-repeat`.
