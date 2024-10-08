@@ -14,7 +14,7 @@
     font-family: Helvetica, Verdana, sans-serif;
   }
   ```
-- Most of the times we need to have something else, thus usually we tend to use web fonts, services such as Google Fonts.
+- Most of the times we need to have something else, thus usually we tend to use web fonts, services such as [Google Fonts](https://fonts.google.com/).
 
 # [`font-weight`](https://drafts.csswg.org/css-fonts-4/#font-weight-prop)
 
@@ -90,6 +90,11 @@
 | Inherited  | yes                                                                                         |
 
 - Usually we tend to use `uppercase` to transform our normal written text to all uppercase letter text.
+
+## YouTube & Aparat
+
+- https://youtu.be/YZM-vCZPJdo
+- https://aparat.com/v/ygt9q49
 
 # [`text-decoration`](https://drafts.csswg.org/css-text-decor-4/#text-decoration-property)
 
