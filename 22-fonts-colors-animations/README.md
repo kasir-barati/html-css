@@ -274,6 +274,7 @@
 - [Sitepoint](https://www.sitepoint.com/how-to-use-css-background-size-and-background-position/).
 - [Parallel gallery](./practice/parallel.html).
 - [Movie banner/poster=](./practice2/movie-banner.html).
+- [Blog gallery](./practice3/blog-gallery.html).
 
 ## YouTube & Aparat
 
