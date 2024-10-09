@@ -273,6 +273,7 @@
 - [Mimo](https://mimo.org/glossary/css/background-image)
 - [Sitepoint](https://www.sitepoint.com/how-to-use-css-background-size-and-background-position/).
 - [Parallel gallery](./practice/parallel.html).
+- [Movie banner/poster=](./practice2/movie-banner.html).
 
 ## YouTube & Aparat
 
