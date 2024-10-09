@@ -35,6 +35,11 @@ body {
   text-transform: capitalize;
 }
 
+.intro__header::before,
+.intro__header::after {
+  content: '"';
+}
+
 .intro__read-more {
   text-transform: capitalize;
   background-color: transparent;
