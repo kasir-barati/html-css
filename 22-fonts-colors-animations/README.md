@@ -314,7 +314,7 @@
 | Name       | transition-duration |
 | ---------- | ------------------- |
 | Value      | `1s`                |
-| Initial    | 0s                  |
+| Initial    | `0s`                |
 | Applies to | all elements        |
 | Inherited  | no                  |
 
@@ -357,3 +357,132 @@
 
 - https://youtu.be/ECp0oqGbLRM
 - https://aparat.com/v/mxef902
+
+# [`keyframes`](https://drafts.csswg.org/css-animations/#keyframes)
+
+- Animation describe a way to enable authors to animate CSS properties' values over time (similar to `transition`).
+- There is a [CSS module for animation](https://drafts.csswg.org/css-animations-1/).
+- You can specify what should happen at each percentage of completion of animation.
+- A very good place to see what's possible with CSS animations is reading [animate.style](https://animate.style/).
+- This is our first [_At-rules_](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule). They start with `@` followed by an identifier. These directives instruct CSS how to behave. Simply put, they enable us to implement functionalities beyond simple styling rules.
+- [An example](./e.html).
+
+# [`animation`](https://drafts.csswg.org/css-animations/#animation)
+
+| Name       | animation                 |
+| ---------- | ------------------------- |
+| Value      | `1s ease-in 0.5s`         |
+| Initial    | see individual properties |
+| Applies to | all elements              |
+| Inherited  | no                        |
+
+- Shorthand property.
+- comma-separated list of animation definitions.
+- Values are in order:
+  1. Animation duration.
+  2. Animation easing function.
+  3. Animation delay.
+  4. Animation iteration count.
+  5. Animation direction.
+  6. Animation fill mode.
+  7. Animation play state.
+  8. Name of keyframes.
+
+## [`animation-name`](https://drafts.csswg.org/css-animations/#animation-name)
+
+| Name       | `animation-name`         |
+| ---------- | ------------------------ |
+| Value      | `none`, `spinning, move` |
+| Initial    | `none`                   |
+| Applies to | all elements             |
+| Inherited  | no                       |
+
+- A list of animations that apply.
+
+## [`animation-duration`](https://drafts.csswg.org/css-animations/#animation-duration)
+
+| Name       | `animation-duration` |
+| ---------- | -------------------- |
+| Value      | `2s`, `1s, 3s`       |
+| Initial    | `0s`                 |
+| Applies to | all elements         |
+| Inherited  | no                   |
+
+- A negative time is invalid.
+
+## [`animation-timing-function`](https://drafts.csswg.org/css-animations/#animation-timing-function)
+
+| Name       | `animation-timing-function` |
+| ---------- | --------------------------- |
+| Value      | `ease-in`                   |
+| Initial    | `ease`                      |
+| Applies to | all elements.               |
+| Inherited  | no                          |
+
+- The progression of the animation between the current keyframe and the next keyframe for the animating property in sorted keyframe selector order.
+
+## [`animation-iteration-count`](https://drafts.csswg.org/css-animations/#propdef-animation-iteration-count)
+
+| Name       | `animation-iteration-count` |
+| ---------- | --------------------------- |
+| Value      | `infinite`, `3`             |
+| Initial    | `1`                         |
+| Applies to | all elements.               |
+| Inherited  | no                          |
+
+- `infinite`: The animation will repeat itself forever.
+- Number:
+  - The animation will repeat the specified number of times.
+  - If the number is not an integer, the animation will end partway through its last cycle.
+  - Negative numbers are invalid.
+
+## [`animation-direction`](https://drafts.csswg.org/css-animations/#animation-direction)
+
+| Name       | `animation-direction`                                 |
+| ---------- | ----------------------------------------------------- |
+| Value      | `reverse`, `normal`, `alternate`, `alternate-reverse` |
+| Initial    | `normal`                                              |
+| Applies to | all elements                                          |
+| Inherited  | no                                                    |
+
+- Whether or not the animation should play in reverse on some or all cycles.
+
+## [`animation-play-state`](https://drafts.csswg.org/css-animations/#propdef-animation-play-state)
+
+| Name       | `animation-play-state` |
+| ---------- | ---------------------- |
+| Value      | `running`, `paused`    |
+| Initial    | `running`              |
+| Applies to | all elements           |
+| Inherited  | no                     |
+
+- Whether the animation is running or paused.
+
+## [`animation-delay`](https://drafts.csswg.org/css-animations/#animation-delay)
+
+| Name       | `animation-delay` |
+| ---------- | ----------------- |
+| Value      | `1s`              |
+| Initial    | `0s`              |
+| Applies to | all elements.     |
+| Inherited  | no                |
+
+## [`animation-fill-mode`](https://drafts.csswg.org/css-animations/#animation-fill-mode)
+
+| Name       | `animation-fill-mode`                   |
+| ---------- | --------------------------------------- |
+| Value      | `forwards`, `backwards`, `both`, `none` |
+| Initial    | `none`                                  |
+| Applies to | all elements.                           |
+| Inherited  | no                                      |
+
+- What values are applied by the animation outside the time it is executing.
+
+## Practice time
+
+- [css-tricks](https://css-tricks.com/almanac/properties/a/animation/).
+
+## YouTube & Aparat
+
+- https://youtu.be/r2_DdeOHFek
+- https://aparat.com/v/vlm65w0

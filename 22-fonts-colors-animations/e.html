@@ -1,0 +1,24 @@
+<style>
+  body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    block-size: 100vh;
+  }
+
+  @keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spin {
+    /* animation: 2s infinite reverse infinite-spinning; */
+    animation: 2s infinite infinite-spinning;
+  }
+</style>
+
+<h1 class="spin">Lorem ipsum dolor sit amet.</h1>
