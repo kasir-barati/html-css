@@ -280,3 +280,80 @@
 
 - https://youtu.be/s719ftEQH88
 - https://aparat.com/v/hziwvla
+
+# [`transition`](https://drafts.csswg.org/css-transitions-1/#transition-shorthand-property)
+
+[The transition module](https://drafts.csswg.org/css-transitions-1) talks about how to transition between css property values. And we have [_easing function_](https://drafts.csswg.org/css-easing-2/) are used via transition to determine how the transition should happen over time (e.g. first it should transition fast and then slow).
+
+| Name       | transition                |
+| ---------- | ------------------------- |
+| Value      | `opacity 1s`              |
+| Initial    | see individual properties |
+| Applies to | all elements              |
+| Inherited  | no                        |
+
+- In which order each individual css property appears in this shorthand:
+  1. Transition property.
+  2. Duration.
+  3. Easing function.
+  4. Delay.
+
+## [`transition-property`](https://drafts.csswg.org/css-transitions-1/#propdef-transition-property)
+
+| Name       | transition-property        |
+| ---------- | -------------------------- |
+| Value      | `none`, `background-color` |
+| Initial    | all                        |
+| Applies to | all elements               |
+| Inherited  | no                         |
+
+- The name of the CSS property to which the transition is applied.
+
+## [`transition-duration`](https://drafts.csswg.org/css-transitions-1/#transition-duration-property)
+
+| Name       | transition-duration |
+| ---------- | ------------------- |
+| Value      | `1s`                |
+| Initial    | 0s                  |
+| Applies to | all elements        |
+| Inherited  | no                  |
+
+- The length of time that a transition takes.
+
+## [`transition-timing-function`](https://drafts.csswg.org/css-transitions-1/#transition-timing-function-property)
+
+| Name       | transition-timing-function                          |
+| ---------- | --------------------------------------------------- |
+| Value      | `ease-in`, `ease-out`, `ease-in-out`, `linear`, etc |
+| Initial    | ease                                                |
+| Applies to | all elements                                        |
+| Inherited  | no                                                  |
+
+- How the intermediate values used during a transition will be calculated.
+- Find the complete list of available values [here](https://drafts.csswg.org/css-easing/#easing-functions).
+
+  ![Most common easing function values](./most-common-easing-function-values.png)
+
+> [!IMPORTANT]
+>
+> Learn easing function [here](https://easings.net/).
+
+> [!TIP]
+>
+> [Play with cubic-bezier](https://cubic-bezier.com).
+
+## [`transition-delay`](https://drafts.csswg.org/css-transitions-1/#transition-delay-property)
+
+| Name       | transition-delay |
+| ---------- | ---------------- |
+| Value      | `1s`             |
+| Initial    | 0s               |
+| Applies to | all elements     |
+| Inherited  | no               |
+
+- When the transition will start.
+
+## YouTube & Aparat
+
+- https://youtu.be/ECp0oqGbLRM
+- https://aparat.com/v/mxef902
