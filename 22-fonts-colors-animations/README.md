@@ -266,3 +266,15 @@
 - `space`: computes to `space space`.
 - `round`: computes to `round round`.
 - `no-repeat`: computes to `no-repeat no-repeat`.
+
+## Practice time
+
+- [Programiz](https://www.programiz.com/css/background-image).
+- [Mimo](https://mimo.org/glossary/css/background-image)
+- [Sitepoint](https://www.sitepoint.com/how-to-use-css-background-size-and-background-position/).
+- [Parallel gallery](./practice/parallel.html).
+
+## YouTube & Aparat
+
+- https://youtu.be/s719ftEQH88
+- https://aparat.com/v/hziwvla
