@@ -1,0 +1,514 @@
+* {
+  border-inline: 0;
+  border-block: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  background-color: darkslategray;
+  grid-template-columns: 5rem 1fr 5rem;
+  padding-block: 1rem;
+}
+
+body > * {
+  grid-column: 2;
+}
+
+a {
+  color: navy;
+  transition: color 0.5s linear 0s normal;
+}
+
+a:visited {
+  color: aqua;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+.header {
+  /* 
+    First I added sticky to the header__menu and it was not working. Because it sticks relevant to its nearest scrollable parent.
+
+    Learn more:
+    1. https://stackoverflow.com/a/70236959/8784518
+  */
+  position: sticky;
+  /* inset-inline-start does not work for me. So I had to use top. */
+  top: 0;
+  inset-inline-start: 0;
+  background-color: darkslategray;
+  display: block flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+/* Added this in order to bring the nav center with space-between */
+header.header::after {
+  content: "";
+  display: block flow;
+}
+
+.header__menu {
+  display: flex;
+  align-self: center;
+}
+
+.header__menu ul {
+  display: flex;
+}
+
+.header__menu ul li {
+  margin-inline: 0.25rem;
+  list-style-type: none;
+}
+
+.header__menu ul li a {
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-family: monospace;
+  text-transform: uppercase;
+  text-decoration: underline blue double;
+  text-underline-offset: 0.2rem;
+}
+
+.header__menu ul li:first-of-type {
+  margin-inline-start: 0;
+}
+
+.header__menu ul li:last-child {
+  margin-inline-end: 0;
+}
+
+main {
+  display: grid;
+  row-gap: 2rem;
+}
+
+#aboutMe {
+  display: grid;
+  row-gap: 1rem;
+  margin-block-start: 0.5rem;
+}
+
+#aboutMe header h2 {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 2.75rem;
+  color: rgba(123, 123, 123, 0.7);
+  text-shadow: 1px 1px 0.5px turquoise, -1px -1px 0.5px tomato,
+    -1px 1px 0.5px yellow, 1px -1px 0.5px seagreen;
+}
+
+.about-me__image {
+  border-radius: 4rem;
+  inline-size: 10%;
+  margin-inline-start: 1rem;
+  animation-name: bounceInRight;
+  animation-duration: 1s;
+}
+
+#aboutMe p {
+  font-family: system-ui;
+  font-size: 1.25rem;
+}
+
+#aboutMe dl {
+  display: grid;
+  row-gap: 0.25rem;
+}
+
+#aboutMe dl dt {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: #7b7b7bb3;
+  text-shadow: 1px 1px 0.5px black;
+  letter-spacing: 0.1rem;
+}
+
+#aboutMe dl dd {
+  margin-inline-start: 1.5rem;
+  display: list-item;
+  list-style-type: "\21B3";
+  padding-inline-start: 0.25rem;
+}
+
+.twitter-icon {
+  display: flex;
+}
+
+.twitter-icon::before {
+  content: "";
+  inline-size: 1.25rem;
+  margin-inline-end: 0.5rem;
+  background-image: url(./assets/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.web-icon {
+  display: flex;
+}
+
+.web-icon::before {
+  content: "";
+  inline-size: 1.25rem;
+  margin-inline-end: 0.5rem;
+  background-image: url(./assets/web.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.profession-icon {
+  display: flex;
+}
+
+.profession-icon::before {
+  content: "";
+  inline-size: 1.25rem;
+  margin-inline-end: 0.5rem;
+  background-image: url(./assets/profession.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.resume-section {
+  display: grid;
+  row-gap: 1rem;
+}
+
+#bio > header:first-child {
+  order: -2;
+}
+
+#bio > header:first-child > h2::after {
+  background: url(./assets/bio.svg) no-repeat center/contain;
+}
+
+.resume-section__header > h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.resume-section__header > h2:after {
+  content: "";
+  display: inline-block;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  margin-inline-start: 0.5rem;
+  animation-name: heartBeat;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.resume-section__content {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+#bio > footer {
+  order: -1;
+  font-family: system-ui;
+}
+
+#bio > footer > address {
+  font-style: normal;
+}
+
+#bio > footer > address > a > strong {
+  /* inherit = currentColor */
+  color: currentColor;
+}
+
+#services header:first-child > h2::after {
+  background: url(./assets/services.svg) no-repeat center/contain;
+}
+
+.services__list {
+  margin-inline-start: 2rem;
+  list-style-type: "\0F13";
+}
+
+.services__list li {
+  padding-inline-start: 0.5rem;
+}
+
+.services__list li::marker {
+  color: red;
+  font-size: 1.75rem;
+}
+
+.services__ordered-list {
+  margin-inline-start: 2rem;
+  line-height: 1.75rem;
+  list-style-type: upper-latin;
+}
+
+.services__ordered-list li {
+  font-weight: 900;
+}
+
+.services__ordered-list p {
+  font-weight: normal;
+}
+
+#skills header:first-child > h2::after {
+  background: url(./assets/skills.svg) no-repeat center/contain;
+}
+
+#exp header:first-child > h2::after {
+  background: url(./assets/experience.svg) no-repeat center/contain;
+}
+
+.portfolio {
+  display: block grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Here you can see how auto can help us to have a dynamic block-size */
+  grid-template-rows: auto 1fr;
+  /* grid-template-areas:
+    "portfolio-header portfolio-header portfolio-header portfolio-header"
+    "portfolio1 portfolio2 portfolio3 portfolio4"; */
+  gap: 1rem;
+}
+
+.portfolio__header {
+  /*
+    A very nice way to tell browser that we wanna have a column to span all.
+
+    Credits goes to this Stackoverflow answer: https://stackoverflow.com/a/50612664/8784518
+  */
+  grid-column: 1 / -1;
+  /*
+    Instead of the above stylistic rule we could define grid-template-areas and after that use the following CSS property.
+  */
+  /* grid-area: portfolio-header; */
+}
+
+.portfolio__project {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.portfolio__project img {
+  inline-size: 100%;
+  block-size: 200px;
+}
+
+.portfolio__project__footer a {
+  text-decoration: none auto solid transparent;
+}
+
+#recommendations {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .recommendations__header  */
+#recommendations > header:first-child {
+  flex: 0 0 100%;
+}
+
+#recommendations header:first-child > h2::after {
+  background: url(./assets/recommendations.svg) no-repeat center/contain;
+}
+
+#recommendations > div:first-of-type {
+  /*
+    TODO: Since the overflow-inline is not implemented in chrome and most browsers: https://caniuse.com/?search=overflow-inline
+    we're gonna use overflow-x for the time being. Remove it ASAP it was implemented.
+  */
+  overflow-x: scroll;
+  overflow-inline: scroll;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: calc(50% - 1rem);
+  grid-auto-columns: calc(50% - 1rem);
+  column-gap: 1rem;
+}
+
+.recommendation {
+  display: grid;
+  row-gap: 1rem;
+  align-content: start;
+}
+
+.recommendation + .recommendation {
+  border-inline-start: 2px dashed gray;
+  padding-inline-start: 1rem;
+}
+
+.recommendation__quote > p {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.recommendation__writer {
+  color: pink;
+}
+
+.footer-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.footer-header:after {
+  content: "";
+  display: inline-block;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  margin-inline-start: 0.5rem;
+  animation-name: heartBeat;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#mailingAddress > h2:first-child:after {
+  background: url(./assets/address.svg) no-repeat center/contain;
+}
+
+.mailing-address {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.mailing-address > p:first-child {
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.mailing-address > aside {
+  display: grid;
+  row-gap: 0.25rem;
+}
+
+.mailing-address > aside > p {
+  text-align: justify;
+}
+
+.contact-form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contact-form > h2:first-child:after {
+  background: url(./assets/contact-form.svg) no-repeat center/contain;
+}
+
+.form {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.form-part {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 3fr;
+  font-size: 1.25rem;
+}
+
+.form-part + .form-part,
+.form-part:last-of-type,
+.form-actions {
+  border-block-start: 1px dashed gray;
+  padding-block-start: 0.5rem;
+}
+
+input,
+option,
+textarea {
+  color: black;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
+input,
+textarea,
+select {
+  border-radius: 1rem;
+}
+
+select {
+  overflow: auto;
+  inline-size: 100%;
+  /* overflow: hidden; */
+}
+
+option {
+  cursor: pointer;
+}
+
+.select-wrapper {
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.border-bottom {
+  border-block-end: 1px dashed gray;
+  padding-block-end: 1rem;
+}
+
+input[type="checkbox"] {
+  accent-color: red;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.form-group {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, max-content);
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+.form-group legend {
+  padding-block-end: 1rem;
+}
+
+.form-actions {
+  display: grid;
+  gap: 1rem;
+}
+
+.submit {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  font-family: system-ui;
+  inline-size: 100%;
+  border-radius: 0.5rem;
+  color: black;
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  cursor: pointer;
+}
+
+@media print {
+  .contact-form {
+    display: none;
+  }
+}
