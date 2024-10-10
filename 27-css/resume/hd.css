@@ -1,0 +1,8 @@
+body {
+  grid-template-columns: 10rem 1fr 10rem;
+  padding-block: 1rem;
+}
+
+body > * {
+  grid-column: 2;
+}
