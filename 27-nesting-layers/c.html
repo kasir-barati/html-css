@@ -1,0 +1,34 @@
+<style>
+  body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    block-size: 100vh;
+    row-gap: 1rem;
+  }
+
+  @layer second-layer, first-layer;
+
+  @layer first-layer {
+    input {
+      inline-size: 100%;
+      block-size: 50px;
+      border-radius: 1rem;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-inline: 3px dashed black;
+      border-block: 3px dashed black;
+      background-color: transparent;
+    }
+  }
+
+  @layer second-layer {
+    input {
+      block-size: 200px;
+      background-color: brown;
+    }
+  }
+</style>
+
+<input type="color" name="color" id="color" />
+<input type="text" name="name" id="name" disabled />

@@ -1,0 +1,23 @@
+<style>
+  body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    block-size: 100vh;
+    row-gap: 1rem;
+  }
+  @layer l1 {
+    section {
+      inline-size: 50px;
+      background-color: red;
+    }
+  }
+  @layer l1 {
+    section {
+      inline-size: 500px;
+      background-color: blue;
+    }
+  }
+</style>
+
+<section>Section</section>

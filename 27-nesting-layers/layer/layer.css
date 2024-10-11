@@ -1,0 +1,20 @@
+/* establish a layer order up-front, from lowest to highest priority */
+@layer defaults, bootstrap;
+
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css)
+layer(bootstrap);
+
+@layer defaults {
+  /* higher specificity, but lower layer priority */
+  a:any-link {
+    color: maroon;
+  }
+  .container {
+    background-color: blueviolet;
+  }
+}
+
+/* un-layered styles have the highest priority */
+a {
+  color: mediumvioletred;
+}
