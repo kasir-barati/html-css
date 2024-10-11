@@ -300,6 +300,7 @@ When ever you need full control over which styles take priority in a project wit
 - Try to implement these examples: https://lab.ishadeed.com/container-queries/
 - [Button component](./components/button/button.component.html).
   - Picked the color name from [this website](https://www.schemecolor.com/).
+  - Or you can use [this one](https://colornamer.robertcooper.me/).
 - And [These ones](https://css-tricks.com/css-container-queries/#aa-demos).
 
 ## YouTube & Aparat

@@ -1,0 +1,46 @@
+:root {
+  --bgcolor: #f9f6fe;
+  --text-color: #74559c;
+}
+
+select,
+body {
+  background-color: var(--bgcolor);
+  color: var(--text-color);
+}
+
+.container {
+  padding-inline: 20px;
+  padding-block: 20px;
+
+  h1 {
+    color: var(--text-color);
+  }
+  p {
+    text-align: justify;
+  }
+  .boxes {
+    display: flex;
+    gap: 20px;
+    margin-block-start: 20px;
+
+    .box {
+      inline-size: 100px;
+      block-size: 100px;
+      background-color: turquoise;
+      border-radius: 10px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+html {
+  &:has(option[value="purple"]:checked) {
+    --text-color: #74559c;
+  }
+  &:has(option[value="glowing-scarlet"]:checked) {
+    --text-color: #c04646;
+  }
+}
