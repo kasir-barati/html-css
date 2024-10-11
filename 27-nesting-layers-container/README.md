@@ -261,3 +261,52 @@ When ever you need full control over which styles take priority in a project wit
 
 - https://youtu.be/lTqJ5e1_8PY
 - https://aparat.com/v/kwj0rwd
+
+# [`@container`](https://drafts.csswg.org/css-conditional-5/#container-queries)
+
+- When we are thinking about layout most of the times it is all about viewport (i.e. we use [`@media`](../24-responsiveness/README.md)).
+- But what if viewport does not change but rather the browser size (like when you resize the size of your browser window in your OS, or when you put that element next to another element in a grid or flexbox element).
+
+  ![container scenarios](./container.png)
+
+  Here we need to adjust our layout according to the width of its container and not the width of browser window. **Container gets larger/smaller**.
+
+- You can see how it works [here](./components/subscribe/subscribe.component.html).
+
+> [!TIP]
+>
+> If you wanna define the size of some CSS property relative to the size of the container you can use [`cq*` units](https://drafts.csswg.org/css-conditional-5/#container-lengths). There are a bunch of them:
+>
+> | unit    | relative to                              |
+> | ------- | ---------------------------------------- |
+> | `cqw`   | 1% of a query container’s `width`.       |
+> | `cqh`   | 1% of a query container’s `height`.      |
+> | `cqi`   | 1% of a query container’s `inline-size`. |
+> | `cqb`   | 1% of a query container’s `block-size`.  |
+> | `cqmin` | The smaller value of `cqi` or `cqb`      |
+> | `cqmax` | The larger value of `cqi` or `cqb`       |
+
+## Containers can't be sized by their contents
+
+- `container-type: inline-size` applies various types of 'containment' to the element, including `inline-size` containment ([ref](https://drafts.csswg.org/css-contain-1/#containment-size)). This has the following effects:
+  1. The intrinsic size[^1]s of the size containment box are determined as if the element had no content, following the same logic as when sizing as if empty.
+  2. Cannot use `min-content` or `max-content` keywords.
+- Size containment 'turns off' the ability for an element to get size information from its contents. Important for container queries, since it breaks the 'infinite loop' where a container query changes the content size, which changes the query, which changes…
+
+&mdash; [Stackoverflow Q&A](https://stackoverflow.com/a/73980194/8784518);
+
+## Practice time
+
+- Try to implement these examples: https://lab.ishadeed.com/container-queries/
+- [Button component](./components/button/button.component.html).
+  - Picked the color name from [this website](https://www.schemecolor.com/).
+- And [These ones](https://css-tricks.com/css-container-queries/#aa-demos).
+
+## YouTube & Aparat
+
+- https://youtu.be/pn8LqOhh3Yc
+- https://aparat.com/v/wlejj5g
+
+# Footnotes
+
+[^1]: A max-content size or min-content size, i.e. a size arising primarily from the size of the content.
