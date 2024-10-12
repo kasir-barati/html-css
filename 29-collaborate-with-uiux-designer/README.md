@@ -41,3 +41,7 @@
   - Complementary:
     - https://youtu.be/GhlaUU2YtRc
     - https://aparat.com/v/uwvl69o
+- CSS Part:
+  - Menu:
+    - https://youtu.be/OGojYSp_Siw
+    - https://aparat.com/v/cxueo3m

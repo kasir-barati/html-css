@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link href="./gym-landing-page.css" rel="stylesheet" />
+    <script src="./gym-landing-page.js" defer></script>
   </head>
   <body>
     <header id="heroHeader">
-      <nav>
-        <a href="#">gym24</a>
-        <ul>
+      <nav class="main-menu">
+        <a class="main-menu__logo" href="#"
+          >gym<span class="text-electric-banana">24</span></a
+        >
+        <button
+          class="main-menu__mobile-toggle"
+          onclick="toggleMenu(this)"
+          aria-label="Main menu button"
+          aria-expanded="false"
+          type="button"
+        >
+          &equiv;
+        </button>
+        <ul class="main-menu__nav" id="navLinks">
           <li><a href="#reasonToJoin">Advantages</a></li>
           <li><a href="#membershipPlan">Membership</a></li>
           <li><a href="#aboutUs">About</a></li>

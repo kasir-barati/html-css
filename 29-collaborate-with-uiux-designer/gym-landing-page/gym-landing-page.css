@@ -1,0 +1,125 @@
+@layer reset, base;
+
+@layer reset {
+  * {
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    border-block: 0;
+    border-inline: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer base {
+  :root {
+    --text-color: white;
+    --bg-color: black;
+    --text-electric-banana: #faff00;
+    --body-inline-padding: 55px;
+    --menu-border-color: #525254;
+  }
+  @font-face {
+    font-family: "Bruno Ace SC";
+    src: url("./assets/BrunoAceSC-Regular.eot");
+    src: local("Bruno Ace SC Regular"), local("BrunoAceSC-Regular"),
+      url("./assets/BrunoAceSC-Regular.eot?#iefix") format("embedded-opentype"),
+      url("./assets/BrunoAceSC-Regular.woff2") format("woff2"),
+      url("./assets/BrunoAceSC-Regular.woff") format("woff"),
+      url("./assets/BrunoAceSC-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "MADE Outer Sans";
+    src: url("./assets/MADEOuterSansAltRegular.ttf");
+    src: local("MADE Outer Sans Alt Regular"), local("MADE Outer Sans"),
+      url("./assets/MADEOuterSansAltRegular.ttf") format("truetype"),
+      url("./assets/MADEOuterSansAltRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  body,
+  html {
+    inline-size: 100%;
+    min-height: 100vh;
+  }
+}
+
+@layer base {
+  body {
+    display: block flex;
+    flex-direction: column;
+    gap: 200px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-inline: var(--body-inline-padding);
+  }
+  a:any-link {
+    color: inherit;
+    text-decoration: none 0 solid transparent;
+  }
+}
+
+@layer navigation {
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-block-start: 60px;
+    align-items: center;
+
+    .main-menu__logo {
+      font-family: "Bruno Ace SC";
+      text-transform: uppercase;
+      font-size: 24px;
+
+      .text-electric-banana {
+        color: var(--text-electric-banana);
+      }
+    }
+    .main-menu__mobile-toggle {
+      background-color: transparent;
+      color: var(--text-color);
+      font-size: 2rem;
+
+      @media screen and (width > 393px) {
+        display: none;
+      }
+    }
+    .main-menu__nav {
+      display: none;
+      flex-direction: column;
+      list-style-type: none;
+      font-family: "MADE Outer Sans";
+
+      &.active {
+        display: flex;
+      }
+
+      @media screen and (width <= 393px) {
+        position: absolute;
+        top: 97px;
+        right: 0;
+        inline-size: 100%;
+        gap: 0.5rem;
+        background-color: var(--bg-color);
+        padding-block-start: 0.5rem;
+        align-items: end;
+
+        li {
+          border-block-end: 1px solid var(--menu-border-color);
+          inline-size: 100%;
+          padding-inline: calc(var(--body-inline-padding) - 1rem);
+          text-align: right;
+          padding-block-end: 0.5rem;
+        }
+      }
+
+      @media screen and (width > 393px) {
+        display: flex;
+      }
+    }
+  }
+}
