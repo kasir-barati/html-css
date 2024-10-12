@@ -49,6 +49,6 @@
   - Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
     - https://youtu.be/OGojYSp_Siw
     - https://aparat.com/v/cxueo3m
-  - Hero section/header:
+  - Hero section/header, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/f42312007a402a2c432125d0e5f14c90aa8ee502):
     - https://youtu.be/XWZ6kGv8NPs
     - https://aparat.com/v/nle9356
