@@ -42,6 +42,6 @@
     - https://youtu.be/GhlaUU2YtRc
     - https://aparat.com/v/uwvl69o
 - CSS Part:
-  - Menu:
+  - Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
     - https://youtu.be/OGojYSp_Siw
     - https://aparat.com/v/cxueo3m
