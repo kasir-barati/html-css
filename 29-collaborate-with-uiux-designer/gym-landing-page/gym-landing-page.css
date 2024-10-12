@@ -1,4 +1,4 @@
-@layer reset, base, hero-header;
+@layer reset, base, hero-header, main;
 
 @layer reset {
   * {
@@ -19,6 +19,7 @@
     --text-electric-banana: #faff00;
     --body-inline-padding: 55px;
     --menu-border-color: #525254;
+    --sections-gap: 200px;
   }
   @font-face {
     font-family: "Bruno Ace SC";
@@ -45,6 +46,7 @@
   html {
     inline-size: 100%;
     min-height: 100vh;
+    font-size: 14px;
   }
 }
 
@@ -52,7 +54,7 @@
   body {
     display: block flex;
     flex-direction: column;
-    gap: 200px;
+    gap: var(--sections-gap);
     background-color: var(--bg-color);
     color: var(--text-color);
     padding-inline: var(--body-inline-padding);
@@ -148,6 +150,44 @@
         @media screen and (width > 393px) {
           display: flex;
         }
+      }
+    }
+  }
+}
+
+@layer main {
+  .main-section {
+    display: block flex;
+    flex-direction: column;
+    gap: var(--sections-gap);
+
+    .main-section__header {
+      font-size: 28px;
+      text-align: center;
+      margin-block-end: 60px;
+    }
+    .reason {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto auto;
+      row-gap: 14px;
+
+      & + & {
+        margin-block-start: 40px;
+      }
+
+      .reason__header {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .reason__content {
+        text-align: justify;
+      }
+      .reason__image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
       }
     }
   }

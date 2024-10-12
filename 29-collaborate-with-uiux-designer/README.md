@@ -39,16 +39,19 @@
 
 # YouTube & Aparat
 
-- HTML part:
-  - https://youtu.be/AW_K-LYkd94
-  - https://aparat.com/v/caue7s1
-  - Complementary:
-    - https://youtu.be/GhlaUU2YtRc
-    - https://aparat.com/v/uwvl69o
-- CSS Part:
-  - Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
-    - https://youtu.be/OGojYSp_Siw
-    - https://aparat.com/v/cxueo3m
-  - Hero section/header, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/f42312007a402a2c432125d0e5f14c90aa8ee502):
-    - https://youtu.be/XWZ6kGv8NPs
-    - https://aparat.com/v/nle9356
+1. HTML part:
+   - https://youtu.be/AW_K-LYkd94
+   - https://aparat.com/v/caue7s1
+   - Complementary:
+     - https://youtu.be/GhlaUU2YtRc
+     - https://aparat.com/v/uwvl69o
+2. CSS Part:
+   1. Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
+      - https://youtu.be/OGojYSp_Siw
+      - https://aparat.com/v/cxueo3m
+   2. Hero section/header, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/f42312007a402a2c432125d0e5f14c90aa8ee502):
+      - https://youtu.be/XWZ6kGv8NPs
+      - https://aparat.com/v/nle9356
+   3. Reasons to join:
+      - https://youtu.be/g6vTpoR7_JA
+      - https://aparat.com/v/mzz6j5y
