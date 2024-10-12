@@ -33,6 +33,10 @@
    2. Placing finer details in each section.
 2. Trying to style our HTML doc, and if needed adjusting our HTML doc.
 
+> [!TIP]
+>
+> `display` CSS property cannot have animation. As such our mobile menu does not have one. But if you are interested in knowing how you can simulate it you can look at [this Stackoverflow Q&A](https://stackoverflow.com/a/38772750/8784518).
+
 # YouTube & Aparat
 
 - HTML part:
@@ -45,3 +49,6 @@
   - Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
     - https://youtu.be/OGojYSp_Siw
     - https://aparat.com/v/cxueo3m
+  - Hero section/header:
+    - https://youtu.be/XWZ6kGv8NPs
+    - https://aparat.com/v/nle9356

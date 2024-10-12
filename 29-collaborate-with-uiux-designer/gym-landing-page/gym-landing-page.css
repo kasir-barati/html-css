@@ -1,4 +1,4 @@
-@layer reset, base;
+@layer reset, base, hero-header;
 
 @layer reset {
   * {
@@ -63,62 +63,91 @@
   }
 }
 
-@layer navigation {
-  .main-menu {
-    display: flex;
-    justify-content: space-between;
-    padding-block-start: 60px;
-    align-items: center;
+@layer hero-header {
+  .hero-header {
+    display: block flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 90px;
+    background: var(--bg-color) url(./assets/background.png) center 100px
+      no-repeat;
+    margin-inline: calc(var(--body-inline-padding) * -1);
 
-    .main-menu__logo {
-      font-family: "Bruno Ace SC";
-      text-transform: uppercase;
-      font-size: 24px;
-
-      .text-electric-banana {
-        color: var(--text-electric-banana);
-      }
-    }
-    .main-menu__mobile-toggle {
-      background-color: transparent;
-      color: var(--text-color);
-      font-size: 2rem;
-
-      @media screen and (width > 393px) {
-        display: none;
-      }
-    }
-    .main-menu__nav {
-      display: none;
-      flex-direction: column;
-      list-style-type: none;
+    .hero-title {
       font-family: "MADE Outer Sans";
+      font-size: 30px;
+      padding-inline: var(--body-inline-padding);
+    }
 
-      &.active {
-        display: flex;
-      }
+    .call-to-action {
+      background-color: var(--text-electric-banana);
+      color: black;
+      font-size: 16px;
+      font-weight: 900;
+      padding-inline: 50px;
+      padding-block: 16px;
+      inline-size: fit-content;
+      border-radius: 30px;
+      align-self: center;
+    }
 
-      @media screen and (width <= 393px) {
-        position: absolute;
-        top: 97px;
-        right: 0;
-        inline-size: 100%;
-        gap: 0.5rem;
-        background-color: var(--bg-color);
-        padding-block-start: 0.5rem;
-        align-items: end;
+    .main-menu {
+      display: flex;
+      justify-content: space-between;
+      padding-block-start: 60px;
+      align-items: center;
+      padding-inline: var(--body-inline-padding);
 
-        li {
-          border-block-end: 1px solid var(--menu-border-color);
-          inline-size: 100%;
-          padding-inline: calc(var(--body-inline-padding) - 1rem);
-          text-align: right;
-          padding-block-end: 0.5rem;
+      .main-menu__logo {
+        font-family: "Bruno Ace SC";
+        text-transform: uppercase;
+        font-size: 24px;
+
+        .text-electric-banana {
+          color: var(--text-electric-banana);
         }
       }
+      .main-menu__mobile-toggle {
+        background-color: transparent;
+        color: var(--text-color);
+        font-size: 2rem;
 
-      @media screen and (width > 393px) {
-        display: flex;
+        @media screen and (width > 393px) {
+          display: none;
+        }
+      }
+      .main-menu__nav {
+        display: none;
+        flex-direction: column;
+        list-style-type: none;
+        font-family: "MADE Outer Sans";
+
+        &.active {
+          display: flex;
+        }
+
+        @media screen and (width <= 393px) {
+          position: absolute;
+          top: 97px;
+          right: 0;
+          inline-size: 100%;
+          gap: 0.5rem;
+          background-color: var(--bg-color);
+          padding-block-start: 0.5rem;
+          align-items: end;
+
+          li {
+            border-block-end: 1px solid var(--menu-border-color);
+            inline-size: 100%;
+            padding-inline: calc(var(--body-inline-padding) - 1rem);
+            text-align: right;
+            padding-block-end: 0.5rem;
+          }
+        }
+
+        @media screen and (width > 393px) {
+          display: flex;
+        }
       }
     }
   }
