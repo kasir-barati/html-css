@@ -52,6 +52,6 @@
    2. Hero section/header, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/f42312007a402a2c432125d0e5f14c90aa8ee502):
       - https://youtu.be/XWZ6kGv8NPs
       - https://aparat.com/v/nle9356
-   3. Reasons to join:
+   3. Reasons to join, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/a3cfc63245510220602c38c74b7fe7e15e77546d):
       - https://youtu.be/g6vTpoR7_JA
       - https://aparat.com/v/mzz6j5y
