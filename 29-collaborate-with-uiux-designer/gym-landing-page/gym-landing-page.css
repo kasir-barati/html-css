@@ -18,6 +18,7 @@
     --bg-color: black;
     --text-electric-banana: #faff00;
     --body-inline-padding: 55px;
+    --body-block-padding: 60px;
     --menu-border-color: #525254;
     --sections-gap: 200px;
     --black-out: #222222;
@@ -49,9 +50,6 @@
     min-height: 100vh;
     font-size: 14px;
   }
-  body {
-    padding-block: 60px;
-  }
 }
 
 @layer base {
@@ -61,6 +59,7 @@
     gap: var(--sections-gap);
     background-color: var(--bg-color);
     color: var(--text-color);
+    padding-block: var(--body-block-padding);
     padding-inline: var(--body-inline-padding);
   }
   a:any-link {
@@ -75,14 +74,28 @@
     text-align: center;
     flex-direction: column;
     gap: 90px;
-    background: var(--bg-color) url(./assets/background.png) center 100px
+    background: var(--bg-color) url(./assets/background.393px.png) center 100px
       no-repeat;
     margin-inline: calc(var(--body-inline-padding) * -1);
+
+    @media screen and (393px < width <= 744px) {
+      padding-inline: 20px;
+      background-image: linear-gradient(to left, transparent, var(--bg-color)),
+        url(./assets/background.744px.png);
+      background-position: top right;
+      background-size: 50% auto;
+      background-repeat: no-repeat;
+      text-align: left;
+    }
 
     .hero-title {
       font-family: "MADE Outer Sans";
       font-size: 30px;
       padding-inline: var(--body-inline-padding);
+
+      @media screen and (393px < width <= 744px) {
+        padding-inline: 0;
+      }
     }
 
     .call-to-action {
@@ -95,6 +108,10 @@
       inline-size: fit-content;
       border-radius: 30px;
       align-self: center;
+
+      @media screen and (393px < width <= 744px) {
+        align-self: self-start;
+      }
     }
 
     .main-menu {
@@ -103,6 +120,9 @@
       align-items: center;
       padding-inline: var(--body-inline-padding);
 
+      @media screen and (393px < width <= 744px) {
+        padding-inline: 0;
+      }
       .main-menu__logo {
         font-family: "Bruno Ace SC";
         text-transform: uppercase;
@@ -130,7 +150,12 @@
         &.active {
           display: flex;
         }
-
+        @media screen and (393px < width <= 744px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          inline-size: 100%;
+        }
         @media screen and (width <= 393px) {
           position: absolute;
           top: 97px;
@@ -149,10 +174,6 @@
             padding-block-end: 0.5rem;
           }
         }
-
-        @media screen and (width > 393px) {
-          display: flex;
-        }
       }
     }
   }
@@ -169,7 +190,7 @@
       text-align: center;
       margin-block-end: 60px;
     }
-    @media screen and (width <= 393px) {
+    @media screen and (width <= 744px) {
       .hide-in-mobile {
         display: none;
       }
@@ -190,9 +211,10 @@
     }
     .reason {
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: auto 3fr;
       grid-template-rows: auto auto;
       row-gap: 14px;
+      column-gap: 30px;
 
       & + & {
         margin-block-start: 40px;
@@ -217,6 +239,9 @@
       flex-direction: column;
       margin-inline: calc(var(--body-inline-padding) * -1);
 
+      @media screen and (393px < width <= 744px) {
+        margin-inline: 0;
+      }
       h2.main-section__header {
         margin-inline: var(--body-inline-padding);
       }
@@ -227,6 +252,13 @@
         overflow-x: scroll;
         overflow-y: hidden;
 
+        @media screen and (393px < width <= 744px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-flow: row;
+          overflow-x: initial;
+          overflow-y: initial;
+        }
         .membership-plan {
           display: block flex;
           flex-direction: column;
@@ -241,7 +273,14 @@
           &:last-of-type {
             margin-inline-end: var(--body-inline-padding);
           }
-
+          @media screen and (393px < width <= 744px) {
+            &:first-of-type {
+              margin-inline-start: 0;
+            }
+            &:last-of-type {
+              margin-inline-end: 0;
+            }
+          }
           .membership-plan__header {
             display: flex;
             flex-direction: column;
@@ -262,6 +301,7 @@
             text-align: left;
             margin-inline: 23px;
             list-style-type: none;
+            margin-block-end: 34px;
 
             > li {
               display: flex;
@@ -342,6 +382,9 @@
         overflow-x: scroll;
         overflow-y: hidden;
 
+        @media screen and (393px < width <= 744px) {
+          gap: 36px;
+        }
         .staff {
           display: block flex;
           flex-direction: column;
@@ -352,6 +395,10 @@
           padding-block: 22px;
           padding-inline: 18px;
           gap: 18px;
+
+          @media screen and (393px < width <= 744px) {
+            min-inline-size: 33%;
+          }
 
           &:first-of-type {
             margin-inline-start: var(--body-inline-padding);
@@ -389,6 +436,11 @@
     gap: 47px;
     --footer-block-gap: 30px;
 
+    @media screen and (393px < width <= 744px) {
+      text-align: left;
+      flex-direction: row;
+      justify-content: space-between;
+    }
     .company-intro {
       display: none;
     }

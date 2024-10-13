@@ -26,12 +26,12 @@ function scrollToDefault(containerSelector, itemSelector, defaultIndex) {
   // Assuming you want to show the item inside the container by default, change the index as needed
   // Scroll to the selected plan
   const defaultPlan = plans[defaultIndex];
-  const planOffset = defaultPlan.offsetLeft;
+  const itemOffset = defaultPlan.offsetLeft;
+  const scrollOffset = container.clientWidth / 7;
 
   // Scroll the container to the desired plan
   container.scrollTo({
-    // Decrease the body-inline-padding so that the default plan is shown in the middle
-    left: planOffset - 55,
+    left: itemOffset - scrollOffset,
     behavior: "smooth",
   });
 }

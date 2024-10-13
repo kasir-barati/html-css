@@ -45,7 +45,7 @@
    - Complementary:
      - https://youtu.be/GhlaUU2YtRc
      - https://aparat.com/v/uwvl69o
-2. CSS Part:
+2. CSS Part -- mobile:
    1. Menu, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/c5861aa883603bf33d9f94281c736422cc855bec):
       - https://youtu.be/OGojYSp_Siw
       - https://aparat.com/v/cxueo3m
@@ -67,3 +67,6 @@
    7. Footer, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/bc5c6a49f7c63768a0bb4458b1a77b7d90a1242f):
       - https://youtu.be/QKEWIoKZYDs
       - https://aparat.com/v/yodisux
+3. CSS part -- tablet:
+   - https://youtu.be/BwdGTsAhULI
+   - https://aparat.com/v/bxpc74k
