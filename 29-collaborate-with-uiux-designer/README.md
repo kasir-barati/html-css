@@ -67,6 +67,6 @@
    7. Footer, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/bc5c6a49f7c63768a0bb4458b1a77b7d90a1242f):
       - https://youtu.be/QKEWIoKZYDs
       - https://aparat.com/v/yodisux
-3. CSS part -- tablet:
+3. CSS part -- tablet, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/ca17536fcce9920133d4054dac743b9096d4f3c3):
    - https://youtu.be/BwdGTsAhULI
    - https://aparat.com/v/bxpc74k
