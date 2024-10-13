@@ -61,6 +61,6 @@
    5. About us, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/ba9c8880902481920dd19d4aa0f16e4359a0f925):
       - https://youtu.be/XsIz0Fkx1kA
       - https://aparat.com/v/xdx2msh
-   6. Trainers staff:
+   6. Trainers staff, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/141ae04139dba685fc404ba2e62baea385345053):
       - https://youtu.be/UuIIflJfd04
       - https://aparat.com/v/ltxvp79
