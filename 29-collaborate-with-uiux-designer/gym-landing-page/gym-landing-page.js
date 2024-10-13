@@ -11,6 +11,7 @@ function toggleMenu(buttonElement) {
 window.onload = function () {
   scrollToDefault(".membership-plans-wrapper", ".membership-plan", 1);
   scrollToDefault(".about-us__carousel-wrapper", ".about-us__image", 2);
+  scrollToDefault(".trainers-staff__wrapper", ".staff", 2);
 };
 
 /**

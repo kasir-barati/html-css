@@ -326,5 +326,55 @@
         }
       }
     }
+    .trainers-staff {
+      display: flex;
+      flex-direction: column;
+      margin-inline: calc(var(--body-inline-padding) * -1);
+
+      h2.main-section__header {
+        margin-inline: var(--body-inline-padding);
+      }
+      .trainers-staff__wrapper {
+        display: flex;
+        gap: 12px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        .staff {
+          display: block flex;
+          flex-direction: column;
+          text-align: center;
+          background-color: var(--black-out);
+          border-radius: 10px;
+          min-inline-size: 70%;
+          padding-block: 22px;
+          padding-inline: 18px;
+          gap: 18px;
+
+          &:first-of-type {
+            margin-inline-start: var(--body-inline-padding);
+          }
+          &:last-of-type {
+            margin-inline-end: var(--body-inline-padding);
+          }
+          .staff__selfie {
+            order: -1;
+          }
+          .staff__name {
+            font-size: 18px;
+          }
+          .staff__social-media {
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 15px;
+            justify-content: center;
+
+            a {
+              inline-size: fit-content;
+            }
+          }
+        }
+      }
+    }
   }
 }
