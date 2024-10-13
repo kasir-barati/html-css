@@ -167,6 +167,25 @@
       text-align: center;
       margin-block-end: 60px;
     }
+    @media screen and (width <= 393px) {
+      .hide-in-mobile {
+        display: none;
+      }
+      .hide-mobile-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+
+        &::-webkit-scrollbar {
+          width: 1px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+      }
+    }
     .reason {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -191,7 +210,6 @@
         grid-row-end: 3;
       }
     }
-
     .membership-plans {
       display: flex;
       flex-direction: column;
@@ -199,23 +217,6 @@
 
       h2.main-section__header {
         margin-inline: var(--body-inline-padding);
-      }
-
-      @media screen and (width <= 393px) {
-        .hide-mobile-scrollbar {
-          scrollbar-width: thin;
-          scrollbar-color: transparent transparent;
-
-          &::-webkit-scrollbar {
-            width: 1px;
-          }
-          &::-webkit-scrollbar-track {
-            background: transparent;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: transparent;
-          }
-        }
       }
 
       .membership-plans-wrapper {
@@ -283,6 +284,44 @@
             align-self: center;
             margin-block-end: 38px;
             margin-block-start: auto;
+          }
+        }
+      }
+    }
+    .about-us {
+      text-align: center;
+      margin-inline: calc(var(--body-inline-padding) * -1);
+
+      h2.main-section__header {
+        margin-inline: var(--body-inline-padding);
+      }
+      .about-us__info {
+        margin-inline: var(--body-inline-padding);
+        margin-block-end: 60px;
+
+        br {
+          display: block;
+          content: "";
+          margin-block: 2rem;
+        }
+      }
+      .about-us__carousel-wrapper {
+        display: flex;
+        gap: 12px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        .about-us__image {
+          border-radius: 10px;
+          min-inline-size: 70%;
+          display: flex;
+          flex-direction: column;
+
+          &:first-of-type {
+            margin-inline-start: var(--body-inline-padding);
+          }
+          &:last-of-type {
+            margin-inline-end: var(--body-inline-padding);
           }
         }
       }
