@@ -58,6 +58,6 @@
    4. Membership plan, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/db8edd0a0da86044b7cee91aacf2dfd2ec44cb65):
       - https://youtu.be/1cgy7vpZjhQ
       - https://aparat.com/v/hsfo26h
-   5. About us:
+   5. About us, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/ba9c8880902481920dd19d4aa0f16e4359a0f925):
       - https://youtu.be/XsIz0Fkx1kA
       - https://aparat.com/v/xdx2msh
