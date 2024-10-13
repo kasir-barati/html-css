@@ -64,3 +64,6 @@
    6. Trainers staff, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/141ae04139dba685fc404ba2e62baea385345053):
       - https://youtu.be/UuIIflJfd04
       - https://aparat.com/v/ltxvp79
+   7. Footer:
+      - https://youtu.be/QKEWIoKZYDs
+      - https://aparat.com/v/yodisux

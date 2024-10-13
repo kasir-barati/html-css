@@ -1,4 +1,4 @@
-@layer reset, base, hero-header, main;
+@layer reset, base, hero-header, main, footer;
 
 @layer reset {
   * {
@@ -49,6 +49,9 @@
     min-height: 100vh;
     font-size: 14px;
   }
+  body {
+    padding-block: 60px;
+  }
 }
 
 @layer base {
@@ -97,7 +100,6 @@
     .main-menu {
       display: flex;
       justify-content: space-between;
-      padding-block-start: 60px;
       align-items: center;
       padding-inline: var(--body-inline-padding);
 
@@ -375,6 +377,37 @@
           }
         }
       }
+    }
+  }
+}
+
+@layer footer {
+  .footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    --footer-block-gap: 30px;
+
+    .company-intro {
+      display: none;
+    }
+    .footer-header {
+      font-size: 18px;
+      margin-block-end: var(--footer-block-gap);
+    }
+    .contact-tel {
+      margin-block-end: 8px;
+    }
+    .contact-mail {
+      display: inline-block;
+      margin-block-end: var(--footer-block-gap);
+    }
+    .contact-social-media {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
     }
   }
 }
