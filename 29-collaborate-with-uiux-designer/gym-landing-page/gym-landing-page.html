@@ -76,80 +76,104 @@
           <img class="reason__image" src="./assets/timer.svg" alt="Timer" />
         </section>
       </section>
-      <article id="membershipPlan">
-        <h2>Gym membership</h2>
-        <section>
-          <h3>Pass 'Trail'</h3>
-          <p>$ 0</p>
-          <ul>
-            <li>
-              Access to the gym from <time datetime="08:00">8:00</time> to
-              <time datetime="14:00">14:00</time>
-            </li>
-            <li>The trainer on duty will introduce you to the gym</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
-        <section>
-          <h3>Pass 'Easy Start'</h3>
-          <p>$ 119</p>
-          <ul>
-            <li>Visit without restrictions 24/7</li>
-            <li>Individual training program</li>
-            <li>Access to the VTRAINER application</li>
-            <li>Trainer support</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
-        <section>
-          <h3>Pass 'Free Time'</h3>
-          <p>$ 49</p>
-          <ul>
-            <li>
-              The entrance time to the gym is from
-              <time datetime="14:00">14:00</time> to
-              <time datetime="16:00">16:00</time>
-            </li>
-            <li>Without suspension of gym membership</li>
-            <li>The trainer on duty will introduce you to the gym</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
-        <section>
-          <h3>Pass '1 Month 24/7'</h3>
-          <p>$ 85</p>
-          <ul>
-            <li>Visit without restrictions 24/7</li>
-            <li>The trainer on duty will introduce you to the gym</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
-        <section>
-          <h3>Pass 'In Shape (AM)'</h3>
-          <p>$ 165</p>
-          <ul>
-            <li>
-              Training in mini-groups until <time datetime="14:00">14:00</time>
-            </li>
-            <li>Without suspension of gym membership</li>
-            <li>Classes with a trainer in a mini-group 3 times a week</li>
-            <li>Trainer support</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
-        <section>
-          <h3>Pass 'In Shape (PM)'</h3>
-          <p>$ 195</p>
-          <ul>
-            <li>
-              Training in mini-groups until <time datetime="17:00">17:00</time>
-            </li>
-            <li>Without suspension of gym membership</li>
-            <li>Classes with a trainer in a mini-group 3 times a week</li>
-            <li>Trainer support</li>
-          </ul>
-          <button type="button">Buy</button>
-        </section>
+      <article class="membership-plans" id="membershipPlan">
+        <h2 class="main-section__header">Gym membership</h2>
+        <div class="membership-plans-wrapper hide-mobile-scrollbar">
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass 'Trail'</h3>
+              <p class="membership-plan__investment">$ 0</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>
+                <span>
+                  Access to the gym from <time datetime="08:00">8:00</time> to
+                  <time datetime="14:00">14:00</time>
+                </span>
+              </li>
+              <li>The trainer on duty will introduce you to the gym</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass 'Easy Start'</h3>
+              <p class="membership-plan__investment">$ 119</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>Visit without restrictions 24/7</li>
+              <li>Individual training program</li>
+              <li>Access to the VTRAINER application</li>
+              <li>Trainer support</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass 'Free Time'</h3>
+              <p class="membership-plan__investment">$ 49</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>
+                <span>
+                  The entrance time to the gym is from
+                  <time datetime="14:00">14:00</time> to
+                  <time datetime="16:00">16:00</time>
+                </span>
+              </li>
+              <li>Without suspension of gym membership</li>
+              <li>The trainer on duty will introduce you to the gym</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass '1 Month 24/7'</h3>
+              <p class="membership-plan__investment">$ 85</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>Visit without restrictions 24/7</li>
+              <li>The trainer on duty will introduce you to the gym</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass 'In Shape (AM)'</h3>
+              <p class="membership-plan__investment">$ 165</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>
+                <span>
+                  Training in mini-groups until
+                  <time datetime="14:00">14:00</time>
+                </span>
+              </li>
+              <li>Without suspension of gym membership</li>
+              <li>Classes with a trainer in a mini-group 3 times a week</li>
+              <li>Trainer support</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+          <section class="membership-plan">
+            <hgroup class="membership-plan__header">
+              <h3 class="membership-plan__name">Pass 'In Shape (PM)'</h3>
+              <p class="membership-plan__investment">$ 195</p>
+            </hgroup>
+            <ul class="membership-plan__features">
+              <li>
+                <span>
+                  Training in mini-groups until
+                  <time datetime="17:00">17:00</time>
+                </span>
+              </li>
+              <li>Without suspension of gym membership</li>
+              <li>Classes with a trainer in a mini-group 3 times a week</li>
+              <li>Trainer support</li>
+            </ul>
+            <button class="membership-plan__cta" type="button">Buy</button>
+          </section>
+        </div>
       </article>
       <article id="aboutUs">
         <h2>About us</h2>

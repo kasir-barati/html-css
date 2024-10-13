@@ -20,6 +20,7 @@
     --body-inline-padding: 55px;
     --menu-border-color: #525254;
     --sections-gap: 200px;
+    --black-out: #222222;
   }
   @font-face {
     font-family: "Bruno Ace SC";
@@ -188,6 +189,102 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 3;
+      }
+    }
+
+    .membership-plans {
+      display: flex;
+      flex-direction: column;
+      margin-inline: calc(var(--body-inline-padding) * -1);
+
+      h2.main-section__header {
+        margin-inline: var(--body-inline-padding);
+      }
+
+      @media screen and (width <= 393px) {
+        .hide-mobile-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: transparent transparent;
+
+          &::-webkit-scrollbar {
+            width: 1px;
+          }
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .membership-plans-wrapper {
+        display: flex;
+        gap: 12px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        .membership-plan {
+          display: block flex;
+          flex-direction: column;
+          text-align: center;
+          background-color: var(--black-out);
+          border-radius: 10px;
+          min-inline-size: 70%;
+
+          &:first-of-type {
+            margin-inline-start: var(--body-inline-padding);
+          }
+          &:last-of-type {
+            margin-inline-end: var(--body-inline-padding);
+          }
+
+          .membership-plan__header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-block-start: 22px;
+            margin-block-end: 27px;
+            padding-block-end: 22px;
+            border-block-end: 1px solid var(--bg-color);
+
+            .membership-plan__name {
+              font-size: 18px;
+            }
+            .membership-plan__investment {
+              font-size: 24px;
+            }
+          }
+          .membership-plan__features {
+            text-align: left;
+            margin-inline: 23px;
+            list-style-type: none;
+
+            > li {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              & + & {
+                margin-block-start: 15px;
+              }
+              &::before {
+                content: url(./assets/check.svg);
+                padding-inline-end: 6px;
+              }
+            }
+          }
+          .membership-plan__cta {
+            background-color: var(--text-electric-banana);
+            border-radius: 30px;
+            padding-inline: 38px;
+            padding-block: 6px;
+            inline-size: fit-content;
+            align-self: center;
+            margin-block-end: 38px;
+            margin-block-start: auto;
+          }
+        }
       }
     }
   }

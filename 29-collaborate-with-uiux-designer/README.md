@@ -55,3 +55,6 @@
    3. Reasons to join, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/a3cfc63245510220602c38c74b7fe7e15e77546d):
       - https://youtu.be/g6vTpoR7_JA
       - https://aparat.com/v/mzz6j5y
+   4. Membership plan,
+      - https://youtu.be/1cgy7vpZjhQ
+      - https://aparat.com/v/hsfo26h
