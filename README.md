@@ -4,6 +4,10 @@ OK folks, here I am just keeping all the things I am teaching to my bro (Mohamma
 
 BTW these videos are all in Persian since my younger brother's English proficiency is not that great (ATM). Also these video are in playlist to make it easier for you guys to watch them in the right order.
 
+# GitHub Pages
+
+I also activated Pages for this repo and listed a couple of project we've done in this tut + some that I deliberately did not do so that you can have something to practice on. You can check it out here: https://kasir-barati.github.io/html-css/
+
 # YouTube
 
 https://youtu.be/gxVLDnIrStA?si=nEaOVxOsz04Bn2j8

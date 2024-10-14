@@ -48,7 +48,33 @@ body {
     text-align: center;
     color: var(--sparkling-red);
   }
-  a {
+  ul {
+    margin-inline: 30px;
+    grid-column: 1 / -1;
+    font-size: 1.25rem;
+
+    li {
+      padding-block: 0.5rem;
+      transition: all 0.5s ease-out 0s;
+
+      a {
+        color: white;
+        transition: all 0.5s ease-out 0s;
+        text-decoration-line: none;
+
+        &:hover {
+          color: blue;
+        }
+        code {
+          font-family: monospace;
+        }
+      }
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+  > a {
     background-color: var(--nero);
     padding-inline: 2rem;
     padding-block: 2rem;
