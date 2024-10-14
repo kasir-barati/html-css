@@ -81,6 +81,6 @@
 5. CSS part -- desktop 2, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/4a14a00db9842c7268661ecc3d882ffae31898d4):
    - https://youtu.be/1oJ1-uUOPpI
    - https://aparat.com/v/tuayx8w
-6. CSS part -- modularity in CSS:
+6. CSS part -- modularity in CSS, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/6cfd601ddba5d72bf26fc30f94a17fda4ee5c320):
    - https://youtu.be/DJydpk0UAb0
    - https://aparat.com/v/ktaecs4
