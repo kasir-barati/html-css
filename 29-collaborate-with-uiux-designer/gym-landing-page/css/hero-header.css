@@ -3,7 +3,7 @@
   text-align: center;
   flex-direction: column;
   gap: 90px;
-  background: var(--bg-color) url(../assets/background.393px.png) center 100px
+  background: var(--bg-color) url(../assets/background.420px.png) center 100px
     no-repeat;
   margin-inline: calc(var(--body-inline-padding) * -1);
 
@@ -31,7 +31,7 @@
     background-size: 50% auto;
     text-align: left;
   }
-  @media screen and (393px < width <= 744px) {
+  @media screen and (420px < width <= 744px) {
     padding-inline: 20px;
     background-image: linear-gradient(to left, transparent, var(--bg-color)),
       url(../assets/background.744px.png);
@@ -48,7 +48,7 @@
     @media screen and (width > 1000px) {
       inline-size: 50%;
     }
-    @media screen and (width > 393px) {
+    @media screen and (width > 420px) {
       padding-inline: 0;
     }
   }
@@ -64,7 +64,7 @@
     border-radius: 30px;
     align-self: center;
 
-    @media screen and (width > 393px) {
+    @media screen and (width > 420px) {
       align-self: self-start;
     }
   }
@@ -78,7 +78,7 @@
     @media screen and (width > 1000px) {
       margin-block-start: var(--body-block-padding);
     }
-    @media screen and (width > 393px) {
+    @media screen and (width > 420px) {
       padding-inline: 0;
     }
     .main-menu__mobile-toggle {
@@ -86,7 +86,7 @@
       color: var(--text-color);
       font-size: 2rem;
 
-      @media screen and (width > 393px) {
+      @media screen and (width > 420px) {
         display: none;
       }
     }
@@ -104,13 +104,13 @@
         flex-direction: row;
         gap: 75px;
       }
-      @media screen and ((393px < width <= 744px) or (744px < width <= 1000px)) {
+      @media screen and ((420px < width <= 744px) or (744px < width <= 1000px)) {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         inline-size: 100%;
       }
-      @media screen and (width <= 393px) {
+      @media screen and (width <= 420px) {
         position: absolute;
         top: 97px;
         right: 0;

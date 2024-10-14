@@ -32,7 +32,7 @@ body {
   @media screen and (width < 600px) {
     grid-template-columns: 1fr;
   }
-  @media screen and (width < 393px) {
+  @media screen and (width < 420px) {
     padding-inline: 2rem;
   }
 

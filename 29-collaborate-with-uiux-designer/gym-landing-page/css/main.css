@@ -84,7 +84,7 @@
     flex-direction: column;
     margin-inline: calc(var(--body-inline-padding) * -1);
 
-    @media screen and (width > 393px) {
+    @media screen and (width > 420px) {
       margin-inline: 0;
     }
     h2.main-section__header {
@@ -111,7 +111,7 @@
         overflow-x: initial;
         overflow-y: initial;
       }
-      @media screen and (393px < width <= 744px) {
+      @media screen and (420px < width <= 744px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-flow: row;
@@ -132,7 +132,7 @@
         &:last-of-type {
           margin-inline-end: var(--body-inline-padding);
         }
-        @media screen and (width > 393px) {
+        @media screen and (width > 420px) {
           &:first-of-type {
             margin-inline-start: 0;
           }
@@ -333,7 +333,7 @@
         grid-auto-flow: row;
         gap: 58px;
       }
-      @media screen and (393px < width <= 744px) {
+      @media screen and (420px < width <= 744px) {
         gap: 36px;
       }
       .staff {
@@ -347,7 +347,7 @@
         padding-inline: 18px;
         gap: 18px;
 
-        @media screen and (393px < width <= 744px) {
+        @media screen and (420px < width <= 744px) {
           min-inline-size: 33%;
         }
 

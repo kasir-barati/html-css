@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     text-align: left;
   }
-  @media screen and (393px < width <= 744px) {
+  @media screen and (420px < width <= 744px) {
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
