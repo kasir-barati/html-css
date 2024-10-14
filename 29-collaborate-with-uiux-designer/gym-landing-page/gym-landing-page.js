@@ -35,3 +35,46 @@ function scrollToDefault(containerSelector, itemSelector, defaultIndex) {
     behavior: "smooth",
   });
 }
+
+// Run the following code when the page's width is bigger than 744px
+if (window.innerWidth > 744) {
+  let carouselIndex = 1;
+
+  showCarousels(carouselIndex);
+
+  function showCarousel(carouselNumber) {
+    carouselIndex += carouselNumber;
+    showCarousels(carouselIndex);
+  }
+  function currentCarousel(carouselNumber) {
+    carouselIndex = carouselNumber;
+    showCarousels(carouselIndex);
+  }
+  function showCarousels(carouselNumber) {
+    const carousels = document.getElementsByClassName("about-us__image");
+    const carouselIndicators = document.querySelectorAll(
+      ".about-us__carousel-indicators .carousel-control"
+    );
+
+    if (carouselNumber > carousels.length) {
+      carouselIndex = 1;
+    }
+    if (carouselNumber < 1) {
+      carouselIndex = carousels.length;
+    }
+
+    for (let i = 0; i < carousels.length; i++) {
+      carousels[i].style.display = "none";
+    }
+    for (let i = 0; i < carouselIndicators.length; i++) {
+      carouselIndicators[i].className = carouselIndicators[i].className.replace(
+        " carousel-control__active",
+        ""
+      );
+    }
+
+    carousels[carouselIndex - 1].style.display = "flex";
+    carouselIndicators[carouselIndex - 1].className +=
+      " carousel-control__active";
+  }
+}

@@ -70,3 +70,10 @@
 3. CSS part -- tablet, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/ca17536fcce9920133d4054dac743b9096d4f3c3):
    - https://youtu.be/BwdGTsAhULI
    - https://aparat.com/v/bxpc74k
+4. CSS part -- desktop 1:
+   - https://youtu.be/AB3x0wtwiQc
+   - https://aparat.com/v/smb9gi4
+
+> [!TIP]
+>
+> Use `filter` to change color of your image. And you can convert hexadecimal color code to `filter`'s css property value [here](https://codepen.io/sosuke/pen/Pjoqqp).

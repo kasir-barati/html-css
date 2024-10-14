@@ -10,7 +10,7 @@
   <body>
     <header class="hero-header" id="heroHeader">
       <nav class="main-menu">
-        <a class="main-menu__logo" href="#"
+        <a class="logo" href="#"
           >gym<span class="text-electric-banana">24</span></a
         >
         <button
@@ -33,7 +33,7 @@
       <a class="call-to-action" href="#">Detailed</a>
     </header>
     <main class="main-section">
-      <section id="reasonsToJoin">
+      <section class="reasons" id="reasonsToJoin">
         <h2 class="main-section__header">Reasons to join</h2>
         <section class="reason">
           <h3 class="reason__header">15000 sq.m.</h3>
@@ -78,7 +78,7 @@
       </section>
       <article class="membership-plans" id="membershipPlan">
         <h2 class="main-section__header">Gym membership</h2>
-        <div class="membership-plans-wrapper hide-mobile-scrollbar">
+        <div class="membership-plans-wrapper hide-scrollbar">
           <section class="membership-plan">
             <hgroup class="membership-plan__header">
               <h3 class="membership-plan__name">Pass 'Trail'</h3>
@@ -193,7 +193,7 @@
           develop personalized workout plans tailored to each individual's needs
           and goals.
         </p>
-        <section class="about-us__carousel-wrapper hide-mobile-scrollbar">
+        <section class="about-us__carousel-wrapper hide-scrollbar">
           <figure class="about-us__image">
             <img
               src="./assets/gym1.png"
@@ -219,19 +219,55 @@
             />
           </figure>
 
-          <button class="hide-in-mobile" type="button">&LongLeftArrow;</button>
-          <button class="hide-in-mobile" type="button">&LongRightArrow;</button>
-          <p class="hide-in-mobile">
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
+          <button
+            class="carousel-control hide-in-mobile"
+            type="button"
+            onclick="showCarousel(-1)"
+          >
+            <img src="./assets/prev.svg" alt="Previous carousel" />
+          </button>
+          <button
+            class="carousel-control hide-in-mobile"
+            type="button"
+            onclick="showCarousel(1)"
+          >
+            <img src="./assets/next.svg" alt="Next carousel" />
+          </button>
+          <p class="about-us__carousel-indicators hide-in-mobile">
+            <button
+              class="carousel-control"
+              type="button"
+              onclick="currentCarousel(1)"
+            >
+              <img src="./assets/rectangle.svg" alt="First carousel" />
+            </button>
+            <button
+              class="carousel-control"
+              type="button"
+              onclick="currentCarousel(2)"
+            >
+              <img src="./assets/rectangle.svg" alt="Second carousel" />
+            </button>
+            <button
+              class="carousel-control"
+              type="button"
+              onclick="currentCarousel(3)"
+            >
+              <img src="./assets/rectangle.svg" alt="Third carousel" />
+            </button>
+            <button
+              class="carousel-control"
+              type="button"
+              onclick="currentCarousel(4)"
+            >
+              <img src="./assets/rectangle.svg" alt="Forth carousel" />
+            </button>
           </p>
         </section>
       </article>
       <section class="trainers-staff" id="trainersStaff">
         <h2 class="main-section__header">Trainers staff</h2>
-        <div class="trainers-staff__wrapper hide-mobile-scrollbar">
+        <div class="trainers-staff__wrapper hide-scrollbar">
           <article class="staff">
             <h3 class="staff__name">Victoria Shurpik</h3>
             <img
@@ -389,8 +425,10 @@
     </main>
     <footer class="footer">
       <section class="company-intro">
-        <h2>
-          <a href="#">gym24</a>
+        <h2 class="footer-header">
+          <a class="logo" href="#"
+            >gym<span class="text-electric-banana">24</span></a
+          >
         </h2>
         <p>
           Build strength and confidence at our gym with state-of-the-art
