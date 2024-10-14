@@ -84,3 +84,17 @@
 6. CSS part -- modularity in CSS, you can see changes we made in [this commit](https://github.com/kasir-barati/html-css/commit/6cfd601ddba5d72bf26fc30f94a17fda4ee5c320):
    - https://youtu.be/DJydpk0UAb0
    - https://aparat.com/v/ktaecs4
+
+> [!CAUTION]
+>
+> Google chrome's device emulator does not do a perfect job when it comes to emulating/pretending to be a cellphone. Just look at how the Google chrome device emulator is showing my Gym landing page:
+>
+> ![gym landing page in a google chrome device emulator](./gym-landing-page/chrome-device-emulator.png)
+>
+> And here is the real deal, a Redmi Note 11
+>
+> ![gym landing page opened in a Redmi Note 11](./gym-landing-page/real-cellphone.png)
+>
+> &mdash; YouTube: https://youtu.be/tJ1DYmBFVLk
+>
+> &mdash; Aparat: https://aparat.com/v/dhq4942
