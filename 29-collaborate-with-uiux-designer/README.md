@@ -77,3 +77,7 @@
 > [!TIP]
 >
 > Use `filter` to change color of your image. And you can convert hexadecimal color code to `filter`'s css property value [here](https://codepen.io/sosuke/pen/Pjoqqp).
+
+5. CSS part -- desktop 2:
+   - https://youtu.be/1oJ1-uUOPpI
+   - https://aparat.com/v/tuayx8w
