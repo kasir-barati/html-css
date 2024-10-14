@@ -171,7 +171,7 @@
               margin-block-start: 15px;
             }
             &::before {
-              content: url(./assets/check.svg);
+              content: url(../assets/check.svg);
               padding-inline-end: 6px;
             }
           }
