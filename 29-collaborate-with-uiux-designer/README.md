@@ -87,7 +87,9 @@
 
 > [!CAUTION]
 >
-> Google chrome's device emulator does not do a perfect job when it comes to emulating/pretending to be a cellphone. Just look at how the Google chrome device emulator is showing my Gym landing page:
+> Google chrome's device emulator does not do a perfect job when it comes to emulating/pretending to be a cellphone. Just look at how the Google chrome device emulator is showing [my Gym landing page](https://kasir-barati.github.io/html-css/29-collaborate-with-uiux-designer/gym-landing-page/gym-landing-page.html).
+>
+> Now I can understand why we have tools [lambdatest](https://www.lambdatest.com/):
 >
 > ![gym landing page in a google chrome device emulator](./gym-landing-page/chrome-device-emulator.png)
 >
