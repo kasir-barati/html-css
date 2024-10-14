@@ -15,3 +15,7 @@ https://youtu.be/gxVLDnIrStA?si=nEaOVxOsz04Bn2j8
 # Aparat
 
 https://www.aparat.com/v/nmw2zm2
+
+# Other tuts from others:
+
+- [Understanding HTML and CSS by Anthony Alicea](https://www.youtube.com/watch?v=OjbM757s3vU)
