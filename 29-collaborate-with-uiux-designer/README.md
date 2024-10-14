@@ -100,3 +100,10 @@
 > &mdash; YouTube: https://youtu.be/tJ1DYmBFVLk
 >
 > &mdash; Aparat: https://aparat.com/v/dhq4942
+>
+> ## Update from future
+>
+> It was not exactly device emulators fault but rather the size of my cellphone's width was a little higher than 393px, just tiny bit (0.59px). But nonetheless we've learned how to inspect our web app opened in our mobile with "developer options" and "usb debugging" feature in our cellphone.
+>
+> - https://youtu.be/nQPVF50N95k
+> - https://aparat.com/v/usd736l
