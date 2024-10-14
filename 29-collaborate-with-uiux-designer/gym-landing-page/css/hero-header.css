@@ -1,0 +1,133 @@
+.hero-header {
+  display: block flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 90px;
+  background: var(--bg-color) url(./assets/background.393px.png) center 100px
+    no-repeat;
+  margin-inline: calc(var(--body-inline-padding) * -1);
+
+  @media screen and (width > 1000px) {
+    margin-inline: 0;
+    text-align: left;
+    background-image: linear-gradient(
+        to left,
+        transparent 0 60%,
+        var(--bg-color)
+      ),
+      linear-gradient(to right, transparent 0 60%, var(--bg-color)),
+      linear-gradient(to bottom, transparent 0% 90%, var(--bg-color)),
+      url(./assets/background.1600px.png);
+    background-position: top right;
+    background-size: 50% auto;
+    min-block-size: 500px;
+    padding-inline: calc(220px - var(--body-inline-padding));
+  }
+  @media screen and (744px < width <= 1000px) {
+    padding-inline: 30px;
+    background-image: linear-gradient(to left, transparent, var(--bg-color)),
+      url(./assets/background.1000px.png);
+    background-position: top right;
+    background-size: 50% auto;
+    text-align: left;
+  }
+  @media screen and (393px < width <= 744px) {
+    padding-inline: 20px;
+    background-image: linear-gradient(to left, transparent, var(--bg-color)),
+      url(./assets/background.744px.png);
+    background-position: top right;
+    background-size: 50% auto;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-family: "MADE Outer Sans";
+    font-size: 30px;
+    padding-inline: var(--body-inline-padding);
+
+    @media screen and (width > 1000px) {
+      inline-size: 50%;
+    }
+    @media screen and (width > 393px) {
+      padding-inline: 0;
+    }
+  }
+
+  .call-to-action {
+    background-color: var(--text-electric-banana);
+    color: black;
+    font-size: 16px;
+    font-weight: 900;
+    padding-inline: 50px;
+    padding-block: 16px;
+    inline-size: fit-content;
+    border-radius: 30px;
+    align-self: center;
+
+    @media screen and (width > 393px) {
+      align-self: self-start;
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--body-inline-padding);
+
+    @media screen and (width > 1000px) {
+      margin-block-start: var(--body-block-padding);
+    }
+    @media screen and (width > 393px) {
+      padding-inline: 0;
+    }
+    .main-menu__mobile-toggle {
+      background-color: transparent;
+      color: var(--text-color);
+      font-size: 2rem;
+
+      @media screen and (width > 393px) {
+        display: none;
+      }
+    }
+    .main-menu__nav {
+      display: none;
+      flex-direction: column;
+      list-style-type: none;
+      font-family: "MADE Outer Sans";
+
+      &.active {
+        display: flex;
+      }
+      @media screen and (width > 1000px) {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+      }
+      @media screen and ((393px < width <= 744px) or (744px < width <= 1000px)) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        inline-size: 100%;
+      }
+      @media screen and (width <= 393px) {
+        position: absolute;
+        top: 97px;
+        right: 0;
+        inline-size: 100%;
+        gap: 0.5rem;
+        background-color: var(--bg-color);
+        padding-block-start: 0.5rem;
+        align-items: end;
+
+        li {
+          border-block-end: 1px solid var(--menu-border-color);
+          inline-size: 100%;
+          padding-inline: calc(var(--body-inline-padding) - 1rem);
+          text-align: right;
+          padding-block-end: 0.5rem;
+        }
+      }
+    }
+  }
+}

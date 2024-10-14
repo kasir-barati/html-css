@@ -1,0 +1,69 @@
+:root {
+  --text-color: white;
+  --bg-color: black;
+  --text-electric-banana: #faff00;
+  --body-inline-padding: 55px;
+  --body-block-padding: 60px;
+  --menu-border-color: #525254;
+  --sections-gap: 200px;
+  --black-out: #222222;
+}
+
+@font-face {
+  font-family: "Bruno Ace SC";
+  src: url("../assets/BrunoAceSC-Regular.eot");
+  src: local("Bruno Ace SC Regular"), local("BrunoAceSC-Regular"),
+    url("../assets/BrunoAceSC-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../assets/BrunoAceSC-Regular.woff2") format("woff2"),
+    url("../assets/BrunoAceSC-Regular.woff") format("woff"),
+    url("../assets/BrunoAceSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Outer Sans";
+  src: url("../assets/MADEOuterSansAltRegular.ttf");
+  src: local("MADE Outer Sans Alt Regular"), local("MADE Outer Sans"),
+    url("../assets/MADEOuterSansAltRegular.ttf") format("truetype"),
+    url("../assets/MADEOuterSansAltRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  inline-size: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+body {
+  display: block flex;
+  flex-direction: column;
+  gap: var(--sections-gap);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-block: var(--body-block-padding);
+  padding-inline: var(--body-inline-padding);
+
+  @media screen and (width > 1000px) {
+    padding-block-start: 0;
+  }
+}
+
+a:any-link {
+  color: inherit;
+  text-decoration: none 0 solid transparent;
+}
+
+.logo {
+  font-family: "Bruno Ace SC";
+  text-transform: uppercase;
+  font-size: 24px;
+
+  .text-electric-banana {
+    color: var(--text-electric-banana);
+  }
+}
