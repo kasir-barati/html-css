@@ -61,6 +61,10 @@ When you're scrolling up and down a web page what's your mental model? We could 
 
   ![Coordinates](./coordinates.png)
 
+> [!TIP]
+>
+> <a id="viewportDefinitionInOneSentence" href="#viewportDefinitionInOneSentence">#</a> Viewport can be seen as **the visible part of a web page that a user can see from their device**.
+
 ## Layout
 
 1. User agent has the render tree.
