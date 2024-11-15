@@ -179,6 +179,12 @@ BUT it is way too large, 4 times larger than what we had with ASCII. So we tried
 
 [Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop). You can see the ASCII codes [here](https://en.wikipedia.org/wiki/ASCII).
 
+#### Memory units:
+
+![Memory units](./memory-units.png)
+
+[Read more here](https://www.linkedin.com/posts/roshan-pagare-052021119_certainly-computer-memory-units-are-used-activity-7115392337022730241-qOHU?utm_source=share&utm_medium=member_desktop).
+
 # title
 
 The `title` element represents the document's title or name. For example it is shown in a user's history or bookmarks, or in search results. There must be no more than one `title` element per document.
