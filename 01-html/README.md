@@ -163,7 +163,10 @@ An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterc
 
 ### Modern area
 
-ASCII was not up to the task so we come up with **Unicode character set**. It contains billion of characters, as such it can support pretty much any character that you want.
+ASCII was not up to the task so we come up with **Unicode character set**.
+
+- It contains billion of characters, as such it can support pretty much any character that you want.
+- Characters of most languages in the world can be used simultaneously.
 
 ![Special characters and none-English letters](./special-characters-and-none-english-letters.png)
 
