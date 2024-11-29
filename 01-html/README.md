@@ -161,6 +161,10 @@ An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterc
   console.log(String.fromCharCode(10));
   ```
 
+> [!NOTE]
+>
+> Learn about how computer's memory works [here](https://www.aparat.com/v/ouphbs0) (this is part of my Python course BTW).
+
 ### Modern area
 
 ASCII was not up to the task so we come up with **Unicode character set**.
