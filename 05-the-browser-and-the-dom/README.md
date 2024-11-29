@@ -2,18 +2,19 @@
 
 - It is a layered architecture.
 - It sorta runs our network.
+- A protocol stack.
 
 ## First step, you, sending a request across the network
 
-![TCP/IP model requesting a web page](./1-tcp-ip-model.png)
+![TCP/IP model requesting a web page](./assets/1-tcp-ip-model.png)
 
 ## Second step, server, responding with a response
 
-![TCP/IP model response](./2-tcp-ip-model.png)
+![TCP/IP model response](./assets/2-tcp-ip-model.png)
 
 ## The entire process in one picture
 
-![TCP/IP model - Entire cycle](./3-tcp-ip-model.png)
+![TCP/IP model - Entire cycle](./assets/3-tcp-ip-model.png)
 
 ## Pipe
 
@@ -21,7 +22,7 @@
 - We are gonna think that there is a nice reliable pipe that allows us to communicate.
 - A program can talk to another program in another computer through this pipe.
 
-![Pipe](./pipe.png)
+![Pipe](./assets/pipe.png)
 
 ## Socket
 
@@ -33,31 +34,31 @@
   - On the other side it can be _web server_; _IIS_ (Internet Information Service), _Apache_, etc.
 - So that **phone call** is what we call it a socket.
 
-![Socket](./socket.png)
+![Socket](./assets/socket.png)
 
 - But we also need to decide to which service/process we wanna talk to.
 
   - We can specify that with something called **port numbers**.
 
-    ![Laptop ports](./laptop-ports.png)
+    ![Laptop ports](./assets/laptop-ports.png)
 
     We can think of them also as extension of the phones, when you call a company they usually ask you to enter the extensions of the party you'd like to talk to. Servers do the same, they ask you to enter extension of the _process_ you like to talk to.
 
-    ![Process's ports](./ports.png)
+    ![Process's ports](./assets/ports.png)
 
 - As always we have **standards** for port numbers, these are the ones **commonly** used for various network applications that serves us data ([List of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)).
 - Here is a simple program/process that shows how it might looks when we are coding:
 
-  ![Python Socket code](./python-socket.png)
+  ![Python Socket code](./assets/python-socket.png)
 
-# Application protocol
+## Application protocol
 
 - So we know that we have a socket.
 - Our _application_ (process) ask the _socket layer_ to make a socket for it.
 - So what we are gonna send and what we're gonna get back is what we call **Application protocol**.
-  ![Application layer](./application-layer.png)
+  ![Application layer](./assets/application-layer.png)
 
-## What is HTTP?
+### What is HTTP?
 
 - It stands for Hypertext Transfer Protocol.
 - It is the dominant protocol on the internet.
@@ -66,7 +67,7 @@
 ### What is Protocol?
 
 - Protocol is a system of rules for two entities to communicate. In this case: how to transfer text from computer 1 (server) to computer 2 (client).
-  ![Protocol](./protocol.png)
+  ![Protocol](./assets/protocol.png)
 - A protocol is just things like the rules we have when talking over the phone:
 
   - Who talks first?
@@ -74,7 +75,7 @@
   - What if the person does not answer?
 
 - So HTTP protocol is really something like which side of the road should road in:
-  ![Left or right hand drive](./left-right-hand-drive.png)
+  ![Left or right hand drive](./assets/left-right-hand-drive.png)
 
 ### Hypertext
 
@@ -83,7 +84,7 @@
 - Imagine you write a blog and then in it put some links to some other HTML documents that exits out there on the Internet.
 - So basically **hypertext is just text that is not your normal text, but text that goes beyond being a simple text.**
 
-  ![Hypertext](./hypertext.png)
+  ![Hypertext](./assets/hypertext.png)
 
 ### URL
 
@@ -91,11 +92,11 @@
 
 - It is the address of a unique resource on the internet.
 
-  ![URL](./url.png)
+  ![URL](./assets/url.png)
 
 - A URL is composed of different parts, some mandatory and others optional.
 
-  ![URL parts](./mdn-url-all.png)
+  ![URL parts](./assets/mdn-url-all.png)
 
   - You might think of a URL like a regular postal mail address:
     - The scheme represents the postal service you want to use.
@@ -155,23 +156,23 @@ It can be your computer or a software that request resources or a service from t
 
 ### So what does a HTTP request look like
 
-![HTTP Request](./request.jpg)
+![HTTP Request](./assets/request.jpg)
 
 ### Can you show me a response too
 
 As you can see in the following image response can be anything; a HTML document, CSS files, JS files, image, etc.
 And also if you are wondering what is that `<CRLF>` I can say it is a new like basically. And is there to separate _HTTP header_ from the _HTTP body_.
 
-![HTTP response](./response.png)
+![HTTP response](./assets/response.png)
 
-## Simplified version of a what happens when you go to a website
+### Simplified version of a what happens when you go to a website
 
 So all in all HTTP is a set of rules that specifies how clients and servers can communicate with each other -- send text back and forth. And these text are usually "marked up" (described, given meaning) with a markup language called HTML.
-![Full picture of a HTTP request response cycle](./full-picture.png)
+![Full picture of a HTTP request response cycle](./assets/full-picture.png)
 
 ### Request response cycle in a browser
 
-![Request response cycle](./request-response-cycle.png)
+![Request response cycle](./assets/request-response-cycle.png)
 
 - https://www.dr-chuck.com/page2.htm
 - So this is what is called a request response cycle and it is governed by a series of standards. These standards were established and to this day maintained and developed by a group called [IETF](https://www.ietf.org/).
@@ -186,24 +187,36 @@ So all in all HTTP is a set of rules that specifies how clients and servers can 
    Host: www.dr-chuck.com
    ```
 
-![openssl s_client request response cycle](./openssl-s-client.png)
+![openssl s_client request response cycle](./assets/openssl-s-client.png)
 
 ### Request response cycle with `telnet` application/process/program
 
 1. `telnet www.dr-chuck.com 80`
 2. `GET http://www.dr-chuck.com/page1.htm HTTP/1.0`
 
-![telnet request response cycle](./telnet.png)
+![telnet request response cycle](./assets/telnet.png)
 
 ### If you are really curious on how exactly it works here is a gif that might be more interesting
 
-![Complete HTTP request response](./complete-http-req-res.gif)
+![Complete HTTP request response](./assets/complete-http-req-res.gif)
 
 [Ref](https://www.linkedin.com/posts/brijpandeyji_we-all-know-typing-a-url-leads-us-to-a-website-activity-7206981158016839681-xVj3?utm_source=share&utm_medium=member_desktop)
 
+> [!TIP]
+>
+> <a href="tcpIpVsTcpVsIp">#</a> <b>TCP/IP VS TCP VS IP</b>:
+>
+> - TCP: [a transport layer](https://www.rfc-editor.org/rfc/rfc793).
+> - IP: [a network layer protocol](https://www.rfc-editor.org/rfc/rfc791).
+> - TCP/IP:
+>   - A protocol stack.
+>   - Contains different protocols required for the data transfer from sender to receiver.
+>
+> &mdash; [Ref](https://stackoverflow.com/a/34545857/8784518).
+
 # User Agents
 
-![User Agents](./user-agents.png)
+![User Agents](./assets/user-agents.png)
 
 ## Browsers
 
@@ -214,7 +227,7 @@ These are all different type of browsers: Google Chrome, Firefox, Internet Explo
 - **Rendering Engine**: A software that converts HTML to visual representations.
 - JavaScript Engine: Codes that manipulate the web page and many more things.
 
-![Browser components](./browser-components.png)
+![Browser components](./assets/browser-components.png)
 
 ### A simple browser in Python
 
@@ -247,15 +260,15 @@ socket_1.close()
 
 #### Encode decode model of communication
 
-![Encode decode model of communication](./encode-decode-model-of-communication.jpg)
+![Encode decode model of communication](./assets/encode-decode-model-of-communication.jpg)
 
 #### Visualization of this piece of code
 
-![Python simple web server code visualization](./python-simple-web-server-code-visualization.png)
+![Python simple web server code visualization](./assets/python-simple-web-server-code-visualization.png)
 
 And if you run this program with python you'll see this in your terminal
 
-![Python simple web browser result](./python-simple-browser-result.png)
+![Python simple web browser result](./assets/python-simple-browser-result.png)
 
 # `a`
 
@@ -265,7 +278,7 @@ When we specify the `href` _attribute_ it represents a hyperlink (a hypertext an
 
   An element's **unique identifier** can be used for a variety of purposes, most notably as a way to link to specific parts of a document using [fragments](https://url.spec.whatwg.org/#concept-url-fragment), as a way to target an element when scripting, and as a way to style a specific element from CSS.
 
-  ![Fragment](./fragment.png)
+  ![Fragment](./assets/fragment.png)
 
 - Categories:
   - Flow content.
@@ -279,7 +292,7 @@ When we specify the `href` _attribute_ it represents a hyperlink (a hypertext an
 
 ## Why it is called **anchor**?
 
-![Why a element is called anchor?](./why-a-is-called-anchor.png)
+![Why a element is called anchor?](./assets/why-a-is-called-anchor.png)
 
 ### Rendering Engine
 
@@ -294,7 +307,7 @@ Browser's rendering engine will translate the HTML document into a visual repres
 - Parse: analyze text, character by character.
 - Parser parses the HTML document; it lookup for special characters in the given text in order to understand what it should do. _Parse_ means to analyze text character by character.
 
-![HTML Parser](./html-parser.png)
+![HTML Parser](./assets/html-parser.png)
 
 [All the credits go to this blog post](https://dev.to/arikaturika/how-web-browsers-work-parsing-the-html-part-3-with-illustrations-45fi)
 
@@ -302,7 +315,7 @@ Browser's rendering engine will translate the HTML document into a visual repres
 
 If you need to use characters such as `<` or `>` in HTML you'll probably soon realize that it is not as straight forward as you imagined. Therefore we came up with the idea of [named character references](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 
-![Examples of named character references](./examples-of-named-character-references.png)
+![Examples of named character references](./assets/examples-of-named-character-references.png)
 
 # Document Object Model
 
@@ -349,7 +362,7 @@ So back to the main topic: We call it DOM to shorten it. It is **an Object Model
 </html>
 ```
 
-![DOM tree of Understanding the Critical Rendering Path](./dom-tree.png)
+![DOM tree of Understanding the Critical Rendering Path](./assets/dom-tree.png)
 
 # Developer Tools or Dev Tools
 
@@ -359,7 +372,7 @@ This a set of developer tools that help us to edit pages on the fly and diagnose
 
 We can see things like http request and responses in _network_ tab, generated DOM in _elements_ tab, and many more tabs which each one of them have their own purpose and objectives.
 
-![Browser, HTML file, and DOM](./browser-html-file-and-dom.png)
+![Browser, HTML file, and DOM](./assets/browser-html-file-and-dom.png)
 
 Refs:
 
