@@ -18,4 +18,28 @@ https://www.aparat.com/v/nmw2zm2
 
 # Other tuts from others:
 
+Some complementary material you can use next to this tut or any other tut:
+
+- https://www.w3schools.com/Html.
+- https://www.w3schools.com/CSS.
+- https://developer.mozilla.org/en-US/docs/Web/HTML.
+- https://developer.mozilla.org/en-US/docs/Web/CSS.
+
+> [!CAUTION]
+>
+> These are just complementary resources. **Your number 1 resource should be their official doc like explained in this tutorial**.
+>
+> - https://html.spec.whatwg.org/.
+> - https://drafts.csswg.org/.
+
+## Persian
+
+This section is subject to change in time since I am not sure how good each one is.
+
+1. [وبینار آشنایی با html, css](https://www.aparat.com/v/a955bd8).
+2. [آموزش پروژه محور طراحی وبسایت با HTML و CSS](https://www.aparat.com/playlist/5745849).
+   - This one is recorded in 3 sessions. Make sure to watch them in the correct order :wink:.
+
+## English
+
 - [Understanding HTML and CSS by Anthony Alicea](https://www.youtube.com/watch?v=OjbM757s3vU)
