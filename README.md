@@ -36,9 +36,12 @@ Some complementary material you can use next to this tut or any other tut:
 
 This section is subject to change in time since I am not sure how good each one is.
 
-1. [وبینار آشنایی با html, css](https://www.aparat.com/v/a955bd8).
-2. [آموزش پروژه محور طراحی وبسایت با HTML و CSS](https://www.aparat.com/playlist/5745849).
-   - This one is recorded in 3 sessions. Make sure to watch them in the correct order :wink:.
+1. I have found these two as well but have not checked how accurate and good he is teaching them:
+
+   - HTML: [https://turbolearn.ir/course/HTML-tutorial](https://turbolearn.ir/course/HTML-tutorial)
+   - CSS: [https://turbolearn.ir/course/CSS-tutorial](https://turbolearn.ir/course/CSS-tutorial)
+
+   BTW You can find this tut on [YouTube](https://www.youtube.com/playlist?list=PLSccONlqbvweeB3Yju0qsBlkwucBLjdel) too.
 
 ## English
 
