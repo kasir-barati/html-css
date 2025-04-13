@@ -43,7 +43,7 @@ VSCode = Text editor = IDE stands for Integrated Development Environment.
 # FAQ
 
 - Tag VS Element: Element is, the tag + tag's content + tag's attributes.
-  ![Tag Element](./tag-element.webp)
+  ![Tag Element](./assets/tag-element.webp)
 - Is HTML the only ML: MLs are everywhere, for instance change a `.docs` file and change its extension to `.zip`. Now extract it. Open the extracted folder in VSCode and there you have it, it is a bunch of XML files.
 - And the following code is a different ML
 
@@ -105,7 +105,7 @@ The html element represents the root of an HTML document. Authors are encouraged
   - Wherever a subdocument fragment is allowed in a compound document: This refers to scenarios where a smaller HTML document (a fragment) can be embedded within another document. A common example of this is using an `<iframe>` to embed a separate HTML document within a larger HTML document. The embedded HTML document within the `<iframe>` will also have its own `<html>` element as the document element.
 - Content model: A `head` element followed by a `body` element.
 
-![HTML Tree](./htmltree.png)
+![HTML Tree](./assets/htmltree.png)
 
 # head
 
@@ -121,7 +121,7 @@ The `body` element represents the contents of the document.
 
 - Categories: None.
 - Contexts in which this element can be used: **As the second element** in an `html` element.
-- Content model: Flow content.
+- Content model: [Flow content](./assets/flowcontent.png).
 
 # meta
 
@@ -143,6 +143,8 @@ In other word Metadata is data that explains what some other data means. E.g. ti
 It is used to specify the _character encoding_ for the HTML document. Character encoding is essential for correctly displaying text on web pages. And `UTF-8` covers almost all languages and symbols.
 
 ### ASCII
+
+![ASCII](./assets/ascii.png)
 
 An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange, is a character encoding standard for electronic communication. Each character was mapped to a number between 0 to 256, stored in 8 bits of memory.
 
@@ -167,12 +169,14 @@ An acronym for **A**merican **S**tandard **C**ode for **I**nformation **I**nterc
 
 ### Modern area
 
-ASCII was not up to the task so we come up with **Unicode character set**.
+![More bits please](./assets/more-bits.png)
+
+[ASCII](https://en.wikipedia.org/wiki/ASCII) was not up to the task due to memory limitations, so we come up with **Unicode character set**.
 
 - It contains billion of characters, as such it can support pretty much any character that you want.
 - Characters of most languages in the world can be used simultaneously.
 
-![Special characters and none-English letters](./special-characters-and-none-english-letters.png)
+![Special characters and none-English letters](./assets/special-characters-and-none-english-letters.png)
 
 BUT it is way too large, 4 times larger than what we had with ASCII. So we tried to compress this.
 
@@ -181,11 +185,15 @@ BUT it is way too large, 4 times larger than what we had with ASCII. So we tried
 - UTF-8: **Dynamic length**; 1-4 bytes. Best practice when we wanna transfer data between computers. It does the job of UTF-32.
   But is way more compressed than UTF-32. With an over lap of ASCII.
 
-[Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop). You can see the ASCII codes [here](https://en.wikipedia.org/wiki/ASCII).
+![UTF-8 VS UTF-32](./assets/utf8-vs-utf32.png)
+
+[Visual presentation](https://www.linkedin.com/posts/kasir-barati_ascii-unicode-standard-activity-7212033903266537473-m9Ox?utm_source=share&utm_medium=member_desktop) of UTF8.
+
+![How characters will be converted to binary](./assets/convert-char-to-binary.png)
 
 #### Memory units:
 
-![Memory units](./memory-units.png)
+![Memory units](./assets/memory-units.png)
 
 [Read more here](https://www.linkedin.com/posts/roshan-pagare-052021119_certainly-computer-memory-units-are-used-activity-7115392337022730241-qOHU?utm_source=share&utm_medium=member_desktop).
 
